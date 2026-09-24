@@ -3,7 +3,7 @@
 button, a { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }
 .external-card{
-  background:#fff;
+  background:#f5f5dc;
   border-radius:16px;
   padding:15px;
   margin-bottom:10px;
