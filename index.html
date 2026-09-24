@@ -25,6 +25,32 @@
     </div>
     <div class="shield">⚖</div>
   </div>
+  <section id="qrcode" class="page">
+  <div class="section-head">
+    <h3>QR Code</h3>
+  </div>
+
+  <div class="welcome-card" style="text-align:center;">
+    <h2>PREVIDENCIÁRIO FÁCIL</h2>
+    <p>Acesse o aplicativo pelo celular</p>
+
+    <img 
+      src="qrcode-previdenciario-facil.png"
+      alt="QR Code do Previdenciário Fácil"
+      style="width:280px;max-width:80%;display:block;margin:20px auto;"
+    >
+
+    <h3>Aponte a câmera do celular para o QR Code</h3>
+
+    <p>
+      Escaneie o código para abrir o Previdenciário Fácil.
+    </p>
+
+    <button class="feature-card" onclick="showPage('inicio')">
+      ← Voltar ao início
+    </button>
+  </div>
+</section>
 
   <div class="section-head"><h3>Acesso rápido</h3><button onclick="showPage('guia')">Ver tudo</button></div>
   <div class="quick-grid">
@@ -33,6 +59,11 @@
     <button class="feature-card purple" onclick="showPage('pesquisa')"><span>🔎</span><b>Pesquisa</b><small>Fontes oficiais</small></button>
     <button class="feature-card orange" onclick="showPage('cnis')"><span>📑</span><b>Meu CNIS</b><small>Organizar períodos</small></button>
   </div>
+  <button class="feature-card" onclick="showPage('qrcode')">
+  <span class="emoji">📱</span>
+  <b>QR Code</b>
+  <small>Acesse o aplicativo pelo celular</small>
+</button>
 
   <div class="section-head"><h3>Ferramentas</h3></div>
   <button class="list-item" onclick="showPage('aposentadoria')"><span class="round blue-bg">🧮</span><span><b>Simulador de aposentadoria</b><small>Estimativa inicial</small></span><i>›</i></button>
