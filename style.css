@@ -18,7 +18,7 @@ button { cursor: pointer; }
 .external-card .ext-icon{
   width:42px;height:42px;border-radius:12px;
   display:grid;place-items:center;
-  background:#e9f2fb;font-size:21px;
+  background:#ff0000;font-size:21px;
 }
 .external-card b{font-size:13px;display:block}
 .external-card small{font-size:10px;color:#718096;display:block;margin-top:3px;line-height:1.35}
