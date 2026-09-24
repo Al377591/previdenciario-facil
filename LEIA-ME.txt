@@ -1,0 +1,11 @@
+PREVIDENCIÁRIO FÁCIL — V2.1 CORRIGIDA
+
+Correções:
+- Benefícios agora são botões funcionais e abrem as páginas oficiais do INSS.
+- Criada a página "INSS Online" com links externos para Meu INSS e serviços.
+- Links externos abrem em nova aba/janela.
+- Adicionado QR Code real para https://www.gov.br/inss/pt-br
+- Navegação entre páginas reforçada para funcionar em celular e PC.
+
+Observação:
+O QR Code do aplicativo em si só poderá ser criado depois que o aplicativo tiver um endereço público (ex.: GitHub Pages).

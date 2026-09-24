@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Previdenciário Fácil</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<header class="top">
+  <div>
+    <div class="eyebrow">DIREITO PREVIDENCIÁRIO</div>
+    <h1>Olá! 👋</h1>
+  </div>
+  <button class="icon-btn" onclick="showPage('guia')" aria-label="Ajuda">?</button>
+</header>
+
+<main>
+<section id="inicio" class="page active">
+  <div class="welcome-card">
+    <div>
+      <span class="mini-label">PREVIDENCIÁRIO FÁCIL</span>
+      <h2>Organize sua pesquisa.<br>Entenda seus direitos.</h2>
+      <p>Ferramentas para estudo, triagem e apresentação acadêmica.</p>
+    </div>
+    <div class="shield">⚖</div>
+  </div>
+
+  <div class="section-head"><h3>Acesso rápido</h3><button onclick="showPage('guia')">Ver tudo</button></div>
+  <div class="quick-grid">
+    <button class="feature-card blue" onclick="showPage('aposentadoria')"><span>🧮</span><b>Aposentadoria</b><small>Calcular regras</small></button>
+    <button class="feature-card green" onclick="showPage('beneficios')"><span>📋</span><b>Benefícios</b><small>Consultar tipos</small></button>
+    <button class="feature-card purple" onclick="showPage('pesquisa')"><span>🔎</span><b>Pesquisa</b><small>Fontes oficiais</small></button>
+    <button class="feature-card orange" onclick="showPage('cnis')"><span>📑</span><b>Meu CNIS</b><small>Organizar períodos</small></button>
+  </div>
+
+  <div class="section-head"><h3>Ferramentas</h3></div>
+  <button class="list-item" onclick="showPage('aposentadoria')"><span class="round blue-bg">🧮</span><span><b>Simulador de aposentadoria</b><small>Estimativa inicial</small></span><i>›</i></button>
+  <button class="list-item" onclick="showPage('cnis')"><span class="round purple-bg">📑</span><span><b>Analisar períodos do CNIS</b><small>Organize vínculos e atividades</small></span><i>›</i></button>
+  <button class="list-item" onclick="showPage('inss')"><span class="round green-bg">🏛️</span><span><b>Acessar serviços do INSS</b><small>Meu INSS e pedidos oficiais</small></span><i>›</i></button>
+
+  <div class="tip">ⓘ <span><b>Importante:</b> resultados são estimativos e não substituem a análise jurídica ou o CNIS oficial.</span></div>
+</section>
+
+<section id="aposentadoria" class="page">
+  <div class="page-title"><button class="back" onclick="showPage('inicio')">‹</button><div><span>CALCULADORA</span><h2>Aposentadoria</h2></div></div>
+  <div class="progress"><span></span></div>
+  <div class="form-card">
+    <h3>Seus dados</h3>
+    <label>Data de nascimento<input id="nascimento" type="date"></label>
+    <label>Sexo<select id="sexo"><option value="">Selecione</option><option value="F">Feminino</option><option value="M">Masculino</option></select></label>
+    <label>Tempo de contribuição informado<input id="tempo" type="number" min="0" max="60" step=".1" placeholder="Ex.: 25,5"></label>
+    <label>Há período especial?<select id="especial"><option value="nao">Não</option><option value="sim">Sim</option></select></label>
+    <button class="cta" onclick="calcular()">Calcular estimativa →</button>
+  </div>
+  <div id="resultado" class="result hidden"></div>
+</section>
+
+<section id="beneficios" class="page">
+  <div class="page-title"><button class="back" onclick="showPage('inicio')">‹</button><div><span>CONSULTA</span><h2>Benefícios</h2></div></div>
+  <p class="tip">Toque em um benefício para abrir a página oficial do INSS.</p>
+  <div class="search-box">⌕ <input placeholder="Pesquisar benefício..." oninput="filtrarBeneficios(this.value)"></div>
+  <div id="beneficio-list" class="stack">
+
+    <button class="benefit clickable" onclick="abrirExterno('https://www.gov.br/inss/pt-br/direitos-e-deveres/aposentadorias')">
+      <span>🧓</span><div><b>Aposentadorias</b><small>Regras permanentes e de transição.</small></div>
+    </button>
+
+    <button class="benefit clickable" onclick="abrirExterno('https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-por-incapacidade/auxilio-por-incapacidade-temporaria')">
+      <span>🩺</span><div><b>Incapacidade temporária</b><small>Informações e requerimento pelo Meu INSS.</small></div>
+    </button>
+
+    <button class="benefit clickable" onclick="abrirExterno('https://www.gov.br/inss/pt-br/direitos-e-deveres/aposentadorias/aposentadoria-por-incapacidade-permanente')">
+      <span>♿</span><div><b>Incapacidade permanente</b><small>Requisitos e orientação oficial.</small></div>
+    </button>
+
+    <button class="benefit clickable" onclick="abrirExterno('https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-por-incapacidade/auxilio-acidente')">
+      <span>📌</span><div><b>Auxílio-acidente</b><small>Benefício indenizatório com requisitos próprios.</small></div>
+    </button>
+
+    <button class="benefit clickable" onclick="abrirExterno('https://www.gov.br/inss/pt-br/direitos-e-deveres/pensoes')">
+      <span>👨‍👩‍👧</span><div><b>Pensão por morte</b><small>Regras de dependência, duração e cálculo.</small></div>
+    </button>
+
+    <button class="benefit clickable" onclick="abrirExterno('https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-assistenciais')">
+      <span>🤝</span><div><b>BPC/LOAS</b><small>Benefício assistencial para os casos previstos em lei.</small></div>
+    </button>
+
+  </div>
+</section>
+
+<section id="pesquisa" class="page">
+  <div class="page-title"><button class="back" onclick="showPage('inicio')">‹</button><div><span>FONTES</span><h2>Pesquisa</h2></div></div>
+  <div class="search-box">⌕ <input placeholder="Pesquisar legislação..."></div>
+  <div class="source-card"><b>Lei 8.213/91</b><small>Benefícios da Previdência Social</small><a target="_blank" rel="noopener" href="https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm">Abrir fonte oficial →</a></div>
+  <div class="source-card"><b>Lei 8.212/91</b><small>Custeio da Seguridade Social</small><a target="_blank" rel="noopener" href="https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm">Abrir fonte oficial →</a></div>
+  <div class="source-card"><b>Constituição Federal</b><small>Texto constitucional</small><a target="_blank" rel="noopener" href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm">Abrir fonte oficial →</a></div>
+  <div class="source-card"><b>Portal do INSS</b><small>Serviços e informações oficiais</small><a target="_blank" rel="noopener" href="https://www.gov.br/inss/pt-br">Abrir portal →</a></div>
+</section>
+
+<section id="cnis" class="page">
+  <div class="page-title"><button class="back" onclick="showPage('inicio')">‹</button><div><span>ORGANIZAÇÃO</span><h2>Meu CNIS</h2></div></div>
+  <div class="form-card">
+    <h3>Novo período</h3>
+    <label>Início<input id="ini" type="date"></label>
+    <label>Fim<input id="fim" type="date"></label>
+    <label>Empresa / atividade<input id="empresa" placeholder="Ex.: Empresa X"></label>
+    <label>Observação<input id="obs" placeholder="Ex.: especial, rural..."></label>
+    <button class="cta" onclick="adicionarPeriodo()">Adicionar período +</button>
+  </div>
+  <div id="tabelaCnis" class="stack"></div>
+  <div id="totalCnis" class="summary"></div>
+</section>
+
+<section id="inss" class="page">
+  <div class="page-title"><button class="back" onclick="showPage('inicio')">‹</button><div><span>LINKS OFICIAIS</span><h2>INSS Online</h2></div></div>
+
+  <div class="external-card">
+    <div class="ext-top"><div class="ext-icon">🏛️</div><div><b>Meu INSS</b><small>Acesse o sistema oficial para fazer pedidos, consultar requerimentos e serviços.</small></div></div>
+    <a class="ext-btn" target="_blank" rel="noopener" href="https://meu.inss.gov.br/">Abrir Meu INSS →</a>
+  </div>
+
+  <div class="external-card">
+    <div class="ext-top"><div class="ext-icon">🩺</div><div><b>Benefício por incapacidade temporária</b><small>Página oficial com requisitos e orientações para o requerimento.</small></div></div>
+    <a class="ext-btn" target="_blank" rel="noopener" href="https://www.gov.br/pt-br/servicos/solicitar-auxilio-por-incapacidade-temporaria-auxilio-doenca">Abrir serviço →</a>
+  </div>
+
+  <div class="external-card">
+    <div class="ext-top"><div class="ext-icon">♿</div><div><b>Aposentadoria por incapacidade permanente</b><small>Orientações oficiais do INSS sobre o benefício.</small></div></div>
+    <a class="ext-btn" target="_blank" rel="noopener" href="https://www.gov.br/inss/pt-br/direitos-e-deveres/aposentadorias/aposentadoria-por-incapacidade-permanente">Abrir informação oficial →</a>
+  </div>
+
+  <div class="external-card">
+    <div class="ext-top"><div class="ext-icon">📑</div><div><b>Extrato de contribuição — CNIS</b><small>Use o Meu INSS para consultar seus registros previdenciários.</small></div></div>
+    <a class="ext-btn" target="_blank" rel="noopener" href="https://meu.inss.gov.br/">Acessar Meu INSS →</a>
+  </div>
+
+  <div class="external-card">
+    <div class="ext-top"><div class="ext-icon">📚</div><div><b>Todos os serviços do INSS</b><small>Lista oficial de aposentadorias, auxílios, pensões e outros serviços.</small></div></div>
+    <a class="ext-btn" target="_blank" rel="noopener" href="https://www.gov.br/inss/pt-br/servicos">Ver serviços →</a>
+  </div>
+
+  <div class="external-card">
+    <div class="ext-top"><div class="ext-icon">☎️</div><div><b>Central 135</b><small>Canal oficial de atendimento do INSS.</small></div></div>
+    <a class="ext-btn" href="tel:135">Ligar para 135 →</a>
+  </div>
+
+  <div class="qr-card">
+    <img src="qrcode-inss.png" alt="QR Code para o portal oficial do INSS">
+    <b>QR Code — Portal do INSS</b>
+    <small>Aponte a câmera do celular para abrir o endereço oficial do INSS.</small>
+  </div>
+</section>
+
+<section id="guia" class="page">
+  <div class="page-title"><button class="back" onclick="showPage('inicio')">‹</button><div><span>APOIO</span><h2>Guia</h2></div></div>
+  <div class="guide-card"><b>01 · Comece pelo CNIS</b><p>Confira vínculos, remunerações, indicadores e lacunas antes de concluir qualquer cálculo.</p></div>
+  <div class="guide-card"><b>02 · Reúna documentos</b><p>CTPS, carnês/GPS, PPP, CTC e outros documentos podem ser necessários conforme o caso.</p></div>
+  <div class="guide-card"><b>03 · Compare as regras</b><p>Após a EC 103/2019, diferentes regras de transição podem ser aplicáveis conforme o histórico do segurado.</p></div>
+  <div class="guide-card"><b>04 · Confira a legislação vigente</b><p>Use as fontes oficiais antes de transformar uma simulação em conclusão jurídica.</p></div>
+  <div class="guide-card"><b>05 · Links externos</b><p>Os botões do aplicativo que levam ao INSS abrem uma nova página oficial, preservando o aplicativo aberto.</p></div>
+</section>
+</main>
+
+<nav class="bottom-nav">
+  <button class="active" onclick="showPage('inicio')"><span>⌂</span>Início</button>
+  <button onclick="showPage('aposentadoria')"><span>▣</span>Calcular</button>
+  <button onclick="showPage('pesquisa')"><span>⌕</span>Pesquisa</button>
+  <button onclick="showPage('cnis')"><span>▤</span>CNIS</button>
+  <button onclick="showPage('guia')"><span>?</span>Guia</button>
+</nav>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
