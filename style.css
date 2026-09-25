@@ -1,56 +1,8 @@
 /* =========================================================
    PREVIDENCIÁRIO FÁCIL
-   STYLE.CSS — VERSÃO COMPLETA
+   STYLE.CSS — VERSÃO ATUALIZADA
    ========================================================= */
-/* Símbolo de direitos autorais */
 
-.copyright {
-  position: fixed;
-  right: 10px;
-  bottom: calc(76px + env(safe-area-inset-bottom) + 5px);
-
-  z-index: 20;
-
-  font-size: 16px;
-  font-weight: 700;
-
-  color: #59697d;
-
-  background: rgba(255, 255, 255, 0.92);
-
-  width: 28px;
-  height: 28px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  box-shadow:
-    0 2px 8px rgba(23, 43, 77, 0.08);
-}
-
-
-/* Notebook / desktop */
-
-@media (min-width: 700px) {
-
-  .copyright {
-    right: max(
-      20px,
-      calc((100vw - 900px) / 2 + 12px)
-    );
-
-    bottom: 82px;
-
-    width: 30px;
-    height: 30px;
-
-    font-size: 17px;
-  }
-
-}
 
 /* =========================================================
    CONFIGURAÇÃO GERAL
@@ -64,8 +16,11 @@ html,
 body {
   margin: 0;
   padding: 0;
+
   background: #eef2f7;
+
   color: #152238;
+
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -102,7 +57,9 @@ button {
 .app {
   width: 100%;
   max-width: 480px;
+
   min-height: 100vh;
+
   margin: 0 auto;
 
   background: #f8fafc;
@@ -124,6 +81,7 @@ button {
   padding: 18px 20px 14px;
 
   display: flex;
+
   justify-content: space-between;
   align-items: center;
 
@@ -133,8 +91,11 @@ button {
 .eyebrow,
 .page-title span {
   font-size: 11px;
+
   letter-spacing: 1.3px;
+
   font-weight: 800;
+
   color: #66809f;
 }
 
@@ -142,6 +103,7 @@ button {
   margin: 5px 0 0;
 
   font-size: 27px;
+
   line-height: 1.1;
 
   letter-spacing: -0.4px;
@@ -152,12 +114,15 @@ button {
   height: 40px;
 
   border-radius: 50%;
+
   border: 1px solid #d8e0ea;
 
   background: #ffffff;
+
   color: #244c7c;
 
   font-size: 17px;
+
   font-weight: 800;
 
   box-shadow:
@@ -181,185 +146,63 @@ button {
 
 
 /* =========================================================
-   CARD PRINCIPAL
-   PREVIDENCIÁRIO FÁCIL
-   ========================================================= */
-
-/* =========================================================
-   CARD PRINCIPAL — PREVIDENCIÁRIO FÁCIL
-   VERSÃO FINAL
+   IMAGEM PRINCIPAL
+   banner-direitos.png
    ========================================================= */
 
 .welcome-card {
-  position: relative;
+  width: 100%;
 
-  min-height: 285px;
+  margin: 0;
+  padding: 0;
 
-  padding: 20px 18px 24px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: #ffffff;
-
-  background:
-    linear-gradient(
-      135deg,
-      #063d78 0%,
-      #07549c 48%,
-      #087bd1 100%
-    );
+  background: #ffffff;
 
   border-radius: 23px;
 
   overflow: hidden;
 
   box-shadow:
-    0 14px 30px rgba(30, 79, 129, 0.18);
+    0 10px 25px rgba(30, 79, 129, 0.15);
 }
 
 
 /* =========================================================
-   EFEITOS DE FUNDO
+   BANNER
    ========================================================= */
 
-.welcome-card::before {
-  content: "";
-
-  position: absolute;
-
-  width: 520px;
-  height: 230px;
-
-  left: -150px;
-  bottom: -145px;
-
-  background: rgba(32, 126, 213, 0.35);
-
-  border-radius: 50%;
-
-  transform: rotate(-12deg);
-}
-
-.welcome-card::after {
-  content: "";
-
-  position: absolute;
-
-  width: 300px;
-  height: 170px;
-
-  right: -220px;
-  bottom: -95px;
-
-  background: rgba(10, 91, 166, 0.45);
-
-  border-radius: 50%;
-}
-
-
-/* =========================================================
-   CONTEÚDO
-   ========================================================= */
-
-.welcome-content {
+.image-banner {
   position: relative;
-  z-index: 2;
 
   width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 245px;
 
-  text-align: center;
+  display: block;
+
+  overflow: hidden;
+
+  padding: 0;
 }
 
 
 /* =========================================================
-   BALANÇA — MENOR
+   IMAGEM DO BANNER
    ========================================================= */
 
-.justice-scale {
-  width: 82px;
-  height: 82px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 7px;
-
-  filter:
-    drop-shadow(
-      0 4px 4px rgba(0, 0, 0, 0.20)
-    );
-}
-
-.justice-scale svg {
+.banner-image {
   display: block;
 
   width: 100%;
   height: 100%;
-}
 
-
-/* =========================================================
-   PREVIDENCIÁRIO FÁCIL
-   ========================================================= */
-
-.mini-label {
-  display: block;
-
-  margin: 2px 0 10px;
-
-  font-size: 22px;
-  line-height: 1.1;
-
-  letter-spacing: 0.8px;
-
-  font-weight: 900;
-
-  color: #ffffff;
-}
-
-
-/* =========================================================
-   ENTENDA SEUS DIREITOS
-   ========================================================= */
-
-.welcome-card h2 {
   margin: 0;
 
-  font-size: 23px;
-  line-height: 1.18;
+  object-fit: cover;
 
-  letter-spacing: 0.2px;
-
-  font-weight: 800;
-
-  color: #ffffff;
+  object-position: center center;
 }
 
-
-/* =========================================================
-   LINHA AZUL CLARA
-   ========================================================= */
-
-.welcome-line {
-  width: 90px;
-  height: 5px;
-
-  margin-top: 17px;
-
-  border-radius: 10px;
-
-  background: #29a9ed;
-
-  box-shadow:
-    0 2px 7px rgba(0, 0, 0, 0.15);
-}
 
 /* =========================================================
    CABEÇALHO DAS SEÇÕES
@@ -367,6 +210,7 @@ button {
 
 .section-head {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
 
@@ -378,16 +222,20 @@ button {
 
   font-size: 19px;
 
+  line-height: 1.2;
+
   letter-spacing: -0.2px;
 }
 
 .section-head button {
   border: 0;
+
   background: none;
 
   color: #2867a7;
 
   font-size: 13px;
+
   font-weight: 800;
 }
 
@@ -396,35 +244,44 @@ button {
    ACESSO RÁPIDO
    ========================================================= */
 
-/* =========================================================
-   ACESSO RÁPIDO — TEXTO MAIOR
-   ========================================================= */
-
 .quick-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 13px;
 }
 
+
+/* =========================================================
+   CARDS:
+   APOSENTADORIA / BENEFÍCIOS / PESQUISA / MEU CNIS
+   ========================================================= */
+
 .feature-card {
   width: 100%;
+
   min-height: 145px;
 
-  border: 0;
-  border-radius: 17px;
-
   padding: 17px;
+
+  border: 0;
+
+  border-radius: 17px;
 
   text-align: left;
 
   background: #ffffff;
+
   color: #152238;
 
   box-shadow:
     0 4px 14px rgba(23, 43, 77, 0.07);
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: space-between;
 
   cursor: pointer;
@@ -439,18 +296,17 @@ button {
 
 .feature-card span {
   font-size: 27px;
+
+  line-height: 1;
 }
 
 
-/* Título:
-   Aposentadoria
-   Benefícios
-   Pesquisa
-   Meu CNIS
-*/
+/* Título dos cards */
 
 .feature-card b {
   display: block;
+
+  margin-top: 5px;
 
   font-size: 20px;
 
@@ -459,27 +315,25 @@ button {
   font-weight: 800;
 
   color: #152238;
-
-  margin-top: 5px;
 }
 
 
-/* Texto menor abaixo */
+/* Texto menor */
 
 .feature-card small {
   display: block;
+
+  margin-top: 5px;
 
   font-size: 14px;
 
   line-height: 1.35;
 
   color: #66758a;
-
-  margin-top: 5px;
 }
 
 
-/* Barras superiores */
+/* Barras coloridas */
 
 .blue {
   border-top: 4px solid #2d6fb0;
@@ -497,6 +351,7 @@ button {
   border-top: 4px solid #d9853a;
 }
 
+
 /* =========================================================
    LISTA DE FERRAMENTAS
    ========================================================= */
@@ -505,12 +360,15 @@ button {
   width: 100%;
 
   border: 0;
+
   border-radius: 16px;
 
   padding: 15px;
+
   margin-bottom: 10px;
 
   display: flex;
+
   align-items: center;
 
   gap: 13px;
@@ -518,6 +376,7 @@ button {
   text-align: left;
 
   background: #ffffff;
+
   color: #152238;
 
   box-shadow:
@@ -543,6 +402,7 @@ button {
   display: block;
 
   font-size: 14px;
+
   line-height: 1.3;
 }
 
@@ -554,6 +414,7 @@ button {
   margin-top: 4px;
 
   font-size: 12px;
+
   line-height: 1.35;
 
   color: #77859a;
@@ -573,6 +434,7 @@ button {
   border-radius: 13px;
 
   display: grid;
+
   place-items: center;
 
   font-size: 19px;
@@ -615,6 +477,7 @@ button {
   color: #48627d;
 
   font-size: 11px;
+
   line-height: 1.5;
 }
 
@@ -629,6 +492,7 @@ button {
 
 .page-title {
   display: flex;
+
   align-items: center;
 
   gap: 12px;
@@ -640,6 +504,7 @@ button {
   margin: 3px 0 0;
 
   font-size: 27px;
+
   line-height: 1.1;
 
   letter-spacing: -0.4px;
@@ -658,6 +523,7 @@ button {
   border-radius: 11px;
 
   font-size: 28px;
+
   line-height: 1;
 
   color: #31577f;
@@ -687,6 +553,7 @@ button {
   display: block;
 
   width: 45%;
+
   height: 100%;
 
   background: #2867a7;
@@ -778,6 +645,7 @@ select:focus {
   padding: 15px;
 
   border: 0;
+
   border-radius: 12px;
 
   background: #174b80;
@@ -785,6 +653,7 @@ select:focus {
   color: #ffffff;
 
   font-size: 15px;
+
   font-weight: 800;
 
   box-shadow:
@@ -823,6 +692,7 @@ select:focus {
 
 .result p {
   font-size: 13px;
+
   line-height: 1.5;
 }
 
@@ -838,13 +708,14 @@ select:focus {
 
 
 /* =========================================================
-   CAMPO DE PESQUISA
+   PESQUISA
    ========================================================= */
 
 .search-box {
   min-height: 47px;
 
   display: flex;
+
   align-items: center;
 
   padding: 0 12px;
@@ -852,6 +723,7 @@ select:focus {
   margin-bottom: 13px;
 
   border: 1px solid #dce4ed;
+
   border-radius: 13px;
 
   background: #ffffff;
@@ -895,6 +767,7 @@ select:focus {
 
 .benefit {
   display: flex;
+
   align-items: center;
 
   gap: 13px;
@@ -1065,6 +938,7 @@ select:focus {
 
 .external-card .ext-top {
   display: flex;
+
   align-items: center;
 
   gap: 13px;
@@ -1077,6 +951,7 @@ select:focus {
   height: 44px;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 13px;
@@ -1207,6 +1082,7 @@ select:focus {
   display: block;
 
   width: 100%;
+
   max-width: 260px;
 
   height: auto;
@@ -1228,6 +1104,7 @@ select:focus {
   transform: translateX(-50%);
 
   width: 100%;
+
   max-width: 480px;
 
   height: 76px;
@@ -1255,7 +1132,9 @@ select:focus {
   display: flex;
 
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
 
   gap: 4px;
@@ -1287,6 +1166,48 @@ select:focus {
 
 
 /* =========================================================
+   DIREITOS AUTORAIS
+   SOMENTE O SÍMBOLO ©
+   ========================================================= */
+
+.copyright {
+  position: fixed;
+
+  right: 10px;
+
+  bottom:
+    calc(
+      76px +
+      env(safe-area-inset-bottom) +
+      5px
+    );
+
+  z-index: 20;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  color: #59697d;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 2px 8px rgba(23, 43, 77, 0.08);
+}
+
+
+/* =========================================================
    EFEITOS DE TOQUE
    ========================================================= */
 
@@ -1300,11 +1221,75 @@ select:focus {
 
 
 /* =========================================================
-   TELAS MAIORES
+   CELULARES PEQUENOS
    ========================================================= */
 
+@media (max-width: 360px) {
+
+  .page {
+    padding-left: 15px;
+
+    padding-right: 15px;
+  }
+
+  .top {
+    padding-left: 15px;
+
+    padding-right: 15px;
+  }
+
+
+  /* Banner */
+
+  .image-banner {
+    height: 205px;
+  }
+
+
+  /* Cards */
+
+  .feature-card {
+    min-height: 138px;
+
+    padding: 14px;
+  }
+
+  .feature-card b {
+    font-size: 18px;
+  }
+
+  .feature-card small {
+    font-size: 13px;
+  }
+
+  .feature-card span {
+    font-size: 24px;
+  }
+
+
+  /* Direitos autorais */
+
+  .copyright {
+    right: 8px;
+
+    width: 27px;
+    height: 27px;
+
+    font-size: 15px;
+  }
+
+
+  /* Navegação */
+
+  .bottom-nav button {
+    font-size: 9px;
+  }
+
+}
+
+
 /* =========================================================
-   VERSÃO PARA NOTEBOOK / DESKTOP
+   NOTEBOOK / DESKTOP
    ========================================================= */
 
 @media (min-width: 700px) {
@@ -1313,9 +1298,14 @@ select:focus {
     padding: 30px 20px;
   }
 
+
+  /* Aplicativo mais largo */
+
   .app {
     width: 100%;
+
     max-width: 900px;
+
     min-height: 900px;
 
     margin: 0 auto;
@@ -1328,38 +1318,53 @@ select:focus {
       0 10px 45px rgba(21, 34, 56, 0.14);
   }
 
+
   /* Cabeçalho */
 
   .top {
     padding-left: 30px;
+
     padding-right: 30px;
   }
+
 
   /* Conteúdo */
 
   .page {
     padding-left: 30px;
+
     padding-right: 30px;
+
     padding-bottom: 105px;
 
     min-height: 800px;
   }
 
-  /* Card principal */
 
-  .welcome-card {
-    min-height: 285px;
+  /* Banner maior */
+
+  .image-banner {
+    height: 330px;
+
+    border-radius: 23px;
   }
+
+  .banner-image {
+    object-position: center center;
+  }
+
 
   /* Acesso rápido */
 
   .quick-grid {
     grid-template-columns: 1fr 1fr;
+
     gap: 16px;
   }
 
   .feature-card {
     min-height: 155px;
+
     padding: 20px;
   }
 
@@ -1371,23 +1376,48 @@ select:focus {
     font-size: 14px;
   }
 
-  /* Navegação inferior */
+
+  /* Navegação */
 
   .bottom-nav {
     position: sticky;
 
     left: auto;
+
     bottom: auto;
 
     transform: none;
 
     width: 100%;
+
     max-width: 900px;
 
     height: 76px;
 
     margin: -76px auto 0;
 
-    border-radius: 0 0 28px 28px;
+    border-radius:
+      0 0 28px 28px;
   }
+
+
+  /* Copyright */
+
+  .copyright {
+    right:
+      max(
+        20px,
+        calc(
+          (100vw - 900px) / 2 + 12px
+        )
+      );
+
+    bottom: 82px;
+
+    width: 30px;
+    height: 30px;
+
+    font-size: 17px;
+  }
+
 }
