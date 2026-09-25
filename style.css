@@ -16,7 +16,12 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #F3E7D3;
+  background: linear-gradient(
+    135deg,
+    #F6EBDD 0%,
+    #EEDDC7 50%,
+    #F4E6D2 100%
+  );
   color: #152536;
   font-family:
     -apple-system,
