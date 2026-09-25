@@ -1255,59 +1255,91 @@ select:focus {
    TELAS MAIORES
    ========================================================= */
 
+/* =========================================================
+   VERSÃO PARA NOTEBOOK / DESKTOP
+   ========================================================= */
+
 @media (min-width: 700px) {
 
   body {
-    padding: 30px 0;
+    padding: 30px 20px;
   }
 
   .app {
-    min-height: 812px;
+    width: 100%;
+    max-width: 900px;
+    min-height: 900px;
+
+    margin: 0 auto;
 
     border-radius: 28px;
 
     overflow: hidden;
+
+    box-shadow:
+      0 10px 45px rgba(21, 34, 56, 0.14);
   }
+
+  /* Cabeçalho */
+
+  .top {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  /* Conteúdo */
+
+  .page {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 105px;
+
+    min-height: 800px;
+  }
+
+  /* Card principal */
+
+  .welcome-card {
+    min-height: 285px;
+  }
+
+  /* Acesso rápido */
+
+  .quick-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .feature-card {
+    min-height: 155px;
+    padding: 20px;
+  }
+
+  .feature-card b {
+    font-size: 21px;
+  }
+
+  .feature-card small {
+    font-size: 14px;
+  }
+
+  /* Navegação inferior */
 
   .bottom-nav {
     position: sticky;
 
     left: auto;
-
-    margin: -76px auto 0;
+    bottom: auto;
 
     transform: none;
 
-    border-radius:
-      0 0 28px 28px;
-  }
+    width: 100%;
+    max-width: 900px;
 
-  .page {
-    min-height: 740px;
-  }
-}
+    height: 76px;
 
+    margin: -76px auto 0;
 
-/* =========================================================
-   CELULARES PEQUENOS
-   ========================================================= */
-
-@media (max-width: 360px) {
-
-  .feature-card {
-    min-height: 138px;
-    padding: 14px;
-  }
-
-  .feature-card b {
-    font-size: 18px;
-  }
-
-  .feature-card small {
-    font-size: 13px;
-  }
-
-  .feature-card span {
-    font-size: 24px;
+    border-radius: 0 0 28px 28px;
   }
 }
