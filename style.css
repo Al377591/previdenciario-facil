@@ -137,12 +137,17 @@ button {
    PREVIDENCIÁRIO FÁCIL
    ========================================================= */
 
+/* =========================================================
+   CARD PRINCIPAL — PREVIDENCIÁRIO FÁCIL
+   VERSÃO FINAL
+   ========================================================= */
+
 .welcome-card {
   position: relative;
 
-  min-height: 330px;
+  min-height: 285px;
 
-  padding: 24px 20px 27px;
+  padding: 20px 18px 24px;
 
   display: flex;
   justify-content: center;
@@ -163,12 +168,12 @@ button {
   overflow: hidden;
 
   box-shadow:
-    0 14px 30px rgba(30, 79, 129, 0.20);
+    0 14px 30px rgba(30, 79, 129, 0.18);
 }
 
 
 /* =========================================================
-   EFEITOS DECORATIVOS DO CARD
+   EFEITOS DE FUNDO
    ========================================================= */
 
 .welcome-card::before {
@@ -177,10 +182,10 @@ button {
   position: absolute;
 
   width: 520px;
-  height: 260px;
+  height: 230px;
 
   left: -150px;
-  bottom: -150px;
+  bottom: -145px;
 
   background: rgba(32, 126, 213, 0.35);
 
@@ -195,10 +200,10 @@ button {
   position: absolute;
 
   width: 500px;
-  height: 180px;
+  height: 170px;
 
   right: -220px;
-  bottom: -100px;
+  bottom: -95px;
 
   background: rgba(10, 91, 166, 0.45);
 
@@ -207,7 +212,7 @@ button {
 
 
 /* =========================================================
-   CONTEÚDO DO CARD PRINCIPAL
+   CONTEÚDO
    ========================================================= */
 
 .welcome-content {
@@ -225,22 +230,22 @@ button {
 
 
 /* =========================================================
-   BALANÇA DA JUSTIÇA
+   BALANÇA — MENOR
    ========================================================= */
 
 .justice-scale {
-  width: 105px;
-  height: 105px;
+  width: 82px;
+  height: 82px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 
   filter:
     drop-shadow(
-      0 5px 5px rgba(0, 0, 0, 0.22)
+      0 4px 4px rgba(0, 0, 0, 0.20)
     );
 }
 
@@ -253,18 +258,18 @@ button {
 
 
 /* =========================================================
-   NOME DO APLICATIVO
+   PREVIDENCIÁRIO FÁCIL
    ========================================================= */
 
 .mini-label {
   display: block;
 
-  margin: 2px 0 12px;
+  margin: 2px 0 10px;
 
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.1;
 
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 
   font-weight: 900;
 
@@ -273,14 +278,14 @@ button {
 
 
 /* =========================================================
-   TEXTO PRINCIPAL
+   ENTENDA SEUS DIREITOS
    ========================================================= */
 
 .welcome-card h2 {
   margin: 0;
 
-  font-size: 25px;
-  line-height: 1.2;
+  font-size: 23px;
+  line-height: 1.18;
 
   letter-spacing: 0.2px;
 
@@ -291,23 +296,22 @@ button {
 
 
 /* =========================================================
-   LINHA DECORATIVA
+   LINHA AZUL CLARA
    ========================================================= */
 
 .welcome-line {
-  width: 105px;
+  width: 90px;
   height: 5px;
 
-  margin-top: 20px;
+  margin-top: 17px;
 
   border-radius: 10px;
 
   background: #29a9ed;
 
   box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.15);
+    0 2px 7px rgba(0, 0, 0, 0.15);
 }
-
 
 /* =========================================================
    CABEÇALHO DAS SEÇÕES
