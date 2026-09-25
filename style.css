@@ -2,7 +2,55 @@
    PREVIDENCIÁRIO FÁCIL
    STYLE.CSS — VERSÃO COMPLETA
    ========================================================= */
+/* Símbolo de direitos autorais */
 
+.copyright {
+  position: fixed;
+  right: 10px;
+  bottom: calc(76px + env(safe-area-inset-bottom) + 5px);
+
+  z-index: 20;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #59697d;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 2px 8px rgba(23, 43, 77, 0.08);
+}
+
+
+/* Notebook / desktop */
+
+@media (min-width: 700px) {
+
+  .copyright {
+    right: max(
+      20px,
+      calc((100vw - 900px) / 2 + 12px)
+    );
+
+    bottom: 82px;
+
+    width: 30px;
+    height: 30px;
+
+    font-size: 17px;
+  }
+
+}
 
 /* =========================================================
    CONFIGURAÇÃO GERAL
