@@ -348,17 +348,19 @@ button {
    ACESSO RÁPIDO
    ========================================================= */
 
+/* =========================================================
+   ACESSO RÁPIDO — TEXTO MAIOR
+   ========================================================= */
+
 .quick-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 13px;
 }
 
 .feature-card {
   width: 100%;
-  min-height: 130px;
+  min-height: 145px;
 
   border: 0;
   border-radius: 17px;
@@ -368,7 +370,6 @@ button {
   text-align: left;
 
   background: #ffffff;
-
   color: #152238;
 
   box-shadow:
@@ -385,19 +386,52 @@ button {
     box-shadow 0.12s ease;
 }
 
+
+/* Ícone */
+
 .feature-card span {
-  font-size: 26px;
+  font-size: 27px;
 }
+
+
+/* Título:
+   Aposentadoria
+   Benefícios
+   Pesquisa
+   Meu CNIS
+*/
 
 .feature-card b {
-  font-size: 15px;
-  line-height: 1.25;
+  display: block;
+
+  font-size: 20px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  color: #152238;
+
+  margin-top: 5px;
 }
 
+
+/* Texto menor abaixo */
+
 .feature-card small {
-  font-size: 12px;
-  color: #718096;
+  display: block;
+
+  font-size: 14px;
+
+  line-height: 1.35;
+
+  color: #66758a;
+
+  margin-top: 5px;
 }
+
+
+/* Barras superiores */
 
 .blue {
   border-top: 4px solid #2d6fb0;
@@ -414,7 +448,6 @@ button {
 .orange {
   border-top: 4px solid #d9853a;
 }
-
 
 /* =========================================================
    LISTA DE FERRAMENTAS
@@ -1261,25 +1294,20 @@ select:focus {
 
 @media (max-width: 360px) {
 
-  .welcome-card {
-    min-height: 270px;
-    padding: 18px 14px 21px;
+  .feature-card {
+    min-height: 138px;
+    padding: 14px;
   }
 
-  .justice-scale {
-    width: 72px;
-    height: 72px;
+  .feature-card b {
+    font-size: 18px;
   }
 
-  .mini-label {
-    font-size: 20px;
+  .feature-card small {
+    font-size: 13px;
   }
 
-  .welcome-card h2 {
-    font-size: 21px;
-  }
-
-  .welcome-line {
-    width: 80px;
+  .feature-card span {
+    font-size: 24px;
   }
 }
