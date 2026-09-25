@@ -43,6 +43,7 @@ select {
 }
 
 button,
+
 a {
   -webkit-tap-highlight-color: transparent;
 }
@@ -60,7 +61,7 @@ button {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
-  background: #EAD8BE;
+  background: #00ffff;
   ...
 }
 
