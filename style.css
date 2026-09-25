@@ -59,17 +59,9 @@ button {
 .app {
   width: 100%;
   max-width: 480px;
-
-  min-height: 100vh;
-
   margin: 0 auto;
-
-  background: #f8fafc;
-
-  box-shadow:
-    0 0 35px rgba(21, 34, 56, 0.10);
-
-  overflow: hidden;
+  background: #ffffff;
+  ...
 }
 
 
