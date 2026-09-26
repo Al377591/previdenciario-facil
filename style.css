@@ -1775,3 +1775,12 @@ select:focus {
   }
 
 }
+/* =========================================
+   FONTE GERAL DO APLICATIVO — VERDANA
+   ========================================= */
+
+html,
+body,
+body * {
+  font-family: Verdana, Geneva, sans-serif !important;
+}
