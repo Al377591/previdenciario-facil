@@ -1749,13 +1749,13 @@ select:focus {
    ========================================= */
 
 /* =========================================
-   BANNER — AJUSTE FINAL PARA COMPUTADOR
-   ========================================
+   BANNER — AJUSTE SOMENTE NO PC
+   ========================================= */
 
 @media (min-width: 700px) {
 
   .image-banner {
-    height: 265px !important;
+    height: 300px !important;
     aspect-ratio: auto !important;
     overflow: hidden;
     border-radius: 23px;
@@ -1763,13 +1763,10 @@ select:focus {
 
   .banner-image {
     width: 100%;
-    height: 265px !important;
+    height: 300px !important;
 
     object-fit: cover;
-
-    /* desloca o enquadramento um pouco para baixo,
-       mantendo o folheto visível */
-    object-position: center 68%;
+    object-position: center 75%;
 
     filter: none;
   }
