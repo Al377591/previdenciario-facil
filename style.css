@@ -1702,3 +1702,44 @@ select:focus {
   }
 
 }
+/* =========================================
+   PREV-FÁCIL — BANNER COM MAIS NITIDEZ
+   ========================================= */
+
+@media (max-width: 699px) {
+
+  .image-banner {
+    height: 190px !important;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .banner-image {
+    display: block;
+    width: 100%;
+    height: 190px !important;
+    object-fit: cover;
+    object-position: center center;
+    filter: none;
+    image-rendering: auto;
+  }
+}
+
+@media (min-width: 700px) {
+
+  .image-banner {
+    height: 290px !important;
+    border-radius: 23px;
+    overflow: hidden;
+  }
+
+  .banner-image {
+    display: block;
+    width: 100%;
+    height: 290px !important;
+    object-fit: cover;
+    object-position: center center;
+    filter: none;
+    image-rendering: auto;
+  }
+}
