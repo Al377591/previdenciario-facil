@@ -1743,3 +1743,26 @@ select:focus {
     image-rendering: auto;
   }
 }
+/* =========================================
+   CORREÇÃO DO BANNER NO COMPUTADOR
+   Mantém toda a altura original da foto
+   ========================================= */
+
+@media (min-width: 700px) {
+
+  .image-banner {
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 23px;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center center;
+    filter: none;
+  }
+
+}
