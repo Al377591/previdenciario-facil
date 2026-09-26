@@ -1748,20 +1748,29 @@ select:focus {
    Mantém toda a altura original da foto
    ========================================= */
 
+/* =========================================
+   BANNER — AJUSTE FINAL PARA COMPUTADOR
+   ========================================
+
 @media (min-width: 700px) {
 
   .image-banner {
-    height: auto !important;
-    aspect-ratio: 16 / 9;
+    height: 265px !important;
+    aspect-ratio: auto !important;
     overflow: hidden;
     border-radius: 23px;
   }
 
   .banner-image {
     width: 100%;
-    height: 100% !important;
+    height: 265px !important;
+
     object-fit: cover;
-    object-position: center center;
+
+    /* desloca o enquadramento um pouco para baixo,
+       mantendo o folheto visível */
+    object-position: center 68%;
+
     filter: none;
   }
 
