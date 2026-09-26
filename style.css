@@ -13,7 +13,6 @@
 }
 
 html,
-body {
   margin: 0;
   padding: 0;
 
@@ -74,16 +73,7 @@ button {
    ========================================================= */
 
 .top {
-  min-height: 88px;
-
-  padding: 18px 20px 14px;
-
-  display: flex;
-
-  justify-content: space-between;
-  align-items: center;
-
-  background: #f8fafc;
+  display: none;
 }
 
 .eyebrow,
@@ -1290,11 +1280,6 @@ select:focus {
 @media (max-width: 360px) {
 
   .page {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .top {
     padding-left: 15px;
     padding-right: 15px;
   }
