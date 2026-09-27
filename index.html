@@ -4,188 +4,94 @@
 <head>
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="theme-color"
-    content="#eef5fb"
-  >
+  <meta name="theme-color" content="#f8fafc">
 
   <title>Previdenciário Fácil</title>
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <div class="app">
 
-    <!-- =====================================================
-         CABEÇALHO
-         ===================================================== -->
-
-    <header class="top">
-
-      <div class="brand-mini">
-        <span class="brand-icon">⚖️</span>
-
-        <div>
-          <span class="brand-label">PREVIDÊNCIA</span>
-          <strong>PREV-FÁCIL</strong>
-        </div>
-      </div>
-
-    </header>
-
-
-    <!-- =====================================================
-         CONTEÚDO
-         ===================================================== -->
+    <header class="top"></header>
 
     <main>
 
-
-      <!-- ===================================================
-           INÍCIO
-           =================================================== -->
-
-      <section
-        id="inicio"
-        class="page active"
-      >
-
-        <!-- BANNER -->
+      <!-- INÍCIO -->
+      <section id="inicio" class="page active">
 
         <div class="welcome-card image-banner">
-
           <img
             src="./banner-direitos_def.png"
-            alt="Mulher negra lendo seus direitos"
+            alt="Seus direitos"
             class="banner-image"
           >
-
         </div>
 
+        <div class="section-head">
 
-        <!-- MARCA -->
+          <h1 class="app-title">
+            <span class="justice-scale">⚖️</span>
+            <span>PREV-FÁCIL</span>
+          </h1>
 
-        <div class="section-head home-head">
-
-          <div>
-
-            <h1 class="app-title">
-
-              <span class="justice-scale">⚖️</span>
-
-              <span>PREV-FÁCIL</span>
-
-            </h1>
-
-            <p>
-              Seu acesso à Previdência ficou mais simples.
-            </p>
-
-          </div>
+          <h3>
+            Seu acesso a Previdência ficou mais simples
+          </h3>
 
         </div>
-
-
-        <!-- ACESSO RÁPIDO -->
 
         <div class="quick-grid">
-
-
-          <!-- APOSENTADORIA -->
 
           <button
             class="feature-card blue"
             onclick="showPage('aposentadoria')"
           >
-
             <span>🧮</span>
 
-            <b>
-              Aposentadoria
-            </b>
+            <b>Aposentadoria</b>
 
-            <small>
-              Consulte regras e faça uma estimativa
-            </small>
-
-            <em>→</em>
-
+            <small>Cálculo</small>
           </button>
 
-
-          <!-- BENEFÍCIOS -->
 
           <button
             class="feature-card green"
             onclick="showPage('beneficios')"
           >
-
             <span>📋</span>
 
-            <b>
-              Tipos de Benefícios
-            </b>
+            <b>Tipos de Benefícios</b>
 
-            <small>
-              Conheça os principais benefícios do INSS
-            </small>
-
-            <em>→</em>
-
+            <small>Consultar</small>
           </button>
 
-
-          <!-- PESQUISA -->
 
           <button
             class="feature-card purple"
             onclick="showPage('pesquisa')"
           >
-
             <span>🔎</span>
 
-            <b>
-              Fontes Oficiais
-            </b>
+            <b>Fontes Oficiais</b>
 
-            <small>
-              Consulte informações oficiais e legislação
-            </small>
-
-            <em>→</em>
-
+            <small>Pesquisa</small>
           </button>
 
-
-          <!-- CNIS -->
 
           <button
             class="feature-card orange"
             onclick="showPage('cnis')"
           >
+            <span>📑</span>
 
-            <span>📊</span>
+            <b>Meu CNIS</b>
 
-            <b>
-              Meu CNIS
-            </b>
-
-            <small>
-              Organize seus períodos de contribuição
-            </small>
-
-            <em>→</em>
-
+            <small>Organizar períodos</small>
           </button>
 
         </div>
@@ -194,11 +100,7 @@
         <!-- FERRAMENTAS -->
 
         <div class="section-head">
-
-          <h3>
-            Ferramentas
-          </h3>
-
+          <h3>Ferramentas</h3>
         </div>
 
 
@@ -212,15 +114,11 @@
           </span>
 
           <div>
-
-            <b>
-              Serviços do INSS
-            </b>
+            <b>Serviços do INSS</b>
 
             <small>
-              Acesse os serviços e canais oficiais do INSS.
+              Acesse os serviços oficiais
             </small>
-
           </div>
 
           <i>›</i>
@@ -238,15 +136,11 @@
           </span>
 
           <div>
-
-            <b>
-              Organizar períodos do CNIS
-            </b>
+            <b>Organizar períodos do CNIS</b>
 
             <small>
-              Cadastre e organize seus períodos de contribuição.
+              Registre seus períodos de trabalho
             </small>
-
           </div>
 
           <i>›</i>
@@ -264,15 +158,11 @@
           </span>
 
           <div>
-
-            <b>
-              QR Code do aplicativo
-            </b>
+            <b>QR Code do aplicativo</b>
 
             <small>
-              Compartilhe e acesse o PREV-FÁCIL pelo celular.
+              Acesse o Previdenciário Fácil pelo celular
             </small>
-
           </div>
 
           <i>›</i>
@@ -286,6 +176,7 @@
 
           <span>
             <b>Importante:</b>
+
             os resultados são estimativos e não substituem
             a análise jurídica ou a consulta ao CNIS oficial.
           </span>
@@ -295,15 +186,9 @@
       </section>
 
 
+      <!-- APOSENTADORIA -->
 
-      <!-- ===================================================
-           APOSENTADORIA
-           =================================================== -->
-
-      <section
-        id="aposentadoria"
-        class="page"
-      >
+      <section id="aposentadoria" class="page">
 
         <div class="page-title">
 
@@ -315,13 +200,9 @@
           </button>
 
           <div>
-
             <span>CALCULADORA</span>
 
-            <h2>
-              Aposentadoria
-            </h2>
-
+            <h2>Aposentadoria</h2>
           </div>
 
         </div>
@@ -334,25 +215,20 @@
 
         <div class="form-card">
 
-          <h3>
-            Informe seus dados
-          </h3>
+          <h3>Informe seus dados</h3>
 
 
           <label>
-
             Data de nascimento
 
             <input
               type="date"
               id="nascimento"
             >
-
           </label>
 
 
           <label>
-
             Sexo
 
             <select id="sexo">
@@ -370,12 +246,10 @@
               </option>
 
             </select>
-
           </label>
 
 
           <label>
-
             Tempo de contribuição
 
             <input
@@ -385,12 +259,10 @@
               step="0.1"
               placeholder="Ex.: 25"
             >
-
           </label>
 
 
           <label>
-
             Atividade especial
 
             <select id="especial">
@@ -404,7 +276,6 @@
               </option>
 
             </select>
-
           </label>
 
 
@@ -421,20 +292,16 @@
         <div
           id="resultado"
           class="result hidden"
-        ></div>
+        >
+          <!-- Resultado preenchido pelo app.js -->
+        </div>
 
       </section>
 
 
+      <!-- BENEFÍCIOS -->
 
-      <!-- ===================================================
-           BENEFÍCIOS
-           =================================================== -->
-
-      <section
-        id="beneficios"
-        class="page"
-      >
+      <section id="beneficios" class="page">
 
         <div class="page-title">
 
@@ -446,13 +313,9 @@
           </button>
 
           <div>
-
             <span>INSS</span>
 
-            <h2>
-              Benefícios
-            </h2>
-
+            <h2>Benefícios</h2>
           </div>
 
         </div>
@@ -472,7 +335,7 @@
 
         <div class="search-box">
 
-          <span>🔎</span>
+          🔎
 
           <input
             type="search"
@@ -488,7 +351,6 @@
           class="stack"
         >
 
-
           <button
             class="benefit clickable"
             onclick="abrirExterno('https://www.gov.br/inss/pt-br/direitos-e-deveres/aposentadorias')"
@@ -497,15 +359,11 @@
             <span>👴</span>
 
             <div>
-
-              <b>
-                Aposentadorias
-              </b>
+              <b>Aposentadorias</b>
 
               <small>
                 Consulte os tipos de aposentadoria
               </small>
-
             </div>
 
           </button>
@@ -519,15 +377,11 @@
             <span>🩺</span>
 
             <div>
-
-              <b>
-                Incapacidade temporária
-              </b>
+              <b>Incapacidade temporária</b>
 
               <small>
                 Auxílio por incapacidade temporária
               </small>
-
             </div>
 
           </button>
@@ -541,15 +395,11 @@
             <span>♿</span>
 
             <div>
-
-              <b>
-                Incapacidade permanente
-              </b>
+              <b>Incapacidade permanente</b>
 
               <small>
                 Aposentadoria por incapacidade permanente
               </small>
-
             </div>
 
           </button>
@@ -563,15 +413,11 @@
             <span>⚕️</span>
 
             <div>
-
-              <b>
-                Auxílio-acidente
-              </b>
+              <b>Auxílio-acidente</b>
 
               <small>
                 Benefício relacionado a acidente
               </small>
-
             </div>
 
           </button>
@@ -585,15 +431,11 @@
             <span>👨‍👩‍👧</span>
 
             <div>
-
-              <b>
-                Pensão por morte
-              </b>
+              <b>Pensão por morte</b>
 
               <small>
                 Informações sobre pensão por morte
               </small>
-
             </div>
 
           </button>
@@ -607,15 +449,11 @@
             <span>🤝</span>
 
             <div>
-
-              <b>
-                BPC / LOAS
-              </b>
+              <b>BPC / LOAS</b>
 
               <small>
                 Benefício assistencial
               </small>
-
             </div>
 
           </button>
@@ -625,15 +463,9 @@
       </section>
 
 
+      <!-- PESQUISA -->
 
-      <!-- ===================================================
-           PESQUISA
-           =================================================== -->
-
-      <section
-        id="pesquisa"
-        class="page"
-      >
+      <section id="pesquisa" class="page">
 
         <div class="page-title">
 
@@ -645,13 +477,9 @@
           </button>
 
           <div>
-
             <span>LEGISLAÇÃO</span>
 
-            <h2>
-              Pesquisa
-            </h2>
-
+            <h2>Pesquisa</h2>
           </div>
 
         </div>
@@ -659,9 +487,7 @@
 
         <div class="source-card">
 
-          <b>
-            Lei nº 8.213/91
-          </b>
+          <b>Lei nº 8.213/91</b>
 
           <small>
             Planos de Benefícios da Previdência Social.
@@ -680,9 +506,7 @@
 
         <div class="source-card">
 
-          <b>
-            Lei nº 8.212/91
-          </b>
+          <b>Lei nº 8.212/91</b>
 
           <small>
             Organização da Seguridade Social e custeio.
@@ -701,9 +525,7 @@
 
         <div class="source-card">
 
-          <b>
-            Constituição Federal
-          </b>
+          <b>Constituição Federal</b>
 
           <small>
             Regras constitucionais relacionadas à Previdência.
@@ -722,13 +544,11 @@
 
         <div class="source-card">
 
-          <b>
-            Portal do INSS
-          </b>
+          <b>Portal do INSS</b>
 
           <small>
-            Informações e serviços oficiais do Instituto
-            Nacional do Seguro Social.
+            Informações e serviços oficiais do Instituto Nacional
+            do Seguro Social.
           </small>
 
           <a
@@ -744,15 +564,9 @@
       </section>
 
 
+      <!-- CNIS -->
 
-      <!-- ===================================================
-           CNIS
-           =================================================== -->
-
-      <section
-        id="cnis"
-        class="page"
-      >
+      <section id="cnis" class="page">
 
         <div class="page-title">
 
@@ -764,13 +578,9 @@
           </button>
 
           <div>
-
             <span>HISTÓRICO</span>
 
-            <h2>
-              Meu CNIS
-            </h2>
-
+            <h2>Meu CNIS</h2>
           </div>
 
         </div>
@@ -778,37 +588,30 @@
 
         <div class="form-card">
 
-          <h3>
-            Adicionar período
-          </h3>
+          <h3>Adicionar período</h3>
 
 
           <label>
-
             Data inicial
 
             <input
               type="date"
               id="ini"
             >
-
           </label>
 
 
           <label>
-
             Data final
 
             <input
               type="date"
               id="fim"
             >
-
           </label>
 
 
           <label>
-
             Empresa / empregador
 
             <input
@@ -816,12 +619,10 @@
               id="empresa"
               placeholder="Nome da empresa"
             >
-
           </label>
 
 
           <label>
-
             Observações
 
             <input
@@ -829,7 +630,6 @@
               id="obs"
               placeholder="Opcional"
             >
-
           </label>
 
 
@@ -846,32 +646,24 @@
         <div
           id="tabelaCnis"
           class="stack"
-        ></div>
+        >
+          <!-- Períodos adicionados pelo app.js -->
+        </div>
 
 
         <div
           id="totalCnis"
           class="summary"
         >
-
-          <b>
-            Total de tempo
-          </b>
-
+          <b>Total de tempo</b>
         </div>
 
       </section>
 
 
+      <!-- INSS -->
 
-      <!-- ===================================================
-           INSS
-           =================================================== -->
-
-      <section
-        id="inss"
-        class="page"
-      >
+      <section id="inss" class="page">
 
         <div class="page-title">
 
@@ -883,13 +675,9 @@
           </button>
 
           <div>
-
             <span>SERVIÇOS</span>
 
-            <h2>
-              INSS
-            </h2>
-
+            <h2>INSS</h2>
           </div>
 
         </div>
@@ -904,15 +692,11 @@
             </div>
 
             <div>
-
-              <b>
-                Meu INSS
-              </b>
+              <b>Meu INSS</b>
 
               <small>
                 Acesse seus serviços e benefícios.
               </small>
-
             </div>
 
           </div>
@@ -923,7 +707,7 @@
             target="_blank"
             rel="noopener"
           >
-            Abrir
+            Abrir Meu INSS
           </a>
 
         </div>
@@ -938,7 +722,6 @@
             </div>
 
             <div>
-
               <b>
                 Benefício por incapacidade temporária
               </b>
@@ -946,7 +729,6 @@
               <small>
                 Solicitação oficial do benefício.
               </small>
-
             </div>
 
           </div>
@@ -957,7 +739,7 @@
             target="_blank"
             rel="noopener"
           >
-            Acessar
+            Acessar serviço
           </a>
 
         </div>
@@ -972,7 +754,6 @@
             </div>
 
             <div>
-
               <b>
                 Aposentadoria por incapacidade permanente
               </b>
@@ -980,7 +761,6 @@
               <small>
                 Informações oficiais sobre o benefício.
               </small>
-
             </div>
 
           </div>
@@ -1006,15 +786,11 @@
             </div>
 
             <div>
-
-              <b>
-                Extrato CNIS
-              </b>
+              <b>Extrato CNIS</b>
 
               <small>
                 Consulte seu histórico previdenciário.
               </small>
-
             </div>
 
           </div>
@@ -1025,7 +801,7 @@
             target="_blank"
             rel="noopener"
           >
-            Acessar
+            Acessar CNIS
           </a>
 
         </div>
@@ -1040,15 +816,11 @@
             </div>
 
             <div>
-
-              <b>
-                Todos os serviços do INSS
-              </b>
+              <b>Todos os serviços do INSS</b>
 
               <small>
                 Consulte os serviços disponíveis.
               </small>
-
             </div>
 
           </div>
@@ -1074,15 +846,11 @@
             </div>
 
             <div>
-
-              <b>
-                Central 135
-              </b>
+              <b>Central 135</b>
 
               <small>
                 Central de atendimento do INSS.
               </small>
-
             </div>
 
           </div>
@@ -1091,7 +859,7 @@
             class="ext-btn"
             href="tel:135"
           >
-            Ligar
+            Ligar 135
           </a>
 
         </div>
@@ -1104,9 +872,7 @@
             alt="QR Code para o portal oficial do INSS"
           >
 
-          <b>
-            QR Code — Portal do INSS
-          </b>
+          <b>QR Code — Portal do INSS</b>
 
           <small>
             Aponte a câmera do celular para abrir
@@ -1118,15 +884,9 @@
       </section>
 
 
+      <!-- GUIA -->
 
-      <!-- ===================================================
-           GUIA
-           =================================================== -->
-
-      <section
-        id="guia"
-        class="page"
-      >
+      <section id="guia" class="page">
 
         <div class="page-title">
 
@@ -1138,13 +898,9 @@
           </button>
 
           <div>
-
             <span>ORIENTAÇÃO</span>
 
-            <h2>
-              Guia
-            </h2>
-
+            <h2>Guia</h2>
           </div>
 
         </div>
@@ -1152,9 +908,7 @@
 
         <div class="guide-card">
 
-          <b>
-            1. Comece pelo CNIS
-          </b>
+          <b>1. Comece pelo CNIS</b>
 
           <p>
             Confira seus vínculos, contribuições e períodos
@@ -1166,9 +920,7 @@
 
         <div class="guide-card">
 
-          <b>
-            2. Reúna documentos
-          </b>
+          <b>2. Reúna documentos</b>
 
           <p>
             Separe documentos pessoais, carteira de trabalho,
@@ -1181,9 +933,7 @@
 
         <div class="guide-card">
 
-          <b>
-            3. Compare as regras
-          </b>
+          <b>3. Compare as regras</b>
 
           <p>
             Verifique qual regra previdenciária pode se aplicar
@@ -1195,9 +945,7 @@
 
         <div class="guide-card">
 
-          <b>
-            4. Confira a legislação vigente
-          </b>
+          <b>4. Confira a legislação vigente</b>
 
           <p>
             Utilize sempre fontes oficiais para conferir
@@ -1209,9 +957,7 @@
 
         <div class="guide-card">
 
-          <b>
-            5. Links externos
-          </b>
+          <b>5. Links externos</b>
 
           <p>
             O aplicativo direciona para páginas oficiais
@@ -1236,15 +982,9 @@
       </section>
 
 
+      <!-- QR CODE -->
 
-      <!-- ===================================================
-           QR CODE
-           =================================================== -->
-
-      <section
-        id="qrcode"
-        class="page"
-      >
+      <section id="qrcode" class="page">
 
         <div class="page-title">
 
@@ -1254,16 +994,6 @@
           >
             ‹
           </button>
-
-          <div>
-
-            <span>APLICATIVO</span>
-
-            <h2>
-              QR Code
-            </h2>
-
-          </div>
 
         </div>
 
@@ -1309,10 +1039,7 @@
     </main>
 
 
-
-    <!-- =====================================================
-         NAVEGAÇÃO INFERIOR
-         ===================================================== -->
+    <!-- NAVEGAÇÃO -->
 
     <nav class="bottom-nav">
 
@@ -1320,74 +1047,44 @@
         onclick="showPage('inicio')"
         class="active"
       >
-
         <span>⌂</span>
-
-        <small>
-          Início
-        </small>
-
+        Início
       </button>
 
 
       <button
         onclick="showPage('aposentadoria')"
       >
-
         <span>🧮</span>
-
-        <small>
-          Aposentadoria
-        </small>
-
+        Calcular
       </button>
 
 
       <button
-        onclick="showPage('beneficios')"
+        onclick="showPage('pesquisa')"
       >
-
-        <span>📋</span>
-
-        <small>
-          Benefícios
-        </small>
-
+        <span>🔎</span>
+        Pesquisa
       </button>
 
 
       <button
         onclick="showPage('cnis')"
       >
-
-        <span>📊</span>
-
-        <small>
-          CNIS
-        </small>
-
+        <span>📑</span>
+        CNIS
       </button>
 
 
       <button
-        onclick="showPage('inss')"
+        onclick="showPage('qrcode')"
       >
-
-        <span>🏛️</span>
-
-        <small>
-          INSS
-        </small>
-
+        <span>▦</span>
+        QR Code
       </button>
 
     </nav>
 
-
-
-    <!-- =====================================================
-         COPYRIGHT
-         ===================================================== -->
 
     <div class="copyright">
       ©
@@ -1395,10 +1092,6 @@
 
   </div>
 
-
-  <!-- =======================================================
-       JAVASCRIPT
-       ======================================================= -->
 
   <script src="app.js"></script>
 
