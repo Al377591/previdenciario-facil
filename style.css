@@ -196,30 +196,6 @@ button {
   will-change: transform;
 }
 
-@keyframes movimentoFoto {
-
-  0% {
-    transform: scale(1);
-  }
-
-  25% {
-    transform: scale(1.015) translateX(2px);
-  }
-
-  50% {
-    transform: scale(1.025) translateX(-2px);
-  }
-
-  75% {
-    transform: scale(1.015) translateX(1px);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-
-}
-
 
 /* =========================================================
    CABEÇALHO DAS SEÇÕES
