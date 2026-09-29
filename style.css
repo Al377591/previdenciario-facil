@@ -1809,81 +1809,66 @@ body * {
   }
 }
 /* =========================================================
-   PREV-FÁCIL — CORREÇÃO DEFINITIVA DO BANNER
+   PREV-FÁCIL — BANNER FINAL
    ========================================================= */
 
-/* Moldura azul */
 .image-banner {
-  width: 100% !important;
-  height: auto !important;
-  padding: 8px !important;
-
   background: #87CEEB !important;
-
+  padding: 8px !important;
   border-radius: 23px !important;
   overflow: hidden !important;
-
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
-/* Imagem sem distorção e sem corte */
-.image-banner .banner-image {
+.banner-image {
   display: block !important;
-
   width: 100% !important;
-  height: auto !important;
+  height: 100% !important;
+
+  object-fit: fill !important;
+  object-position: center center !important;
 
   margin: 0 !important;
 
-  object-fit: contain !important;
-  object-position: center center !important;
-
   border-radius: 16px;
 
-  /* elimina o movimento que pode causar desfoque */
+  /* sem movimento */
   animation: none !important;
   transform: none !important;
   will-change: auto !important;
-
-  filter: none !important;
-  image-rendering: auto;
 }
 
 
-/* =========================================================
-   CELULAR
-   ========================================================= */
-
+/* CELULAR */
 @media (max-width: 699px) {
 
   .image-banner {
+    height: 190px !important;
     padding: 7px !important;
     border-radius: 20px !important;
   }
 
-  .image-banner .banner-image {
+  .banner-image {
     width: 100% !important;
-    height: auto !important;
+    height: 176px !important;
     border-radius: 14px !important;
   }
 
 }
 
 
-/* =========================================================
-   COMPUTADOR
-   ========================================================= */
-
+/* COMPUTADOR */
 @media (min-width: 700px) {
 
   .image-banner {
+    height: 300px !important;
     padding: 9px !important;
     border-radius: 23px !important;
   }
 
-  .image-banner .banner-image {
+  .banner-image {
     width: 100% !important;
-    height: auto !important;
+    height: 282px !important;
     border-radius: 16px !important;
   }
 
