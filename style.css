@@ -1760,3 +1760,51 @@ body,
 body * {
   font-family: Verdana, Geneva, sans-serif !important;
 }
+/* =========================================
+   PREV-FÁCIL — MOLDURA AZUL DO BANNER
+   ========================================= */
+
+.image-banner {
+  background: #87CEEB !important;
+  padding: 8px !important;
+  border-radius: 23px !important;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.image-banner .banner-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* CELULAR */
+@media (max-width: 699px) {
+
+  .image-banner {
+    padding: 7px !important;
+    border-radius: 20px !important;
+  }
+
+  .image-banner .banner-image {
+    height: 176px !important;
+    border-radius: 14px;
+  }
+}
+
+/* COMPUTADOR */
+@media (min-width: 700px) {
+
+  .image-banner {
+    padding: 9px !important;
+    border-radius: 23px !important;
+  }
+
+  .image-banner .banner-image {
+    height: 282px !important;
+    border-radius: 16px;
+  }
+}
