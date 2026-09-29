@@ -1,1121 +1,1499 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
 
-html,
-body {
-  margin: 0;
-  padding: 0;
+  <meta charset="UTF-8">
 
-  min-height: 100%;
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  background: linear-gradient(
-    135deg,
-    #F6EBDD 0%,
-    #EEDDC7 50%,
-    #F4E6D2 100%
-  );
+  <meta
+    name="theme-color"
+    content="#f8fafc"
+  >
 
-  color: #000000;
+  <title>Previdenciário Fácil</title>
 
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Arial,
-    sans-serif;
-}
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
 
-body {
-  min-height: 100vh;
-}
+</head>
 
-button,
-input,
-select {
-  font-family: inherit;
-}
 
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
-}
+<body>
 
-button {
-  cursor: pointer;
-}
+  <div class="app">
 
 
-/* =========================================================
-   APLICATIVO
-   ========================================================= */
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
 
-.app {
-  width: 100%;
-  max-width: 480px;
+    <header class="top">
 
-  margin: 0 auto;
+    </header>
 
-  background: #87CEEB;
 
-  border-radius: 28px;
 
-  box-shadow:
-    0 2px 6px rgba(20, 35, 50, 0.10),
-    0 10px 30px rgba(20, 35, 50, 0.14),
-    0 22px 55px rgba(20, 35, 50, 0.10);
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+         ===================================================== -->
 
-  overflow: hidden;
-}
+    <main>
 
 
-/* =========================================================
-   TOPO
-   ========================================================= */
+      <!-- ===================================================
+           INÍCIO
+           =================================================== -->
 
-.top {
-  display: none;
-}
+      <section
+        id="inicio"
+        class="page active"
+      >
 
-.eyebrow,
-.page-title span {
-  font-size: 11px;
 
-  letter-spacing: 1.3px;
+        <!-- IMAGEM PRINCIPAL -->
 
-  font-weight: 800;
+        <div class="welcome-card image-banner">
 
-  color: #000000;
-}
+          <img
+            src="./banner_prev-facil.png"
+            alt="Seus direitos"
+            class="banner-image"
+          >
 
-.top h1 {
-  margin: 5px 0 0;
+          <div class="section-head">
 
-  font-size: 27px;
+          </div>
 
-  line-height: 1.1;
 
-  letter-spacing: -0.4px;
-}
 
-.icon-btn {
-  width: 40px;
-  height: 40px;
+          <!-- ACESSO RÁPIDO -->
 
-  border-radius: 50%;
+          <h1 class="app-title">
+            <span class="justice-scale">⚖️</span>
+            <span>PREV-FÁCIL</span>
+          </h1>
 
-  border: 1px solid #d8e0ea;
+          <h3>
+            Seu acesso a Previdência ficou mais simples
+          </h3>
 
-  background: #ffffff;
+        </div>
 
-  color: #244c7c;
 
-  font-size: 17px;
 
-  font-weight: 800;
+        <div class="quick-grid">
 
-  box-shadow:
-    0 3px 10px rgba(23, 43, 77, 0.06);
-}
 
+          <!-- APOSENTADORIA -->
 
-/* =========================================================
-   PÁGINAS
-   ========================================================= */
+          <button
+            class="feature-card blue"
+            onclick="showPage('aposentadoria')"
+          >
 
-.page {
-  display: none;
+            <span>🧮</span>
 
-  padding: 0 20px 105px;
-}
+            <b>
+              Cálculo de Aposentadoria
+            </b>
 
-.page.active {
-  display: block;
-}
+            <small>
+              Calcular regras
+            </small>
 
+          </button>
 
-/* =========================================================
-   IMAGEM PRINCIPAL
-   ========================================================= */
 
-.welcome-card {
-  width: 100%;
 
-  margin: 0;
-  padding: 0;
+          <!-- BENEFÍCIOS -->
 
-  background: #ffffff;
+          <button
+            class="feature-card green"
+            onclick="showPage('beneficios')"
+          >
 
-  border-radius: 23px;
+            <span>📋</span>
 
-  overflow: hidden;
+            <b>
+              Tipos de Benefícios
+            </b>
 
-  box-shadow:
-    0 10px 25px rgba(30, 79, 129, 0.15);
-}
+            <small>
+              Consultar
+            </small>
 
+          </button>
 
-/* =========================================================
-   BANNER
-   ========================================================= */
 
-.image-banner {
-  position: relative;
 
-  width: 100%;
+          <!-- PESQUISA -->
 
-  display: block;
+          <button
+            class="feature-card purple"
+            onclick="showPage('pesquisa')"
+          >
 
-  overflow: hidden;
+            <span>🔎</span>
 
-  padding: 0;
+            <b>
+              Fontes Oficiais
+            </b>
 
-  border-radius: 23px;
-}
+            <small>
+              Pesquisa
+            </small>
 
-.banner-image {
-  display: block;
+          </button>
 
-  width: 100%;
-  height: 100%;
 
-  margin: 0;
 
-  object-fit: fill;
+          <!-- CNIS -->
 
-  object-position: center center;
+          <button
+            class="feature-card orange"
+            onclick="showPage('cnis')"
+          >
 
-  transform-origin: center center;
+            <span>📑</span>
 
-  will-change: transform;
-}
+            <b>
+              Meu CNIS
+            </b>
 
+            <small>
+              Organizar períodos
+            </small>
 
-/* =========================================================
-   CABEÇALHO DAS SEÇÕES
-   ========================================================= */
+          </button>
 
-.section-head {
-  display: flex;
 
-  justify-content: space-between;
-  align-items: center;
+        </div>
 
-  margin: 27px 2px 13px;
-}
 
-.section-head h3 {
-  margin: 0;
 
-  font-size: 19px;
+        <!-- FERRAMENTAS -->
 
-  line-height: 1.2;
+        <div class="section-head">
 
-  letter-spacing: -0.2px;
-}
+          <h3>
+            Ferramentas
+          </h3>
 
-.section-head button {
-  border: 0;
+        </div>
 
-  background: none;
 
-  color: #2867a7;
+        <button
+          class="list-item"
+          onclick="showPage('inss')"
+        >
 
-  font-size: 13px;
+          <span class="round green-bg">
+            🏛️
+          </span>
 
-  font-weight: 800;
-}
+          <div>
 
+            <b>
+              Serviços do INSS
+            </b>
 
-/* =========================================================
-   MARCA PREV-FÁCIL
-   ========================================================= */
+            <small>
+              Acesse os serviços oficiais
+            </small>
 
-.app-title {
-  margin: 0;
+          </div>
 
-  display: flex;
+          <i>
+            ›
+          </i>
 
-  align-items: center;
+        </button>
 
-  gap: 8px;
 
-  font-size: 24px;
 
-  line-height: 1.15;
+        <button
+          class="list-item"
+          onclick="showPage('qrcode')"
+        >
 
-  font-weight: 900;
+          <span class="round orange-bg">
+            ▦
+          </span>
 
-  letter-spacing: -0.4px;
+          <div>
 
-  color: #173B57;
-}
+            <b>
+              QR Code do aplicativo
+            </b>
 
-.app-title .justice-scale {
-  font-size: 22px;
+            <small>
+              Acesse o Previdenciário Fácil pelo celular
+            </small>
 
-  line-height: 1;
-}
+          </div>
 
-.section-head > h3 {
-  color: #536579;
+          <i>
+            ›
+          </i>
 
-  font-weight: 500;
-}
+        </button>
 
 
-/* =========================================================
-   ACESSO RÁPIDO
-   ========================================================= */
 
-.quick-grid {
-  display: grid;
+        <div class="tip">
 
-  grid-template-columns: 1fr 1fr;
+          <span>
+            ⓘ
+          </span>
 
-  gap: 13px;
-}
+          <span>
 
+            <b>
+              Importante:
+            </b>
 
-/* =========================================================
-   CARDS PRINCIPAIS
-   ========================================================= */
+            Os resultados são estimativos e não substituem
+            a análise jurídica.
 
-.feature-card {
-  width: 100%;
+          </span>
 
-  min-height: 118px;
+        </div>
 
-  padding: 12px 14px;
 
-  border: 0;
+      </section>
 
-  border-radius: 17px;
 
-  text-align: left;
 
-  background: #ffffff;
+      <!-- ===================================================
+           APOSENTADORIA
+           =================================================== -->
 
-  color: #152238;
+      <section
+        id="aposentadoria"
+        class="page"
+      >
 
-  box-shadow:
-    0 4px 14px rgba(23, 43, 77, 0.07);
+        <div class="page-title">
 
-  display: flex;
+          <button
+            class="back"
+            onclick="showPage('inicio')"
+          >
+            ‹
+          </button>
 
-  flex-direction: column;
+          <div>
 
-  justify-content: space-between;
+            <span>
+              CALCULADORA
+            </span>
 
-  cursor: pointer;
+            <h2>
+              Aposentadoria
+            </h2>
 
-  transition:
-    transform 0.12s ease,
-    box-shadow 0.12s ease;
-}
+          </div>
 
-.feature-card:active {
-  transform: translateY(1px);
+        </div>
 
-  box-shadow:
-    0 1px 3px rgba(20, 35, 50, 0.06);
-}
 
-.feature-card span {
-  font-size: 23px;
 
-  line-height: 1;
-}
+        <div class="progress">
 
-.feature-card b {
-  display: block;
+          <span></span>
 
-  margin-top: 5px;
+        </div>
 
-  font-size: 17px;
 
-  line-height: 1.15;
 
-  font-weight: 800;
+        <div class="form-card">
 
-  color: #152238;
-}
+          <h3>
+            Informe seus dados
+          </h3>
 
-.feature-card small {
-  display: block;
 
-  margin-top: 5px;
 
-  font-size: 12px;
+          <label>
 
-  line-height: 1.3;
+            Data de nascimento
 
-  color: #66758a;
-}
+            <input
+              type="date"
+              id="nascimento"
+            >
 
+          </label>
 
-/* CORES */
 
-.blue {
-  border-top: 4px solid #2d6fb0;
-}
 
-.green {
-  border-top: 4px solid #27a36a;
-}
+          <label>
 
-.purple {
-  border-top: 4px solid #7657bd;
-}
+            Sexo
 
-.orange {
-  border-top: 4px solid #d9853a;
-}
+            <select id="sexo">
 
+              <option value="">
+                Selecione
+              </option>
 
-/* =========================================================
-   LISTA DE FERRAMENTAS
-   ========================================================= */
+              <option value="F">
+                Feminino
+              </option>
 
-.list-item {
-  width: 100%;
+              <option value="M">
+                Masculino
+              </option>
 
-  border: 0;
+            </select>
 
-  border-radius: 16px;
+          </label>
 
-  padding: 15px;
 
-  margin-bottom: 10px;
 
-  display: flex;
+          <label>
 
-  align-items: center;
+            Tempo de contribuição
 
-  gap: 13px;
+            <input
+              type="number"
+              id="tempo"
+              min="0"
+              step="0.1"
+              placeholder="Ex.: 25"
+            >
 
-  text-align: left;
+          </label>
 
-  background: #ffffff;
 
-  color: #152238;
 
-  box-shadow:
-    0 4px 14px rgba(23, 43, 77, 0.07);
+          <label>
 
-  transition:
-    transform 0.12s ease;
-}
+            Atividade especial
 
-.list-item:active {
-  transform: translateY(1px);
-}
+            <select id="especial">
 
-.list-item i {
-  margin-left: auto;
+              <option value="nao">
+                Não
+              </option>
 
-  font-size: 29px;
+              <option value="sim">
+                Sim
+              </option>
 
-  color: #9aa7b6;
+            </select>
 
-  font-style: normal;
-}
+          </label>
 
-.list-item b,
-.benefit b,
-.source-card b {
-  display: block;
 
-  font-size: 14px;
 
-  line-height: 1.3;
-}
+          <button
+            class="cta"
+            onclick="calcular()"
+          >
+            Calcular
+          </button>
 
-.list-item small,
-.benefit small,
-.source-card small {
-  display: block;
 
-  margin-top: 4px;
+        </div>
 
-  font-size: 12px;
 
-  line-height: 1.35;
 
-  color: #77859a;
-}
+        <div
+          id="resultado"
+          class="result hidden"
+        >
 
+          <!-- Resultado preenchido pelo app.js -->
 
-/* =========================================================
-   ÍCONES
-   ========================================================= */
+        </div>
 
-.round {
-  flex: 0 0 42px;
 
-  width: 42px;
-  height: 42px;
+      </section>
 
-  border-radius: 13px;
 
-  display: grid;
 
-  place-items: center;
+      <!-- ===================================================
+           BENEFÍCIOS
+           =================================================== -->
 
-  font-size: 19px;
-}
+      <section
+        id="beneficios"
+        class="page"
+      >
 
-.blue-bg {
-  background: #e5f0fb;
-}
+        <div class="page-title">
 
-.purple-bg {
-  background: #eee8fb;
-}
+          <button
+            class="back"
+            onclick="showPage('inicio')"
+          >
+            ‹
+          </button>
 
-.green-bg {
-  background: #e5f7ee;
-}
+          <div>
 
-.orange-bg {
-  background: #fff0df;
-}
+            <span>
+              INSS
+            </span>
 
+            <h2>
+              Benefícios
+            </h2>
 
-/* =========================================================
-   BOTÕES / FORMULÁRIOS
-   ========================================================= */
+          </div>
 
-.back {
-  width: 42px;
-  height: 42px;
+        </div>
 
-  border: 0;
 
-  border-radius: 50%;
 
-  background: #ffffff;
+        <div class="tip">
 
-  color: #244c7c;
+          <span>
+            ⓘ
+          </span>
 
-  font-size: 30px;
+          <span>
+            Toque em um benefício para consultar
+            informações na página oficial do INSS.
+          </span>
 
-  line-height: 1;
+        </div>
 
-  box-shadow:
-    0 3px 10px rgba(23, 43, 77, 0.06);
-}
 
-.page-title {
-  display: flex;
 
-  align-items: center;
+        <div class="search-box">
 
-  gap: 12px;
+          🔎
 
-  padding: 20px 0;
-}
+          <input
+            type="search"
+            placeholder="Pesquisar benefício..."
+            oninput="filtrarBeneficios(this.value)"
+          >
 
-.page-title h2 {
-  margin: 3px 0 0;
+        </div>
 
-  font-size: 25px;
 
-  color: #173B57;
-}
 
-.form-card,
-.source-card,
-.external-card,
-.guide-card,
-.qr-card,
-.summary,
-.result {
-  background: #ffffff;
+        <div
+          id="beneficio-list"
+          class="stack"
+        >
 
-  border-radius: 17px;
 
-  padding: 17px;
+          <button
+            class="benefit clickable"
+            onclick="abrirExterno('https://www.gov.br/inss/pt-br/direitos-e-deveres/aposentadorias')"
+          >
 
-  margin-bottom: 12px;
+            <span>
+              👴
+            </span>
 
-  box-shadow:
-    0 4px 14px rgba(23, 43, 77, 0.07);
-}
+            <div>
 
-.form-card h3 {
-  margin-top: 0;
-}
+              <b>
+                Aposentadorias
+              </b>
 
-.form-card label {
-  display: block;
+              <small>
+                Consulte os tipos de aposentadoria
+              </small>
 
-  margin-bottom: 14px;
+            </div>
 
-  font-size: 13px;
+          </button>
 
-  font-weight: 700;
-}
 
-.form-card input,
-.form-card select,
-.search-box input {
-  width: 100%;
 
-  margin-top: 6px;
+          <button
+            class="benefit clickable"
+            onclick="abrirExterno('https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-por-incapacidade/auxilio-por-incapacidade-temporaria')"
+          >
 
-  padding: 12px;
+            <span>
+              🩺
+            </span>
 
-  border: 1px solid #d7e0e9;
+            <div>
 
-  border-radius: 10px;
+              <b>
+                Incapacidade temporária
+              </b>
 
-  background: #ffffff;
+              <small>
+                Auxílio por incapacidade temporária
+              </small>
 
-  outline: none;
-}
+            </div>
 
-.form-card input:focus,
-.form-card select:focus,
-.search-box input:focus {
-  border-color: #2d6fb0;
+          </button>
 
-  box-shadow:
-    0 0 0 3px rgba(45, 111, 176, 0.12);
-}
 
-.cta {
-  width: 100%;
 
-  padding: 13px;
+          <button
+            class="benefit clickable"
+            onclick="abrirExterno('https://www.gov.br/inss/pt-br/direitos-e-deveres/aposentadorias/aposentadoria-por-incapacidade-permanente')"
+          >
 
-  border: 0;
+            <span>
+              ♿
+            </span>
 
-  border-radius: 12px;
+            <div>
 
-  background: #2d6fb0;
+              <b>
+                Incapacidade permanente
+              </b>
 
-  color: #ffffff;
+              <small>
+                Aposentadoria por incapacidade permanente
+              </small>
 
-  font-size: 15px;
+            </div>
 
-  font-weight: 800;
-}
+          </button>
 
 
-/* =========================================================
-   BENEFÍCIOS
-   ========================================================= */
 
-.search-box {
-  display: flex;
+          <button
+            class="benefit clickable"
+            onclick="abrirExterno('https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-por-incapacidade/auxilio-acidente')"
+          >
 
-  align-items: center;
+            <span>
+              ⚕️
+            </span>
 
-  gap: 8px;
+            <div>
 
-  background: #ffffff;
+              <b>
+                Auxílio-acidente
+              </b>
 
-  padding: 8px 12px;
+              <small>
+                Benefício relacionado a acidente
+              </small>
 
-  margin-bottom: 12px;
+            </div>
 
-  border-radius: 14px;
+          </button>
 
-  box-shadow:
-    0 4px 14px rgba(23, 43, 77, 0.07);
-}
 
-.search-box input {
-  margin: 0;
 
-  border: 0;
+          <button
+            class="benefit clickable"
+            onclick="abrirExterno('https://www.gov.br/inss/pt-br/direitos-e-deveres/pensoes')"
+          >
 
-  box-shadow: none;
-}
+            <span>
+              👨‍👩‍👧
+            </span>
 
-.benefit {
-  width: 100%;
+            <div>
 
-  display: flex;
+              <b>
+                Pensão por morte
+              </b>
 
-  align-items: center;
+              <small>
+                Informações sobre pensão por morte
+              </small>
 
-  gap: 13px;
+            </div>
 
-  text-align: left;
+          </button>
 
-  padding: 14px;
 
-  margin-bottom: 10px;
 
-  border: 0;
+          <button
+            class="benefit clickable"
+            onclick="abrirExterno('https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-assistenciais')"
+          >
 
-  border-radius: 15px;
+            <span>
+              🤝
+            </span>
 
-  background: #ffffff;
+            <div>
 
-  color: #152238;
+              <b>
+                BPC / LOAS
+              </b>
 
-  box-shadow:
-    0 4px 14px rgba(23, 43, 77, 0.07);
-}
+              <small>
+                Benefício assistencial
+              </small>
 
-.benefit > span {
-  font-size: 25px;
+            </div>
 
-  width: 40px;
+          </button>
 
-  text-align: center;
-}
 
+        </div>
 
-/* =========================================================
-   CARDS EXTERNOS
-   ========================================================= */
+      </section>
 
-.ext-top {
-  display: flex;
 
-  align-items: center;
 
-  gap: 13px;
+      <!-- ===================================================
+           PESQUISA
+           =================================================== -->
 
-  margin-bottom: 14px;
-}
+      <section
+        id="pesquisa"
+        class="page"
+      >
 
-.ext-icon {
-  width: 45px;
-  height: 45px;
+        <div class="page-title">
 
-  flex: 0 0 45px;
+          <button
+            class="back"
+            onclick="showPage('inicio')"
+          >
+            ‹
+          </button>
 
-  display: grid;
+          <div>
 
-  place-items: center;
+            <span>
+              LEGISLAÇÃO
+            </span>
 
-  border-radius: 13px;
+            <h2>
+              Pesquisa
+            </h2>
 
-  background: #e7f2fb;
+          </div>
 
-  font-size: 21px;
-}
+        </div>
 
-.ext-top b {
-  display: block;
 
-  font-size: 15px;
 
-  line-height: 1.25;
-}
+        <div class="source-card">
 
-.ext-top small {
-  display: block;
+          <b>
+            Lei nº 8.213/91
+          </b>
 
-  margin-top: 4px;
+          <small>
+            Planos de Benefícios da Previdência Social.
+          </small>
 
-  color: #77859a;
+          <a
+            href="https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
+            target="_blank"
+            rel="noopener"
+          >
+            Consultar legislação oficial →
+          </a>
 
-  font-size: 12px;
+        </div>
 
-  line-height: 1.3;
-}
 
-.ext-btn {
-  display: block;
 
-  width: 100%;
+        <div class="source-card">
 
-  padding: 11px;
+          <b>
+            Lei nº 8.212/91
+          </b>
 
-  border-radius: 11px;
+          <small>
+            Organização da Seguridade Social e custeio.
+          </small>
 
-  background: #2d6fb0;
+          <a
+            href="https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+            target="_blank"
+            rel="noopener"
+          >
+            Consultar legislação oficial →
+          </a>
 
-  color: #ffffff;
+        </div>
 
-  text-align: center;
 
-  text-decoration: none;
 
-  font-weight: 800;
+        <div class="source-card">
 
-  font-size: 13px;
-}
+          <b>
+            Constituição Federal
+          </b>
 
+          <small>
+            Regras constitucionais relacionadas à Previdência.
+          </small>
 
-/* =========================================================
-   GUIA
-   ========================================================= */
+          <a
+            href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+            target="_blank"
+            rel="noopener"
+          >
+            Consultar Constituição →
+          </a>
 
-.guide-card b {
-  color: #173B57;
+        </div>
 
-  font-size: 15px;
-}
 
-.guide-card p {
-  margin-bottom: 0;
 
-  color: #66758a;
+        <div class="source-card">
 
-  font-size: 13px;
+          <b>
+            Portal do INSS
+          </b>
 
-  line-height: 1.5;
-}
+          <small>
+            Informações e serviços oficiais do Instituto Nacional
+            do Seguro Social.
+          </small>
 
+          <a
+            href="https://www.gov.br/inss/pt-br"
+            target="_blank"
+            rel="noopener"
+          >
+            Acessar portal do INSS →
+          </a>
 
-/* =========================================================
-   AVISO
-   ========================================================= */
+        </div>
 
-.tip {
-  display: flex;
 
-  align-items: flex-start;
+      </section>
 
-  gap: 9px;
 
-  margin-top: 14px;
 
-  padding: 13px;
+      <!-- ===================================================
+           CNIS
+           =================================================== -->
 
-  border-radius: 14px;
+      <section
+        id="cnis"
+        class="page"
+      >
 
-  background: #ffffff;
+        <div class="page-title">
 
-  color: #526276;
+          <button
+            class="back"
+            onclick="showPage('inicio')"
+          >
+            ‹
+          </button>
 
-  font-size: 12px;
+          <div>
 
-  line-height: 1.45;
-}
+            <span>
+              HISTÓRICO
+            </span>
 
-.tip > span:first-child {
-  font-size: 18px;
+            <h2>
+              Meu CNIS
+            </h2>
 
-  color: #2d6fb0;
-}
+          </div>
 
+        </div>
 
-/* =========================================================
-   QR CODE
-   ========================================================= */
 
-.qr-hero {
-  padding: 20px;
 
-  text-align: center;
-}
+        <div class="form-card">
 
-.qr-hero h2 {
-  color: #173B57;
+          <h3>
+            Adicionar período
+          </h3>
 
-  font-size: 21px;
-}
 
-.qr-image-box {
-  display: flex;
 
-  justify-content: center;
+          <label>
 
-  align-items: center;
+            Data inicial
 
-  padding: 15px;
-}
+            <input
+              type="date"
+              id="ini"
+            >
 
-.qr-image-box img {
-  width: 220px;
+          </label>
 
-  max-width: 100%;
 
-  height: auto;
 
-  display: block;
-}
+          <label>
 
-.qr-hero p {
-  color: #66758a;
+            Data final
 
-  font-size: 13px;
+            <input
+              type="date"
+              id="fim"
+            >
 
-  line-height: 1.4;
-}
+          </label>
 
-.qr-card {
-  text-align: center;
-}
 
-.qr-card img {
-  display: block;
 
-  width: 180px;
+          <label>
 
-  max-width: 100%;
+            Empresa / empregador
 
-  margin: 0 auto 12px;
-}
+            <input
+              type="text"
+              id="empresa"
+              placeholder="Nome da empresa"
+            >
 
-.qr-card b {
-  display: block;
+          </label>
 
-  color: #173B57;
-}
 
-.qr-card small {
-  display: block;
 
-  margin-top: 6px;
+          <label>
 
-  color: #77859a;
+            Observações
 
-  line-height: 1.4;
-}
+            <input
+              type="text"
+              id="obs"
+              placeholder="Opcional"
+            >
 
+          </label>
 
-/* =========================================================
-   NAVEGAÇÃO INFERIOR
-   ========================================================= */
 
-.bottom-nav {
-  position: fixed;
 
-  left: 50%;
+          <button
+            class="cta"
+            onclick="adicionarPeriodo()"
+          >
+            Adicionar período
+          </button>
 
-  bottom: 0;
+        </div>
 
-  transform: translateX(-50%);
 
-  width: 100%;
 
-  max-width: 480px;
+        <div
+          id="tabelaCnis"
+          class="stack"
+        >
 
-  height: 76px;
+          <!-- Períodos adicionados pelo app.js -->
 
-  display: flex;
+        </div>
 
-  align-items: center;
 
-  justify-content: space-around;
 
-  background: rgba(255,255,255,0.97);
+        <div
+          id="totalCnis"
+          class="summary"
+        >
 
-  border-top: 1px solid #dce4ec;
+          <b>
+            Total de tempo
+          </b>
 
-  box-shadow:
-    0 -5px 20px rgba(23,43,77,0.08);
+        </div>
 
-  z-index: 100;
-}
 
-.bottom-nav button {
-  flex: 1;
+      </section>
 
-  height: 58px;
 
-  border: 0;
 
-  background: transparent;
+      <!-- ===================================================
+           INSS
+           =================================================== -->
 
-  color: #718096;
+      <section
+        id="inss"
+        class="page"
+      >
 
-  font-size: 10px;
+        <div class="page-title">
 
-  font-weight: 700;
+          <button
+            class="back"
+            onclick="showPage('inicio')"
+          >
+            ‹
+          </button>
 
-  display: flex;
+          <div>
 
-  flex-direction: column;
+            <span>
+              SERVIÇOS
+            </span>
 
-  justify-content: center;
+            <h2>
+              INSS
+            </h2>
 
-  align-items: center;
+          </div>
 
-  gap: 4px;
-}
+        </div>
 
-.bottom-nav button span {
-  font-size: 20px;
 
-  line-height: 1;
-}
 
-.bottom-nav button.active {
-  color: #2d6fb0;
+        <!-- MEU INSS -->
 
-  font-weight: 900;
-}
+        <div class="external-card">
 
+          <div class="ext-top">
 
-/* =========================================================
-   COPYRIGHT
-   ========================================================= */
+            <div class="ext-icon">
+              🏛️
+            </div>
 
-.copyright {
-  text-align: center;
+            <div>
 
-  padding: 8px;
+              <b>
+                Meu INSS
+              </b>
 
-  color: #718096;
+              <small>
+                Acesse seus serviços e benefícios.
+              </small>
 
-  font-size: 10px;
-}
+            </div>
 
+          </div>
 
-/* =========================================================
-   CELULAR
-   ========================================================= */
+          <a
+            class="ext-btn"
+            href="https://meu.inss.gov.br/"
+            target="_blank"
+            rel="noopener"
+          >
+            Abrir Meu INSS
+          </a>
 
-@media (max-width: 699px) {
+        </div>
 
-  .image-banner {
-    height: 164px !important;
 
-    border-radius: 20px;
 
-    overflow: hidden;
-  }
+        <!-- INCAPACIDADE TEMPORÁRIA -->
 
-  .banner-image {
-    display: block;
+        <div class="external-card">
 
-    width: 100%;
+          <div class="ext-top">
 
-    height: 164px !important;
+            <div class="ext-icon">
+              🩺
+            </div>
 
-    object-fit: cover;
+            <div>
 
-    object-position: center center;
+              <b>
+                Benefício por incapacidade temporária
+              </b>
 
-    filter: none;
+              <small>
+                Solicitação oficial do benefício.
+              </small>
 
-    image-rendering: auto;
-  }
+            </div>
 
-  .quick-grid {
-    gap: 9px;
-  }
+          </div>
 
-  .feature-card {
-    min-height: 100px !important;
+          <a
+            class="ext-btn"
+            href="https://www.gov.br/pt-br/servicos/solicitar-auxilio-por-incapacidade-temporaria-auxilio-doenca"
+            target="_blank"
+            rel="noopener"
+          >
+            Acessar serviço
+          </a>
 
-    height: 100px !important;
+        </div>
 
-    padding: 9px 11px !important;
 
-    border-radius: 14px;
-  }
 
-  .feature-card span {
-    font-size: 20px !important;
-  }
+        <!-- INCAPACIDADE PERMANENTE -->
 
-  .feature-card b {
-    margin-top: 3px;
+        <div class="external-card">
 
-    font-size: 14px !important;
+          <div class="ext-top">
 
-    line-height: 1.1;
-  }
+            <div class="ext-icon">
+              ♿
+            </div>
 
-  .feature-card small {
-    margin-top: 3px;
+            <div>
 
-    font-size: 10px !important;
+              <b>
+                Aposentadoria por incapacidade permanente
+              </b>
 
-    line-height: 1.2;
-  }
+              <small>
+                Informações oficiais sobre o benefício.
+              </small>
 
-}
+            </div>
 
+          </div>
 
-/* =========================================================
-   DESKTOP
-   ========================================================= */
+          <a
+            class="ext-btn"
+            href="https://www.gov.br/inss/pt-br/direitos-e-deveres/aposentadorias/aposentadoria-por-incapacidade-permanente"
+            target="_blank"
+            rel="noopener"
+          >
+            Consultar
+          </a>
 
-@media (min-width: 700px) {
+        </div>
 
-  .app {
-    max-width: 900px;
 
-    border-radius: 28px;
 
-    box-shadow:
-      0 2px 6px rgba(20, 35, 50, 0.10),
-      0 12px 35px rgba(20, 35, 50, 0.15),
-      0 25px 60px rgba(20, 35, 50, 0.10);
-  }
+        <!-- CNIS -->
 
-  .image-banner {
-    height: 300px !important;
+        <div class="external-card">
 
-    aspect-ratio: auto !important;
+          <div class="ext-top">
 
-    overflow: hidden;
+            <div class="ext-icon">
+              📑
+            </div>
 
-    border-radius: 23px;
-  }
+            <div>
 
-  .banner-image {
-    display: block;
+              <b>
+                Extrato CNIS
+              </b>
 
-    width: 100%;
+              <small>
+                Consulte seu histórico previdenciário.
+              </small>
 
-    height: 300px !important;
+            </div>
 
-    object-fit: fill;
+          </div>
 
-    object-position: center center;
+          <a
+            class="ext-btn"
+            href="https://meu.inss.gov.br/"
+            target="_blank"
+            rel="noopener"
+          >
+            Acessar CNIS
+          </a>
 
-    filter: none;
-  }
+        </div>
 
-  .feature-card {
-    min-height: 105px !important;
 
-    height: 105px !important;
 
-    padding: 10px 12px !important;
-  }
+        <!-- TODOS OS SERVIÇOS -->
 
-  .feature-card b {
-    font-size: 15px !important;
-  }
+        <div class="external-card">
 
-  .feature-card small {
-    font-size: 10px !important;
-  }
+          <div class="ext-top">
 
-  .bottom-nav {
-    position: fixed !important;
+            <div class="ext-icon">
+              📋
+            </div>
 
-    left: 50% !important;
+            <div>
 
-    bottom: 0 !important;
+              <b>
+                Todos os serviços do INSS
+              </b>
 
-    transform: translateX(-50%) !important;
+              <small>
+                Consulte os serviços disponíveis.
+              </small>
 
-    width: 100% !important;
+            </div>
 
-    max-width: 900px !important;
+          </div>
 
-    height: 76px !important;
+          <a
+            class="ext-btn"
+            href="https://www.gov.br/inss/pt-br/servicos"
+            target="_blank"
+            rel="noopener"
+          >
+            Ver serviços
+          </a>
 
-    margin: 0 !important;
+        </div>
 
-    border-radius: 0 0 28px 28px !important;
 
-    z-index: 100 !important;
-  }
 
-}
+        <!-- CENTRAL 135 -->
 
+        <div class="external-card">
 
-/* =========================================================
-   FONTE GERAL — VERDANA
-   ========================================================= */
+          <div class="ext-top">
 
-html,
-body,
-body * {
-  font-family: Verdana, Geneva, sans-serif !important;
-}
+            <div class="ext-icon">
+              ☎️
+            </div>
+
+            <div>
+
+              <b>
+                Central 135
+              </b>
+
+              <small>
+                Central de atendimento do INSS.
+              </small>
+
+            </div>
+
+          </div>
+
+          <a
+            class="ext-btn"
+            href="tel:135"
+          >
+            Ligar 135
+          </a>
+
+        </div>
+
+
+
+        <!-- QR CODE INSS -->
+
+        <div class="qr-card">
+
+          <img
+            src="./qrcode-inss.png"
+            alt="QR Code para o portal oficial do INSS"
+          >
+
+          <b>
+            QR Code — Portal do INSS
+          </b>
+
+          <small>
+            Aponte a câmera do celular para abrir
+            o endereço oficial do INSS.
+          </small>
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- ===================================================
+           GUIA
+           =================================================== -->
+
+      <section
+        id="guia"
+        class="page"
+      >
+
+        <div class="page-title">
+
+          <button
+            class="back"
+            onclick="showPage('inicio')"
+          >
+            ‹
+          </button>
+
+          <div>
+
+            <span>
+              ORIENTAÇÃO
+            </span>
+
+            <h2>
+              Guia
+            </h2>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="guide-card">
+
+          <b>
+            1. Comece pelo CNIS
+          </b>
+
+          <p>
+            Confira seus vínculos, contribuições e períodos
+            registrados antes de analisar seu benefício.
+          </p>
+
+        </div>
+
+
+
+        <div class="guide-card">
+
+          <b>
+            2. Reúna documentos
+          </b>
+
+          <p>
+            Separe documentos pessoais, carteira de trabalho,
+            comprovantes de contribuição e outros documentos
+            relacionados ao seu histórico.
+          </p>
+
+        </div>
+
+
+
+        <div class="guide-card">
+
+          <b>
+            3. Compare as regras
+          </b>
+
+          <p>
+            Verifique qual regra previdenciária pode se aplicar
+            ao seu caso.
+          </p>
+
+        </div>
+
+
+
+        <div class="guide-card">
+
+          <b>
+            4. Confira a legislação vigente
+          </b>
+
+          <p>
+            Utilize sempre fontes oficiais para conferir
+            alterações na legislação.
+          </p>
+
+        </div>
+
+
+
+        <div class="guide-card">
+
+          <b>
+            5. Links externos
+          </b>
+
+          <p>
+            O aplicativo direciona para páginas oficiais
+            do Governo Federal, INSS e Planalto.
+          </p>
+
+        </div>
+
+
+
+        <div class="tip">
+
+          <span>
+            ⓘ
+          </span>
+
+          <span>
+
+            Este aplicativo tem finalidade informativa.
+            Os resultados não substituem análise profissional
+            ou consulta aos canais oficiais.
+
+          </span>
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- ===================================================
+           QR CODE DO APLICATIVO
+           =================================================== -->
+
+      <section
+        id="qrcode"
+        class="page"
+      >
+
+        <div class="page-title">
+
+          <button
+            class="back"
+            onclick="showPage('inicio')"
+          >
+            ‹
+          </button>
+
+          <div>
+
+          </div>
+
+        </div>
+
+
+
+        <div
+          class="welcome-card qr-hero"
+        >
+
+          <h2>
+            PREVIDENCIÁRIO FÁCIL
+          </h2>
+
+
+          <div class="qr-image-box">
+
+            <img
+              src="./qrcode-previdenciario-facil-correto.png"
+              alt="QR Code do aplicativo Previdenciário Fácil"
+            >
+
+          </div>
+
+
+
+          <p>
+            Aponte a câmera do celular para
+            abrir o Previdenciário Fácil.
+          </p>
+
+        </div>
+
+
+
+        <div class="tip">
+
+          <span>
+            ⓘ
+          </span>
+
+          <span>
+
+            Este QR Code direciona para a versão
+            publicada do aplicativo no GitHub Pages.
+
+          </span>
+
+        </div>
+
+
+      </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         NAVEGAÇÃO INFERIOR
+         ===================================================== -->
+
+    <nav class="bottom-nav">
+
+
+      <button
+        onclick="showPage('inicio')"
+        class="active"
+      >
+
+        <span>
+          ⌂
+        </span>
+
+        Início
+
+      </button>
+
+
+
+      <button
+        onclick="showPage('aposentadoria')"
+      >
+
+        <span>
+          🧮
+        </span>
+
+        Calcular
+
+      </button>
+
+
+
+      <button
+        onclick="showPage('pesquisa')"
+      >
+
+        <span>
+          🔎
+        </span>
+
+        Pesquisa
+
+      </button>
+
+
+
+      <button
+        onclick="showPage('cnis')"
+      >
+
+        <span>
+          📑
+        </span>
+
+        CNIS
+
+      </button>
+
+
+
+      <button
+        onclick="showPage('qrcode')"
+      >
+
+        <span>
+          ▦
+        </span>
+
+        QR Code
+
+      </button>
+
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         DIREITOS AUTORAIS
+         ===================================================== -->
+
+    <div class="copyright">
+      ©
+    </div>
+
+
+
+  </div>
+
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+       ======================================================= -->
+
+  <script src="app.js"></script>
+
+
+</body>
+
+</html>
