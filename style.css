@@ -1873,3 +1873,31 @@ body * {
   }
 
 }
+/* =========================================================
+   CORREÇÃO — BARRA INFERIOR
+   Mantém a barra realmente no rodapé
+   ========================================================= */
+
+@media (min-width: 700px) {
+
+  .bottom-nav {
+    position: fixed !important;
+
+    left: 50% !important;
+    bottom: 0 !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 100% !important;
+    max-width: 900px !important;
+
+    height: 76px !important;
+
+    margin: 0 !important;
+
+    border-radius: 0 0 28px 28px !important;
+
+    z-index: 100 !important;
+  }
+
+}
