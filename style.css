@@ -235,33 +235,27 @@ main {
 
 
 /* =========================================================
-   BANNER
+   BANNER PRINCIPAL
    ========================================================= */
 
 /*
-   IMPORTANTE:
-
-   Não usamos "object-fit: cover".
-
-   A imagem fica com width: 100% e height: auto,
-   preservando toda a imagem original.
+   O banner usa a proporção original da arte (2048 x 736).
+   A largura acompanha o conteúdo e a altura é calculada
+   automaticamente, evitando cortes ou alongamentos.
 */
-
-/* =========================================================
-   BANNER - AJUSTE FINAL
-   ========================================================= */
-
-/* =========================================================
-   BANNER - PROPORÇÃO DO LAYOUT ANTERIOR
-   ========================================================= */
 
 .welcome-card {
   width: 100%;
+
   margin: 0 0 20px 0;
   padding: 0;
+
   background: transparent;
+
   border: none;
+
   box-shadow: none;
+
   overflow: hidden;
 }
 
@@ -269,9 +263,7 @@ main {
 .image-banner {
   width: 100%;
 
-  aspect-ratio: 2048 / 500;
-
-  height: auto;
+  aspect-ratio: 2048 / 736;
 
   margin: 0;
   padding: 0;
@@ -304,6 +296,8 @@ main {
   object-fit: cover;
 
   object-position: center center;
+
+  animation: none;
 }
 
 
@@ -1654,12 +1648,7 @@ main {
   }
 
 
-  /*
-     Banner sem corte.
-
-     A imagem determina a própria altura.
-  */
-
+  /* Banner */
   .welcome-card {
     border-radius: 15px;
 
@@ -1668,24 +1657,28 @@ main {
 
 
   .image-banner {
-    height: auto !important;
+    width: 100%;
 
-    aspect-ratio: auto !important;
+    aspect-ratio: 2048 / 736;
+
+    height: auto;
 
     overflow: hidden;
   }
 
 
   .banner-image {
-    width: 100% !important;
+    width: 100%;
 
-    height: auto !important;
+    height: 100%;
 
-    max-height: none !important;
+    max-width: 100%;
 
-    object-fit: contain !important;
+    max-height: 100%;
 
-    object-position: center center !important;
+    object-fit: cover;
+
+    object-position: center center;
   }
 
 
@@ -1863,9 +1856,21 @@ main {
   }
 
 
+  .image-banner {
+    width: 100%;
+
+    aspect-ratio: 2048 / 736;
+
+    height: auto;
+  }
+
+
   .banner-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
   }
 
 }
@@ -1900,16 +1905,16 @@ main {
 
 
   /*
-     Banner totalmente proporcional.
-     A imagem NÃO será cortada.
+     Banner horizontal proporcional.
+     A altura acompanha automaticamente a largura.
   */
 
   .image-banner {
     width: 100%;
 
-    height: auto;
+    aspect-ratio: 2048 / 736;
 
-    aspect-ratio: auto;
+    height: auto;
 
     overflow: hidden;
   }
@@ -1920,13 +1925,14 @@ main {
 
     width: 100%;
 
-    height: auto;
+    height: 100%;
 
     max-width: 100%;
+    max-height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
 
-    object-position: center;
+    object-position: center center;
   }
 
 
