@@ -2002,18 +2002,22 @@ main {
    ========================================================= */
 
 /*
+   CORREÇÃO:
+   O HTML possui .welcome-card e, dentro dele, .image-banner.
+   A regra anterior ".welcome-card.image-banner" estava errada,
+   pois procurava as duas classes no MESMO elemento.
+
    O banner original usa a proporção 2048 x 736.
-   A altura abaixo foi reduzida para 70% da altura original.
+   A altura visual foi reduzida para 70% da altura original.
    A imagem permanece nítida: não usamos blur nem filtros.
-   object-fit: cover mantém a imagem preenchendo o banner.
 */
 
-.welcome-card.image-banner {
+.image-banner {
   width: 100% !important;
   height: auto !important;
   aspect-ratio: 2048 / 515.2 !important;
 
-  margin: 0 0 18px 0 !important;
+  margin: 0 !important;
   padding: 0 !important;
 
   background: transparent !important;
@@ -2024,7 +2028,7 @@ main {
   overflow: hidden !important;
 }
 
-.welcome-card.image-banner .banner-image {
+.image-banner .banner-image {
   display: block !important;
 
   width: 100% !important;
@@ -2044,3 +2048,4 @@ main {
 
   filter: none !important;
 }
+
