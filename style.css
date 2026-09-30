@@ -2072,3 +2072,29 @@ main {
         object-position: center center;
     }
 }
+/* ================================
+   AJUSTE DO BANNER - SOMENTE CELULAR
+   ================================ */
+@media (max-width: 699px) {
+
+  .image-banner {
+    width: 100% !important;
+    height: 150px !important;
+    min-height: 150px !important;
+    max-height: 150px !important;
+    aspect-ratio: auto !important;
+    overflow: hidden !important;
+    border-radius: 14px !important;
+  }
+
+  .image-banner .banner-image {
+    display: block !important;
+    width: 100% !important;
+    height: 150px !important;
+    min-height: 150px !important;
+    max-height: 150px !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    border-radius: 14px !important;
+  }
+}
