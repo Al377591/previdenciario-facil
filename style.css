@@ -2030,3 +2030,33 @@ main {
     object-fit: cover !important;
     object-position: center center !important;
 }
+/* =========================================================
+   AJUSTE DEFINITIVO — SOMENTE ALTURA DO BANNER
+   ========================================================= */
+
+/* CELULAR */
+@media (max-width: 699px) {
+
+  .image-banner {
+    height: 155px !important;
+  }
+
+  .banner-image {
+    height: 155px !important;
+  }
+
+}
+
+
+/* COMPUTADOR / NOTEBOOK */
+@media (min-width: 700px) {
+
+  .image-banner {
+    height: 215px !important;
+  }
+
+  .banner-image {
+    height: 215px !important;
+  }
+
+}
