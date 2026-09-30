@@ -12,7 +12,7 @@
 
   <meta
     name="theme-color"
-    content="#087ac1"
+    content="#f8fafc"
   >
 
   <title>Previdenciário Fácil</title>
@@ -36,68 +36,6 @@
 
     <header class="top">
 
-      <div class="top-brand">
-
-        <div class="top-logo">
-          ⚖️
-        </div>
-
-        <div class="top-title">
-
-          <strong>
-            PREV-FÁCIL
-          </strong>
-
-          <small>
-            Seu acesso à Previdência ficou mais simples
-          </small>
-
-        </div>
-
-      </div>
-
-
-      <nav class="top-nav">
-
-        <button
-          class="active"
-          onclick="showPage('inicio')"
-        >
-          Início
-        </button>
-
-        <button
-          onclick="showPage('aposentadoria')"
-        >
-          Calcular
-        </button>
-
-        <button
-          onclick="showPage('pesquisa')"
-        >
-          Legislação
-        </button>
-
-        <button
-          onclick="showPage('guia')"
-        >
-          Guia
-        </button>
-
-        <button
-          onclick="showPage('inss')"
-        >
-          Serviços
-        </button>
-
-        <button
-          onclick="showPage('qrcode')"
-        >
-          Contato
-        </button>
-
-      </nav>
-
     </header>
 
 
@@ -119,44 +57,32 @@
       >
 
 
-        <!-- =================================================
-             BANNER PRINCIPAL
-             ================================================= -->
+        <!-- IMAGEM PRINCIPAL -->
 
-        <div class="welcome-card">
+        <div class="welcome-card image-banner">
 
-          <div class="image-banner">
+          <img
+            src="./banner_prev-facil.png"
+            alt="Seus direitos"
+            class="banner-image"
+          >
 
-            <img
-              src="./banner_prev-facil.png"
-              alt="PREV-FÁCIL - Seus direitos previdenciários"
-              class="banner-image"
-            >
+          <div class="section-head">
 
           </div>
 
-        </div>
 
 
+          <!-- ACESSO RÁPIDO -->
 
-        <!-- =================================================
-             ACESSO RÁPIDO
-             ================================================= -->
+          <h1 class="app-title">
+            <span class="justice-scale">⚖️</span>
+            <span>PREV-FÁCIL</span>
+          </h1>
 
-        <div class="section-head">
-
-          <div>
-
-            <h1 class="app-title">
-              <span class="justice-scale">⚖️</span>
-              <span>PREV-FÁCIL</span>
-            </h1>
-
-            <h3>
-              Seu acesso à Previdência ficou mais simples
-            </h3>
-
-          </div>
+          <h3>
+            Seu acesso a Previdência ficou mais simples
+          </h3>
 
         </div>
 
@@ -172,25 +98,15 @@
             onclick="showPage('aposentadoria')"
           >
 
-            <span>
-              🧮
-            </span>
+            <span>🧮</span>
 
-            <div>
+            <h3>
+              Cálculo de Aposentadoria
+            </h3>
 
-              <b>
-                Cálculo de Aposentadoria
-              </b>
-
-              <small>
-                Calcule seu tempo e simule o valor
-              </small>
-
-            </div>
-
-            <i>
-              ›
-            </i>
+            <small>
+              Calcular regras
+            </small>
 
           </button>
 
@@ -203,25 +119,15 @@
             onclick="showPage('beneficios')"
           >
 
-            <span>
-              📋
-            </span>
+            <span>📋</span>
 
-            <div>
+            <b>
+              Tipos de Benefícios
+            </b>
 
-              <b>
-                Tipos de Benefícios
-              </b>
-
-              <small>
-                Conheça os benefícios do INSS
-              </small>
-
-            </div>
-
-            <i>
-              ›
-            </i>
+            <small>
+              Consultar
+            </small>
 
           </button>
 
@@ -234,25 +140,15 @@
             onclick="showPage('pesquisa')"
           >
 
-            <span>
-              🔎
-            </span>
+            <span>🔎</span>
 
-            <div>
+            <b>
+              Fontes Oficiais
+            </b>
 
-              <b>
-                Fontes Oficiais
-              </b>
-
-              <small>
-                Acesse leis, portarias e manuais
-              </small>
-
-            </div>
-
-            <i>
-              ›
-            </i>
+            <small>
+              Pesquisa
+            </small>
 
           </button>
 
@@ -265,25 +161,15 @@
             onclick="showPage('cnis')"
           >
 
-            <span>
-              📑
-            </span>
+            <span>📑</span>
 
-            <div>
+            <b>
+              Meu CNIS
+            </b>
 
-              <b>
-                Meu CNIS
-              </b>
-
-              <small>
-                Organize seus períodos contributivos
-              </small>
-
-            </div>
-
-            <i>
-              ›
-            </i>
+            <small>
+              Organizar períodos
+            </small>
 
           </button>
 
@@ -292,21 +178,16 @@
 
 
 
-        <!-- =================================================
-             FERRAMENTAS E SERVIÇOS
-             ================================================= -->
+        <!-- FERRAMENTAS -->
 
         <div class="section-head">
 
           <h3>
-            Ferramentas e Serviços
+            Ferramentas
           </h3>
 
         </div>
 
-
-
-        <!-- SERVIÇOS DO INSS -->
 
         <button
           class="list-item"
@@ -337,8 +218,6 @@
 
 
 
-        <!-- QR CODE -->
-
         <button
           class="list-item"
           onclick="showPage('qrcode')"
@@ -367,8 +246,6 @@
         </button>
 
 
-
-        <!-- AVISO -->
 
         <div class="tip">
 
@@ -443,6 +320,7 @@
           </h3>
 
 
+
           <label>
 
             Data de nascimento
@@ -453,6 +331,7 @@
             >
 
           </label>
+
 
 
           <label>
@@ -478,6 +357,7 @@
           </label>
 
 
+
           <label>
 
             Tempo de contribuição
@@ -491,6 +371,7 @@
             >
 
           </label>
+
 
 
           <label>
@@ -512,6 +393,7 @@
           </label>
 
 
+
           <button
             class="cta"
             onclick="calcular()"
@@ -528,6 +410,9 @@
           id="resultado"
           class="result hidden"
         >
+
+          <!-- Resultado preenchido pelo app.js -->
+
         </div>
 
 
@@ -926,6 +811,7 @@
           </h3>
 
 
+
           <label>
 
             Data inicial
@@ -938,6 +824,7 @@
           </label>
 
 
+
           <label>
 
             Data final
@@ -948,6 +835,7 @@
             >
 
           </label>
+
 
 
           <label>
@@ -963,6 +851,7 @@
           </label>
 
 
+
           <label>
 
             Observações
@@ -974,6 +863,7 @@
             >
 
           </label>
+
 
 
           <button
@@ -991,6 +881,9 @@
           id="tabelaCnis"
           class="stack"
         >
+
+          <!-- Períodos adicionados pelo app.js -->
+
         </div>
 
 
@@ -1407,9 +1300,11 @@
           </span>
 
           <span>
+
             Este aplicativo tem finalidade informativa.
             Os resultados não substituem análise profissional
             ou consulta aos canais oficiais.
+
           </span>
 
         </div>
@@ -1439,30 +1334,19 @@
 
           <div>
 
-            <span>
-              ACESSO
-            </span>
-
-            <h2>
-              QR Code
-            </h2>
-
           </div>
 
         </div>
 
 
 
-        <div class="welcome-card qr-hero">
+        <div
+          class="welcome-card qr-hero"
+        >
 
           <h2>
             PREVIDENCIÁRIO FÁCIL
           </h2>
-
-          <p>
-            Acesse o aplicativo pelo celular
-          </p>
-
 
 
           <div class="qr-image-box">
@@ -1475,10 +1359,6 @@
           </div>
 
 
-
-          <h3>
-            Escaneie este QR Code
-          </h3>
 
           <p>
             Aponte a câmera do celular para
@@ -1496,8 +1376,10 @@
           </span>
 
           <span>
+
             Este QR Code direciona para a versão
             publicada do aplicativo no GitHub Pages.
+
           </span>
 
         </div>
@@ -1598,6 +1480,7 @@
     <div class="copyright">
       ©
     </div>
+
 
 
   </div>
