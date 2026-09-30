@@ -2044,9 +2044,9 @@ main {
 
 .welcome-card .image-banner {
   width: 100% !important;
-  height: 190px !important;
-  min-height: 190px !important;
-  max-height: 190px !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
   aspect-ratio: auto !important;
 
   margin: 0 !important;
@@ -2060,15 +2060,15 @@ main {
   display: block !important;
 
   width: 100% !important;
-  height: 190px !important;
+  height: auto !important;
 
-  max-width: none !important;
+  max-width: 100% !important;
   max-height: none !important;
 
   margin: 0 !important;
   padding: 0 !important;
 
-  object-fit: cover !important;
+  object-fit: contain !important;
   object-position: center center !important;
 
   border-radius: 14px !important;
