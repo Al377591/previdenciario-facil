@@ -2093,3 +2093,35 @@ main {
     border-radius: 14px !important;
   }
 }
+/* =========================================
+   BANNER MOBILE — MAIOR SEM CORTAR
+   ========================================= */
+@media (max-width: 699px) {
+
+  .image-banner {
+    width: 100% !important;
+    height: 160px !important;
+    min-height: 160px !important;
+    max-height: 160px !important;
+    aspect-ratio: auto !important;
+    overflow: hidden !important;
+    border-radius: 14px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .image-banner .banner-image {
+    display: block !important;
+    width: 100% !important;
+    height: 160px !important;
+    min-height: 160px !important;
+    max-height: 160px !important;
+    max-width: 100% !important;
+    object-fit: fill !important;
+    object-position: center center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 14px !important;
+  }
+}
