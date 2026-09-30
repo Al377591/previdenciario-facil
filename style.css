@@ -13,29 +13,33 @@
 }
 
 html,
+body {
   margin: 0;
   padding: 0;
+  min-height: 100%;
+}
 
-  background: linear-gradient(
-    135deg,
-    #F6EBDD 0%,
-    #EEDDC7 50%,
-    #F4E6D2 100%
-  );
-
-  color: #000000;
-
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Arial,
-    sans-serif;
+html {
+  background: #dff3fc;
 }
 
 body {
   min-height: 100vh;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dff4ff 0%,
+      #b9e5f8 50%,
+      #d7f1fb 100%
+    );
+
+  color: #17324d;
+
+  font-family:
+    Verdana,
+    Geneva,
+    sans-serif;
 }
 
 button,
@@ -60,11 +64,24 @@ button {
 
 .app {
   width: 100%;
-  max-width: 480px;
+  max-width: 900px;
+
+  min-height: 100vh;
 
   margin: 0 auto;
 
-  background: #0000FF;
+  background:
+    linear-gradient(
+      180deg,
+      #74cce9 0%,
+      #91d8ee 45%,
+      #b9e8f5 100%
+    );
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 35px rgba(0, 70, 120, 0.15);
 }
 
 
@@ -73,48 +90,112 @@ button {
    ========================================================= */
 
 .top {
-  display: none;
+  width: 100%;
+
+  min-height: 74px;
+
+  padding: 12px 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #eaf8fd 100%
+    );
+
+  border-bottom: 1px solid rgba(0, 90, 140, 0.12);
 }
 
-.eyebrow,
-.page-title span {
+.top-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 0;
+}
+
+.top-logo {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: #d9f1fb;
+
+  font-size: 22px;
+}
+
+.top-title {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.top-title strong {
+  color: #0d527b;
+
+  font-size: 18px;
+
+  font-weight: 900;
+
+  letter-spacing: -0.3px;
+}
+
+.top-title small {
+  color: #5b7387;
+
+  font-size: 10px;
+
+  line-height: 1.2;
+}
+
+.top-nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.top-nav button {
+  min-height: 36px;
+
+  padding: 7px 10px;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #587184;
+
   font-size: 11px;
 
-  letter-spacing: 1.3px;
-
-  font-weight: 800;
-
-  color: #000000;
+  font-weight: 700;
 }
 
-.top h1 {
-  margin: 5px 0 0;
+.top-nav button.active,
+.top-nav button:hover {
+  background: #dff3fc;
 
-  font-size: 27px;
-
-  line-height: 1.1;
-
-  letter-spacing: -0.4px;
-}
-
-.icon-btn {
-  width: 40px;
-  height: 40px;
-
-  border-radius: 50%;
-
-  border: 1px solid #d8e0ea;
-
-  background: #ffffff;
-
-  color: #244c7c;
-
-  font-size: 17px;
-
-  font-weight: 800;
-
-  box-shadow:
-    0 3px 10px rgba(23, 43, 77, 0.06);
+  color: #087ac1;
 }
 
 
@@ -125,7 +206,12 @@ button {
 .page {
   display: none;
 
-  padding: 0 20px 105px;
+  width: 100%;
+
+  padding:
+    22px
+    30px
+    110px;
 }
 
 .page.active {
@@ -134,102 +220,79 @@ button {
 
 
 /* =========================================================
-   IMAGEM PRINCIPAL
+   BANNER PRINCIPAL
    ========================================================= */
 
 .welcome-card {
   width: 100%;
 
   margin: 0;
+
   padding: 0;
 
-  background: #ffffff;
+  background: transparent;
 
-  border-radius: 23px;
+  border-radius: 0;
 
-  overflow: hidden;
+  overflow: visible;
 
-  box-shadow:
-    0 10px 25px rgba(30, 79, 129, 0.15);
+  box-shadow: none;
 }
-
-
-/* =========================================================
-   BANNER
-   ========================================================= */
 
 .image-banner {
   position: relative;
 
   width: 100%;
 
-  display: block;
+  height: auto;
 
-  overflow: hidden;
+  display: block;
 
   padding: 0;
 
-  border-radius: 23px;
+  margin: 0;
+
+  background: transparent;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 7px 20px rgba(0, 70, 120, 0.18);
 }
-
-
-/* =========================================================
-   IMAGEM DO BANNER
-   ========================================================= */
 
 .banner-image {
   display: block;
 
   width: 100%;
-  height: 100%;
+
+  height: auto;
+
+  aspect-ratio: 16 / 5;
 
   margin: 0;
 
-  object-fit: fill;
+  object-fit: cover;
 
   object-position: center center;
 
-  animation: movimentoFoto 8s ease-in-out infinite;
+  border-radius: 18px;
 
-  transform-origin: center center;
+  animation: none;
 
-  will-change: transform;
+  transform: none;
+
+  will-change: auto;
 }
 
 
 /* =========================================================
-   CABEÇALHO DAS SEÇÕES
+   CONTEÚDO DO BANNER
    ========================================================= */
 
-.section-head {
-  display: flex;
-
-  justify-content: space-between;
-  align-items: center;
-
-  margin: 27px 2px 13px;
-}
-
-.section-head h3 {
-  margin: 0;
-
-  font-size: 19px;
-
-  line-height: 1.2;
-
-  letter-spacing: -0.2px;
-}
-
-.section-head button {
-  border: 0;
-
-  background: none;
-
-  color: #2867a7;
-
-  font-size: 13px;
-
-  font-weight: 800;
+.banner-content {
+  display: none;
 }
 
 
@@ -252,9 +315,7 @@ button {
 
   font-weight: 900;
 
-  letter-spacing: -0.4px;
-
-  color: #173B57;
+  color: #123f5c;
 }
 
 .app-title .justice-scale {
@@ -263,10 +324,43 @@ button {
   line-height: 1;
 }
 
-.section-head > h3 {
-  color: #536579;
 
-  font-weight: 500;
+/* =========================================================
+   CABEÇALHO DAS SEÇÕES
+   ========================================================= */
+
+.section-head {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin: 20px 0 11px;
+}
+
+.section-head h3 {
+  margin: 0;
+
+  color: #174765;
+
+  font-size: 18px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.section-head button {
+  border: 0;
+
+  background: transparent;
+
+  color: #087ac1;
+
+  font-size: 12px;
+
+  font-weight: 800;
 }
 
 
@@ -275,110 +369,202 @@ button {
    ========================================================= */
 
 .quick-grid {
+  width: 100%;
+
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  gap: 13px;
+  gap: 12px;
+
+  margin-top: 16px;
 }
 
 
 /* =========================================================
-   CARDS
-   APOSENTADORIA / BENEFÍCIOS / PESQUISA / MEU CNIS
+   CARDS PRINCIPAIS
    ========================================================= */
 
 .feature-card {
+  position: relative;
+
   width: 100%;
 
-  min-height: 118px;
+  min-width: 0;
+
+  min-height: 108px;
 
   padding: 12px 14px;
 
   border: 0;
 
-  border-radius: 17px;
+  border-top: 5px solid transparent;
+
+  border-radius: 15px;
+
+  display: grid;
+
+  grid-template-columns: 30px minmax(0, 1fr) 18px;
+
+  align-items: center;
+
+  column-gap: 10px;
 
   text-align: left;
 
-  background: #ffffff;
-
-  color: #152238;
-
-  box-shadow:
-    0 4px 14px rgba(23, 43, 77, 0.07);
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: space-between;
+  color: #17324d;
 
   cursor: pointer;
 
+  box-shadow:
+    0 4px 14px rgba(0, 70, 120, 0.13);
+
   transition:
-    transform 0.12s ease,
-    box-shadow 0.12s ease;
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(0, 70, 120, 0.18);
+}
+
+.feature-card:active {
+  transform: translateY(0);
 }
 
 
 /* Ícone */
 
-.feature-card span {
-  font-size: 23px;
+.feature-card > span {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 30px;
+
+  font-size: 22px;
 
   line-height: 1;
 }
 
 
-/* Título */
+/* Área de texto */
 
-.feature-card b {
-  display: block;
-
-  margin-top: 5px;
-
-  font-size: 17px;
-
-  line-height: 1.15;
-
-  font-weight: 800;
-
-  color: #152238;
+.feature-card > div {
+  min-width: 0;
 }
 
+.feature-card b,
+.feature-card h3 {
+  display: block;
 
-/* Texto menor */
+  margin: 0;
+
+  color: #17324d;
+
+  font-size: 14px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
 
 .feature-card small {
   display: block;
 
   margin-top: 5px;
 
-  font-size: 12px;
+  color: #42627b;
+
+  font-size: 10px;
 
   line-height: 1.3;
-
-  color: #66758a;
 }
 
 
-/* Barras coloridas */
+/* Seta */
 
-.blue {
-  border-top: 4px solid #2d6fb0;
+.feature-card > i {
+  color: #7f99ab;
+
+  font-size: 22px;
+
+  font-style: normal;
+
+  text-align: right;
 }
 
-.green {
-  border-top: 4px solid #27a36a;
+
+/* =========================================================
+   CORES DOS CARDS
+   ========================================================= */
+
+.feature-card.blue {
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #d9efff 100%
+    );
+
+  border-top-color: #1688d4;
 }
 
-.purple {
-  border-top: 4px solid #7657bd;
+.feature-card.green {
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #d9f8e8 100%
+    );
+
+  border-top-color: #16a765;
 }
 
-.orange {
-  border-top: 4px solid #d9853a;
+.feature-card.purple {
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #eee1ff 100%
+    );
+
+  border-top-color: #8055d6;
+}
+
+.feature-card.orange {
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #ffe4c7 100%
+    );
+
+  border-top-color: #f07b22;
+}
+
+
+/* Ícones coloridos */
+
+.feature-card.blue > span {
+  color: #087ac1;
+}
+
+.feature-card.green > span {
+  color: #079653;
+}
+
+.feature-card.purple > span {
+  color: #7042c4;
+}
+
+.feature-card.orange > span {
+  color: #e96712;
 }
 
 
@@ -386,104 +572,129 @@ button {
    LISTA DE FERRAMENTAS
    ========================================================= */
 
+.tools-grid {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
 .list-item {
   width: 100%;
 
+  min-height: 68px;
+
+  padding: 12px 14px;
+
+  margin: 0;
+
   border: 0;
 
-  border-radius: 16px;
+  border-left: 5px solid #1688d4;
 
-  padding: 15px;
-
-  margin-bottom: 10px;
+  border-radius: 14px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 13px;
+  gap: 12px;
 
   text-align: left;
 
   background: #ffffff;
 
-  color: #152238;
+  color: #17324d;
 
   box-shadow:
-    0 4px 14px rgba(23, 43, 77, 0.07);
+    0 4px 13px rgba(0, 70, 120, 0.12);
 
   transition:
     transform 0.12s ease;
 }
 
+.list-item:active {
+  transform: scale(0.99);
+}
+
 .list-item i {
   margin-left: auto;
 
-  font-size: 29px;
+  color: #8299aa;
 
-  color: #9aa7b6;
+  font-size: 25px;
 
   font-style: normal;
 }
 
-.list-item b,
-.benefit b,
-.source-card b {
+.list-item b {
   display: block;
 
-  font-size: 14px;
+  font-size: 13px;
 
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
-.list-item small,
-.benefit small,
-.source-card small {
+.list-item small {
   display: block;
 
   margin-top: 4px;
 
-  font-size: 12px;
+  color: #71889a;
 
-  line-height: 1.35;
+  font-size: 10px;
 
-  color: #77859a;
+  line-height: 1.3;
+}
+
+
+/* Cores laterais */
+
+.list-item:nth-child(1) {
+  border-left-color: #16a765;
+}
+
+.list-item:nth-child(2) {
+  border-left-color: #f07b22;
 }
 
 
 /* =========================================================
-   ÍCONES DOS ITENS
+   ÍCONES DAS FERRAMENTAS
    ========================================================= */
 
 .round {
-  flex: 0 0 42px;
+  flex: 0 0 40px;
 
-  width: 42px;
-  height: 42px;
-
-  border-radius: 13px;
+  width: 40px;
+  height: 40px;
 
   display: grid;
 
   place-items: center;
 
-  font-size: 19px;
-}
+  border-radius: 12px;
 
-.blue-bg {
-  background: #e5f0fb;
-}
-
-.purple-bg {
-  background: #eee8fb;
+  font-size: 18px;
 }
 
 .green-bg {
-  background: #e5f7ee;
+  background: #c9f4dd;
 }
 
 .orange-bg {
-  background: #fff0df;
+  background: #ffe0bd;
+}
+
+.blue-bg {
+  background: #c9eaff;
+}
+
+.purple-bg {
+  background: #e4d5ff;
 }
 
 
@@ -492,23 +703,35 @@ button {
    ========================================================= */
 
 .tip {
+  width: 100%;
+
   display: flex;
 
   gap: 9px;
 
-  margin-top: 16px;
+  margin-top: 14px;
 
-  padding: 13px;
+  padding: 11px 13px;
 
-  border-radius: 14px;
+  border-left: 4px solid #1688d4;
 
-  background: #edf5fc;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #e8f8ff 100%
+    );
 
   color: #48627d;
 
-  font-size: 11px;
+  font-size: 10px;
 
   line-height: 1.5;
+
+  box-shadow:
+    0 4px 12px rgba(0, 70, 120, 0.09);
 }
 
 .tip b {
@@ -527,17 +750,27 @@ button {
 
   gap: 12px;
 
-  margin: 5px 0 21px;
+  margin: 0 0 20px;
+}
+
+.page-title span {
+  color: #176083;
+
+  font-size: 10px;
+
+  letter-spacing: 1.2px;
+
+  font-weight: 800;
 }
 
 .page-title h2 {
   margin: 3px 0 0;
 
-  font-size: 27px;
+  color: #123f5c;
+
+  font-size: 25px;
 
   line-height: 1.1;
-
-  letter-spacing: -0.4px;
 }
 
 .back {
@@ -546,20 +779,20 @@ button {
   width: 40px;
   height: 40px;
 
-  border: 1px solid #d9e2ec;
+  border: 1px solid #d2e2ec;
+
+  border-radius: 10px;
 
   background: #ffffff;
 
-  border-radius: 11px;
+  color: #31577f;
 
-  font-size: 28px;
+  font-size: 27px;
 
   line-height: 1;
 
-  color: #31577f;
-
   box-shadow:
-    0 3px 10px rgba(23, 43, 77, 0.05);
+    0 3px 10px rgba(0, 70, 120, 0.08);
 }
 
 
@@ -572,7 +805,7 @@ button {
 
   margin-bottom: 16px;
 
-  background: #dfe7ef;
+  background: #d4e7f0;
 
   border-radius: 5px;
 
@@ -586,7 +819,12 @@ button {
 
   height: 100%;
 
-  background: #2867a7;
+  background:
+    linear-gradient(
+      90deg,
+      #087ac1,
+      #19a8e8
+    );
 
   border-radius: 5px;
 }
@@ -597,20 +835,22 @@ button {
    ========================================================= */
 
 .form-card {
-  background: #ffffff;
-
-  border-radius: 19px;
-
   padding: 19px;
 
+  background: #ffffff;
+
+  border-radius: 17px;
+
   box-shadow:
-    0 5px 17px rgba(23, 43, 77, 0.07);
+    0 5px 17px rgba(0, 70, 120, 0.09);
 }
 
 .form-card h3 {
   margin: 0 0 17px;
 
-  font-size: 18px;
+  color: #174765;
+
+  font-size: 17px;
 }
 
 label {
@@ -618,32 +858,32 @@ label {
 
   margin: 14px 0;
 
-  font-size: 12px;
+  color: #55677e;
+
+  font-size: 11px;
 
   font-weight: 800;
-
-  color: #55677e;
 }
 
 input,
 select {
   width: 100%;
 
-  min-height: 48px;
+  min-height: 46px;
 
   margin-top: 7px;
 
-  padding: 12px 13px;
+  padding: 11px 13px;
 
-  border: 1px solid #d5dee8;
+  border: 1px solid #d2e0e9;
 
-  border-radius: 11px;
+  border-radius: 10px;
 
-  background: #fbfcfe;
+  background: #fbfdfe;
 
-  color: #152238;
+  color: #17324d;
 
-  font-size: 15px;
+  font-size: 14px;
 
   outline: none;
 }
@@ -654,10 +894,10 @@ input::placeholder {
 
 input:focus,
 select:focus {
-  border-color: #3b76b2;
+  border-color: #1688d4;
 
   box-shadow:
-    0 0 0 3px rgba(59, 118, 178, 0.10);
+    0 0 0 3px rgba(22, 136, 212, 0.10);
 }
 
 
@@ -668,29 +908,31 @@ select:focus {
 .cta {
   width: 100%;
 
-  min-height: 49px;
+  min-height: 48px;
 
   margin-top: 8px;
 
-  padding: 15px;
+  padding: 14px;
 
   border: 0;
 
-  border-radius: 12px;
+  border-radius: 11px;
 
-  background: #174b80;
+  background:
+    linear-gradient(
+      135deg,
+      #087ac1,
+      #19a8e8
+    );
 
   color: #ffffff;
 
-  font-size: 15px;
+  font-size: 14px;
 
   font-weight: 800;
 
   box-shadow:
-    0 5px 12px rgba(23, 75, 128, 0.15);
-
-  transition:
-    transform 0.12s ease;
+    0 5px 12px rgba(8, 122, 193, 0.25);
 }
 
 
@@ -706,30 +948,32 @@ select:focus {
 
   background: #ffffff;
 
-  border-radius: 17px;
+  border-radius: 15px;
 
-  border-left: 4px solid #2867a7;
+  border-left: 4px solid #1688d4;
 
   box-shadow:
-    0 5px 17px rgba(23, 43, 77, 0.07);
+    0 5px 17px rgba(0, 70, 120, 0.08);
 }
 
 .result h3 {
   margin-top: 0;
 
-  font-size: 18px;
+  color: #174765;
+
+  font-size: 17px;
 }
 
 .result p {
-  font-size: 13px;
+  font-size: 12px;
 
   line-height: 1.5;
 }
 
 .result small {
-  font-size: 11px;
-
   color: #6e7d90;
+
+  font-size: 10px;
 }
 
 .hidden {
@@ -742,7 +986,7 @@ select:focus {
    ========================================================= */
 
 .search-box {
-  min-height: 47px;
+  min-height: 46px;
 
   display: flex;
 
@@ -752,23 +996,23 @@ select:focus {
 
   margin-bottom: 13px;
 
-  border: 1px solid #dce4ed;
+  border: 1px solid #d2e0e9;
 
-  border-radius: 13px;
+  border-radius: 12px;
 
   background: #ffffff;
 
   color: #8291a4;
 
-  font-size: 21px;
+  font-size: 20px;
 }
 
 .search-box input {
-  min-height: 42px;
+  min-height: 40px;
 
   margin: 0;
 
-  padding: 8px;
+  padding: 7px;
 
   border: 0;
 
@@ -802,14 +1046,16 @@ select:focus {
 
   gap: 13px;
 
-  padding: 15px;
+  padding: 14px;
+
+  border: 0;
+
+  border-radius: 15px;
 
   background: #ffffff;
 
-  border-radius: 16px;
-
   box-shadow:
-    0 4px 14px rgba(23, 43, 77, 0.07);
+    0 4px 14px rgba(0, 70, 120, 0.08);
 }
 
 .benefit > span {
@@ -819,13 +1065,11 @@ select:focus {
 
   text-align: center;
 
-  font-size: 24px;
+  font-size: 23px;
 }
 
 .benefit.clickable {
   width: 100%;
-
-  border: 0;
 
   text-align: left;
 
@@ -834,32 +1078,70 @@ select:focus {
   color: inherit;
 }
 
+.benefit b {
+  display: block;
+
+  font-size: 13px;
+
+  line-height: 1.3;
+}
+
+.benefit small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #71889a;
+
+  font-size: 10px;
+
+  line-height: 1.35;
+}
+
 
 /* =========================================================
    FONTES / PESQUISA
    ========================================================= */
 
 .source-card {
-  padding: 17px;
+  padding: 16px;
 
   margin-bottom: 10px;
 
   background: #ffffff;
 
-  border-radius: 16px;
+  border-radius: 15px;
 
   box-shadow:
-    0 4px 14px rgba(23, 43, 77, 0.07);
+    0 4px 14px rgba(0, 70, 120, 0.08);
+}
+
+.source-card b {
+  display: block;
+
+  font-size: 13px;
+}
+
+.source-card small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #71889a;
+
+  font-size: 10px;
+
+  line-height: 1.4;
 }
 
 .source-card a {
   display: inline-block;
 
-  margin-top: 13px;
+  margin-top: 12px;
 
-  color: #2867a7;
+  color: #087ac1;
 
-  font-size: 12px;
+  font-size: 11px;
 
   font-weight: 800;
 
@@ -872,20 +1154,22 @@ select:focus {
    ========================================================= */
 
 .guide-card {
-  padding: 17px;
+  padding: 16px;
 
-  margin-bottom: 11px;
+  margin-bottom: 10px;
 
   background: #ffffff;
 
-  border-radius: 16px;
+  border-radius: 15px;
 
   box-shadow:
-    0 4px 14px rgba(23, 43, 77, 0.07);
+    0 4px 14px rgba(0, 70, 120, 0.08);
 }
 
 .guide-card b {
-  font-size: 14px;
+  color: #174765;
+
+  font-size: 13px;
 
   line-height: 1.35;
 }
@@ -893,11 +1177,11 @@ select:focus {
 .guide-card p {
   margin-bottom: 0;
 
-  font-size: 12px;
+  color: #6d7c8f;
+
+  font-size: 11px;
 
   line-height: 1.55;
-
-  color: #6d7c8f;
 }
 
 
@@ -910,10 +1194,10 @@ select:focus {
 
   background: #ffffff;
 
-  border-radius: 15px;
+  border-radius: 14px;
 
   box-shadow:
-    0 4px 14px rgba(23, 43, 77, 0.07);
+    0 4px 14px rgba(0, 70, 120, 0.08);
 }
 
 .period .row {
@@ -925,13 +1209,13 @@ select:focus {
 }
 
 .period small {
-  font-size: 11px;
-
   color: #748196;
+
+  font-size: 10px;
 }
 
 .period b {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .del {
@@ -952,18 +1236,18 @@ select:focus {
    ========================================================= */
 
 .external-card {
-  padding: 16px;
+  padding: 15px;
 
-  margin-bottom: 11px;
+  margin-bottom: 10px;
 
   background: #ffffff;
 
-  border: 1px solid #e4eaf1;
+  border: 1px solid #dce8ef;
 
-  border-radius: 17px;
+  border-radius: 16px;
 
   box-shadow:
-    0 4px 14px rgba(23, 43, 77, 0.07);
+    0 4px 14px rgba(0, 70, 120, 0.08);
 }
 
 .external-card .ext-top {
@@ -971,30 +1255,32 @@ select:focus {
 
   align-items: center;
 
-  gap: 13px;
+  gap: 12px;
 }
 
 .external-card .ext-icon {
-  flex: 0 0 44px;
+  flex: 0 0 42px;
 
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
 
   display: grid;
 
   place-items: center;
 
-  border-radius: 13px;
+  border-radius: 12px;
 
-  background: #f1f5f9;
+  background: #e7f5fb;
 
-  font-size: 22px;
+  font-size: 21px;
 }
 
 .external-card b {
   display: block;
 
-  font-size: 14px;
+  color: #17324d;
+
+  font-size: 13px;
 
   line-height: 1.3;
 }
@@ -1004,11 +1290,11 @@ select:focus {
 
   margin-top: 4px;
 
-  font-size: 11px;
+  color: #718096;
+
+  font-size: 10px;
 
   line-height: 1.45;
-
-  color: #718096;
 }
 
 .external-card .ext-btn {
@@ -1016,13 +1302,18 @@ select:focus {
 
   width: 100%;
 
-  margin-top: 13px;
+  margin-top: 12px;
 
-  padding: 12px 10px;
+  padding: 11px 10px;
 
-  border-radius: 11px;
+  border-radius: 10px;
 
-  background: #174b80;
+  background:
+    linear-gradient(
+      135deg,
+      #087ac1,
+      #19a8e8
+    );
 
   color: #ffffff;
 
@@ -1030,7 +1321,7 @@ select:focus {
 
   text-decoration: none;
 
-  font-size: 12px;
+  font-size: 11px;
 
   font-weight: 800;
 }
@@ -1041,18 +1332,18 @@ select:focus {
    ========================================================= */
 
 .qr-card {
-  margin-top: 14px;
+  margin-top: 13px;
 
-  padding: 20px;
+  padding: 19px;
 
   background: #ffffff;
 
-  border-radius: 19px;
+  border-radius: 17px;
 
   text-align: center;
 
   box-shadow:
-    0 5px 17px rgba(23, 43, 77, 0.07);
+    0 5px 17px rgba(0, 70, 120, 0.08);
 }
 
 .qr-card img {
@@ -1062,8 +1353,6 @@ select:focus {
   max-width: 100%;
 
   object-fit: contain;
-
-  image-rendering: auto;
 }
 
 .qr-card b {
@@ -1071,15 +1360,15 @@ select:focus {
 
   margin: 9px 0 5px;
 
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .qr-card small {
-  font-size: 11px;
+  color: #718096;
+
+  font-size: 10px;
 
   line-height: 1.45;
-
-  color: #718096;
 }
 
 
@@ -1090,7 +1379,15 @@ select:focus {
 .qr-hero {
   display: block;
 
+  padding: 20px;
+
   text-align: center;
+}
+
+.qr-hero h2 {
+  color: #174765;
+
+  font-size: 19px;
 }
 
 .qr-image-box {
@@ -1098,14 +1395,14 @@ select:focus {
 
   margin: 20px auto;
 
-  padding: 20px;
+  padding: 18px;
 
   background: #ffffff;
 
-  border-radius: 22px;
+  border-radius: 19px;
 
   box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.10);
+    0 8px 25px rgba(0, 70, 120, 0.12);
 }
 
 .qr-image-box img {
@@ -1135,27 +1432,27 @@ select:focus {
 
   width: 100%;
 
-  max-width: 480px;
+  max-width: 900px;
 
-  height: 76px;
+  height: 72px;
 
   display: grid;
 
   grid-template-columns: repeat(5, 1fr);
 
   padding:
-    7px
+    6px
     5px
     env(safe-area-inset-bottom);
 
   background: rgba(255, 255, 255, 0.98);
 
-  border-top: 1px solid #e1e7ee;
+  border-top: 2px solid #7fd3f2;
 
-  z-index: 10;
+  z-index: 100;
 
   box-shadow:
-    0 -7px 22px rgba(23, 43, 77, 0.08);
+    0 -5px 20px rgba(0, 80, 130, 0.15);
 }
 
 .bottom-nav button {
@@ -1167,7 +1464,7 @@ select:focus {
 
   justify-content: center;
 
-  gap: 4px;
+  gap: 3px;
 
   border: 0;
 
@@ -1175,19 +1472,19 @@ select:focus {
 
   color: #7b899a;
 
-  font-size: 10px;
+  font-size: 9px;
 
   font-weight: 700;
 }
 
 .bottom-nav button span {
-  font-size: 22px;
+  font-size: 21px;
 
-  line-height: 22px;
+  line-height: 21px;
 }
 
 .bottom-nav button.active {
-  color: #1e5b94;
+  color: #087ac1;
 }
 
 .bottom-nav button.active span {
@@ -1202,16 +1499,16 @@ select:focus {
 .copyright {
   position: fixed;
 
-  right: 10px;
+  right: 12px;
 
   bottom:
     calc(
-      76px +
+      72px +
       env(safe-area-inset-bottom) +
-      5px
+      6px
     );
 
-  z-index: 20;
+  z-index: 110;
 
   width: 28px;
   height: 28px;
@@ -1223,21 +1520,21 @@ select:focus {
 
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
 
   color: #59697d;
 
-  font-size: 16px;
+  font-size: 15px;
 
   font-weight: 700;
 
   box-shadow:
-    0 2px 8px rgba(23, 43, 77, 0.08);
+    0 2px 8px rgba(0, 70, 120, 0.10);
 }
 
 
 /* =========================================================
-   EFEITOS DE TOQUE
+   EFEITOS
    ========================================================= */
 
 .feature-card:active,
@@ -1250,61 +1547,237 @@ select:focus {
 
 
 /* =========================================================
-   CELULARES PEQUENOS
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 699px) {
+
+  body {
+    background:
+      linear-gradient(
+        180deg,
+        #bfe9f8 0%,
+        #d9f3fa 100%
+      );
+  }
+
+  .app {
+    max-width: 100%;
+
+    min-height: 100vh;
+
+    border-radius: 0;
+
+    box-shadow: none;
+  }
+
+  .top {
+    min-height: 62px;
+
+    padding: 9px 14px;
+  }
+
+  .top-title strong {
+    font-size: 15px;
+  }
+
+  .top-title small {
+    display: none;
+  }
+
+  .top-logo {
+    width: 37px;
+    height: 37px;
+
+    font-size: 19px;
+  }
+
+  .top-nav {
+    gap: 2px;
+  }
+
+  .top-nav button {
+    padding: 6px;
+
+    font-size: 9px;
+  }
+
+  .page {
+    padding:
+      14px
+      14px
+      95px;
+  }
+
+  .image-banner {
+    border-radius: 15px;
+
+    box-shadow:
+      0 5px 15px rgba(0, 70, 120, 0.15);
+  }
+
+  .banner-image {
+    aspect-ratio: 16 / 7;
+
+    border-radius: 15px;
+
+    object-fit: cover;
+  }
+
+  .quick-grid {
+    gap: 9px;
+
+    margin-top: 13px;
+  }
+
+  .feature-card {
+    min-height: 94px;
+
+    padding: 10px;
+
+    grid-template-columns:
+      25px
+      minmax(0, 1fr)
+      13px;
+
+    column-gap: 7px;
+
+    border-radius: 13px;
+  }
+
+  .feature-card > span {
+    width: 25px;
+
+    font-size: 19px;
+  }
+
+  .feature-card b,
+  .feature-card h3 {
+    font-size: 12px;
+
+    line-height: 1.15;
+  }
+
+  .feature-card small {
+    margin-top: 4px;
+
+    font-size: 9px;
+  }
+
+  .feature-card > i {
+    font-size: 18px;
+  }
+
+  .section-head {
+    margin:
+      17px
+      1px
+      9px;
+  }
+
+  .section-head h3 {
+    font-size: 16px;
+  }
+
+  .list-item {
+    min-height: 62px;
+
+    padding: 10px 12px;
+  }
+
+  .round {
+    flex-basis: 37px;
+
+    width: 37px;
+    height: 37px;
+
+    font-size: 16px;
+  }
+
+  .list-item b {
+    font-size: 12px;
+  }
+
+  .list-item small {
+    font-size: 9px;
+  }
+
+  .tip {
+    font-size: 9px;
+  }
+
+  .bottom-nav {
+    height: 68px;
+
+    border-radius:
+      0
+      0
+      0
+      0;
+  }
+
+  .bottom-nav button {
+    font-size: 8px;
+  }
+
+  .bottom-nav button span {
+    font-size: 19px;
+  }
+
+  .copyright {
+    bottom:
+      calc(
+        68px +
+        env(safe-area-inset-bottom) +
+        5px
+      );
+
+    right: 7px;
+
+    width: 26px;
+    height: 26px;
+
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   CELULARES MUITO PEQUENOS
    ========================================================= */
 
 @media (max-width: 360px) {
 
+  .top-nav button {
+    font-size: 8px;
+
+    padding: 5px 4px;
+  }
+
   .page {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 11px;
+
+    padding-right: 11px;
   }
 
-
-  /* Banner 20% menor */
-
-  .image-banner {
-    height: 164px;
+  .quick-grid {
+    gap: 7px;
   }
-
-
-  /* Cards compactos */
 
   .feature-card {
-    min-height: 110px;
+    min-height: 90px;
 
-    padding: 11px 12px;
+    padding: 8px;
   }
 
-  .feature-card b {
-    font-size: 16px;
-  }
-
-  .feature-card small {
+  .feature-card b,
+  .feature-card h3 {
     font-size: 11px;
   }
 
-  .feature-card span {
-    font-size: 21px;
-  }
-
-
-  /* Direitos autorais */
-
-  .copyright {
-    right: 8px;
-
-    width: 27px;
-    height: 27px;
-
-    font-size: 15px;
-  }
-
-
-  /* Navegação */
-
-  .bottom-nav button {
-    font-size: 9px;
+  .feature-card small {
+    font-size: 8px;
   }
 
 }
@@ -1317,828 +1790,85 @@ select:focus {
 @media (min-width: 700px) {
 
   body {
-    padding: 30px 20px;
+    padding: 24px 20px;
   }
-
-
-  /* Aplicativo mais largo */
 
   .app {
-    width: 100%;
+    min-height: calc(100vh - 48px);
 
-    max-width: 900px;
-
-    min-height: 900px;
-
-    margin: 0 auto;
-
-    border-radius: 28px;
+    border-radius: 24px;
 
     overflow: hidden;
-
-    box-shadow:
-      0 10px 45px rgba(21, 34, 56, 0.14);
   }
-
-
-  /* Cabeçalho */
-
-  .top {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-
-  /* Conteúdo */
 
   .page {
-    padding-left: 30px;
+    min-height: 820px;
 
-    padding-right: 30px;
-
-    padding-bottom: 105px;
-
-    min-height: 800px;
+    padding:
+      22px
+      30px
+      110px;
   }
 
-
-  /* Banner 20% menor */
-
   .image-banner {
-    height: 264px;
+    width: 100%;
 
-    border-radius: 23px;
+    border-radius: 18px;
   }
 
   .banner-image {
-    object-position: center center;
-  }
+    aspect-ratio: 16 / 5;
 
-
-  /* Acesso rápido */
-
-  .quick-grid {
-    grid-template-columns: 1fr 1fr;
-
-    gap: 16px;
-  }
-
-  .feature-card {
-    min-height: 124px;
-
-    padding: 13px 15px;
-  }
-
-  .feature-card b {
-    font-size: 18px;
-  }
-
-  .feature-card small {
-    font-size: 12px;
-  }
-
-
-  /* Navegação */
-
-  .bottom-nav {
-    position: sticky;
-
-    left: auto;
-
-    bottom: auto;
-
-    transform: none;
-
-    width: 100%;
-
-    max-width: 900px;
-
-    height: 76px;
-
-    margin: -76px auto 0;
-
-    border-radius:
-      0 0 28px 28px;
-  }
-
-
-  /* Copyright */
-
-  .copyright {
-    right:
-      max(
-        20px,
-        calc(
-          (100vw - 900px) / 2 + 12px
-        )
-      );
-
-    bottom: 82px;
-
-    width: 30px;
-    height: 30px;
-
-    font-size: 17px;
-  }
-
-}
-/* =========================================================
-   AJUSTE FINAL — CARDS DA TELA INICIAL
-   ========================================================= */
-
-.quick-grid {
-  gap: 10px;
-}
-
-.feature-card {
-  min-height: 105px !important;
-  height: 105px !important;
-
-  padding: 10px 12px !important;
-
-  border-radius: 14px;
-}
-
-.feature-card span {
-  font-size: 21px !important;
-}
-
-.feature-card b {
-  margin-top: 3px;
-
-  font-size: 15px !important;
-  line-height: 1.1;
-}
-
-.feature-card small {
-  margin-top: 3px;
-
-  font-size: 10px !important;
-  line-height: 1.2;
-}
-
-
-/* CELULAR */
-
-@media (max-width: 699px) {
-
-  .quick-grid {
-    gap: 9px;
-  }
-
-  .feature-card {
-    min-height: 100px !important;
-    height: 100px !important;
-
-    padding: 9px 11px !important;
-  }
-
-  .feature-card span {
-    font-size: 20px !important;
-  }
-
-  .feature-card b {
-    font-size: 14px !important;
-  }
-
-  .feature-card small {
-    font-size: 10px !important;
-  }
-
-}
-
-
-/* DESKTOP */
-
-@media (min-width: 700px) {
-
-  .feature-card {
-    min-height: 105px !important;
-    height: 105px !important;
-
-    padding: 10px 12px !important;
-  }
-
-  .feature-card b {
-    font-size: 15px !important;
-  }
-
-  .feature-card small {
-    font-size: 10px !important;
-  }
-
-}
-/* =========================================================
-   PREV-FÁCIL — AJUSTE FINAL DO VISUAL
-   ========================================================= */
-
-
-/* ---------------------------------------------------------
-   SOMBRA DO APLICATIVO
-   --------------------------------------------------------- */
-
-.app {
-  border-radius: 28px;
-
-  box-shadow:
-    0 2px 6px rgba(20, 35, 50, 0.10),
-    0 10px 30px rgba(20, 35, 50, 0.14),
-    0 22px 55px rgba(20, 35, 50, 0.10);
-
-  overflow: hidden;
-}
-
-
-/* ---------------------------------------------------------
-   SOMBRA DOS CARDS
-   Visual moderno: sombra leve, sem aspecto pesado
-   --------------------------------------------------------- */
-
-.feature-card {
-  box-shadow:
-    0 1px 3px rgba(20, 35, 50, 0.07),
-    0 5px 14px rgba(20, 35, 50, 0.08);
-
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
-}
-
-
-/* Ao tocar no card */
-
-.feature-card:active {
-  transform: translateY(1px);
-
-  box-shadow:
-    0 1px 3px rgba(20, 35, 50, 0.06);
-}
-
-
-/* ---------------------------------------------------------
-   BANNER — CELULAR
-   164px para TODOS os celulares
-   --------------------------------------------------------- */
-
-@media (max-width: 699px) {
-
-  .image-banner {
-    height: 164px !important;
-
-    border-radius: 20px;
-  }
-
-  .banner-image {
-    width: 100%;
-    height: 164px !important;
+    border-radius: 18px;
 
     object-fit: cover;
-    object-position: center center;
   }
 
-
-  /* Cards compactos */
-
   .quick-grid {
-    gap: 9px;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
   }
 
   .feature-card {
-    min-height: 100px !important;
-    height: 100px !important;
-
-    padding: 9px 11px !important;
-
-    border-radius: 14px;
-  }
-
-  .feature-card span {
-    font-size: 20px !important;
-  }
-
-  .feature-card b {
-    margin-top: 3px;
-
-    font-size: 14px !important;
-    line-height: 1.1;
-  }
-
-  .feature-card small {
-    margin-top: 3px;
-
-    font-size: 10px !important;
-    line-height: 1.2;
+    min-height: 104px;
   }
 
 }
 
 
-/* ---------------------------------------------------------
-   DESKTOP
-   --------------------------------------------------------- */
+/* =========================================================
+   TELAS GRANDES
+   ========================================================= */
 
-@media (min-width: 700px) {
+@media (min-width: 1100px) {
 
   .app {
-    border-radius: 28px;
-
-    box-shadow:
-      0 2px 6px rgba(20, 35, 50, 0.10),
-      0 12px 35px rgba(20, 35, 50, 0.15),
-      0 25px 60px rgba(20, 35, 50, 0.10);
+    max-width: 1000px;
   }
 
-  .image-banner {
-    height: 264px !important;
+  .page {
+    padding-left: 34px;
 
-    border-radius: 23px;
+    padding-right: 34px;
   }
 
-  .banner-image {
-    width: 100%;
-    height: 264px !important;
-
-    object-fit: cover;
-    object-position: center center;
+  .bottom-nav {
+    max-width: 1000px;
   }
 
   .feature-card {
-    min-height: 105px !important;
-    height: 105px !important;
-
-    padding: 10px 12px !important;
+    min-height: 110px;
   }
 
-  .feature-card b {
-    font-size: 15px !important;
+  .feature-card b,
+  .feature-card h3 {
+    font-size: 15px;
   }
 
   .feature-card small {
-    font-size: 10px !important;
+    font-size: 10px;
   }
 
-}
-/* =========================================
-   PREV-FÁCIL — BANNER COM MAIS NITIDEZ
-   ========================================= */
-
-@media (max-width: 699px) {
-
-  .image-banner {
-    height: 190px !important;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-
-  .banner-image {
-    display: block;
-    width: 100%;
-    height: 190px !important;
-    object-fit: cover;
-    object-position: center center;
-    filter: none;
-    image-rendering: auto;
-  }
-}
-
-@media (min-width: 700px) {
-
-  .image-banner {
-    height: 290px !important;
-    border-radius: 23px;
-    overflow: hidden;
-  }
-
-  .banner-image {
-    display: block;
-    width: 100%;
-    height: 290px !important;
-    object-fit: cover;
-    object-position: center center;
-    filter: none;
-    image-rendering: auto;
-  }
-}
-/* =========================================
-   CORREÇÃO DO BANNER NO COMPUTADOR
-   Mantém toda a altura original da foto
-   ========================================= */
-
-/* =========================================
-   BANNER — PC
-   MOSTRAR A FOTO COMPLETA
-   ========================================= */
-
-@media (min-width: 700px) {
-
-  .image-banner {
-    height: 300px !important;
-    aspect-ratio: auto !important;
-    overflow: hidden;
-    border-radius: 23px;
-  }
-
-  .banner-image {
-    display: block;
-    width: 100%;
-    height: 300px !important;
-
-    /* mostra a fotografia inteira */
-    object-fit: fill;
-    object-position: center center;
-
-    filter: none;
-  }
-
-}
-/* =========================================
-   FONTE GERAL DO APLICATIVO — VERDANA
-   ========================================= */
-
-html,
-body,
-body * {
-  font-family: Verdana, Geneva, sans-serif !important;
-}
-/* =========================================
-   PREV-FÁCIL — MOLDURA AZUL DO BANNER
-   ========================================= */
-
-.image-banner {
-  background: #87CEEB !important;
-  padding: 8px !important;
-  border-radius: 23px !important;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.image-banner .banner-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 16px;
-  object-fit: cover;
-  object-position: center center;
-}
-
-/* CELULAR */
-@media (max-width: 699px) {
-
-  .image-banner {
-    padding: 7px !important;
-    border-radius: 20px !important;
-  }
-
-  .image-banner .banner-image {
-    height: 176px !important;
-    border-radius: 14px;
-  }
-}
-
-/* COMPUTADOR */
-@media (min-width: 700px) {
-
-  .image-banner {
-    padding: 9px !important;
-    border-radius: 23px !important;
-  }
-
-  .image-banner .banner-image {
-    height: 282px !important;
-    border-radius: 16px;
-  }
-}
-/* =========================================================
-   PREV-FÁCIL — BANNER FINAL
-   ========================================================= */
-
-.image-banner {
-  background: #87CEEB !important;
-  padding: 8px !important;
-  border-radius: 23px !important;
-  overflow: hidden !important;
-  box-sizing: border-box !important;
-}
-
-.banner-image {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-
-  object-fit: fill !important;
-  object-position: center center !important;
-
-  margin: 0 !important;
-
-  border-radius: 16px;
-
-  /* sem movimento */
-  animation: none !important;
-  transform: none !important;
-  will-change: auto !important;
-}
-
-
-/* CELULAR */
-@media (max-width: 699px) {
-
-  .image-banner {
-    height: 190px !important;
-    padding: 7px !important;
-    border-radius: 20px !important;
-  }
-
-  .banner-image {
-    width: 100% !important;
-    height: 176px !important;
-    border-radius: 14px !important;
-  }
-
-}
-
-
-/* COMPUTADOR */
-@media (min-width: 700px) {
-
-  .image-banner {
-    height: 300px !important;
-    padding: 9px !important;
-    border-radius: 23px !important;
-  }
-
-  .banner-image {
-    width: 100% !important;
-    height: 282px !important;
-    border-radius: 16px !important;
-  }
-
-}
-/* =========================================================
-   CORREÇÃO — BARRA INFERIOR
-   Mantém a barra realmente no rodapé
-   ========================================================= */
-
-@media (min-width: 700px) {
-
-  .bottom-nav {
-    position: fixed !important;
-
-    left: 50% !important;
-    bottom: 0 !important;
-
-    transform: translateX(-50%) !important;
-
-    width: 100% !important;
-    max-width: 900px !important;
-
-    height: 76px !important;
-
-    margin: 0 !important;
-
-    border-radius: 0 0 28px 28px !important;
-
-    z-index: 100 !important;
-  }
-
-}
-/* =========================================================
-   NOVA PALETA — CORES MAIS VIVAS
-   ========================================================= */
-
-/* Fundo geral */
-html,
-body {
-  background: linear-gradient(
-    135deg,
-    #dff4ff 0%,
-    #bde8ff 50%,
-    #d9f5ff 100%
-  ) !important;
-}
-
-
-/* Fundo do aplicativo */
-.app {
-  background: linear-gradient(
-    180deg,
-    #65c8ed 0%,
-    #8ed9f2 55%,
-    #b9e9f7 100%
-  ) !important;
-}
-
-
-/* =========================================================
-   CARDS PRINCIPAIS — CORES VIVAS
-   ========================================================= */
-
-.feature-card {
-  color: #17324d !important;
-
-  box-shadow:
-    0 5px 15px rgba(0, 70, 120, 0.16) !important;
-
-  border-top-width: 6px !important;
-}
-
-
-/* AZUL */
-.feature-card.blue {
-  background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    #d9efff 100%
-  ) !important;
-
-  border-top-color: #1688d4 !important;
-}
-
-
-/* VERDE */
-.feature-card.green {
-  background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    #d9f8e8 100%
-  ) !important;
-
-  border-top-color: #16a765 !important;
-}
-
-
-/* ROXO */
-.feature-card.purple {
-  background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    #eee1ff 100%
-  ) !important;
-
-  border-top-color: #8055d6 !important;
-}
-
-
-/* LARANJA */
-.feature-card.orange {
-  background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    #ffe4c7 100%
-  ) !important;
-
-  border-top-color: #f07b22 !important;
-}
-
-
-/* =========================================================
-   ÍCONES DOS CARDS
-   ========================================================= */
-
-.feature-card.blue > span {
-  color: #087ac1 !important;
-}
-
-.feature-card.green > span {
-  color: #079653 !important;
-}
-
-.feature-card.purple > span {
-  color: #7042c4 !important;
-}
-
-.feature-card.orange > span {
-  color: #e96712 !important;
-}
-
-
-/* =========================================================
-   TÍTULOS
-   ========================================================= */
-
-.feature-card b {
-  color: #17324d !important;
-}
-
-.feature-card small {
-  color: #42627b !important;
-}
-
-
-/* =========================================================
-   FERRAMENTAS
-   ========================================================= */
-
-.list-item {
-  background: #ffffff !important;
-
-  border-left: 5px solid #1688d4 !important;
-
-  box-shadow:
-    0 5px 15px rgba(0, 70, 120, 0.14) !important;
-}
-
-
-/* Primeiro item */
-.list-item:nth-of-type(1) {
-  border-left-color: #16a765 !important;
-}
-
-
-/* Segundo item */
-.list-item:nth-of-type(2) {
-  border-left-color: #f07b22 !important;
-}
-
-
-/* =========================================================
-   ÍCONES DAS FERRAMENTAS
-   ========================================================= */
-
-.green-bg {
-  background: #c9f4dd !important;
-}
-
-.orange-bg {
-  background: #ffe0bd !important;
-}
-
-.blue-bg {
-  background: #c9eaff !important;
-}
-
-.purple-bg {
-  background: #e4d5ff !important;
-}
-
-
-/* =========================================================
-   TÍTULO "FERRAMENTAS"
-   ========================================================= */
-
-.section-head > h3 {
-  color: #174765 !important;
-
-  font-weight: 800 !important;
-}
-
-
-/* =========================================================
-   AVISO
-   ========================================================= */
-
-.tip {
-  background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    #e8f8ff 100%
-  ) !important;
-
-  border-left: 4px solid #1688d4 !important;
-
-  box-shadow:
-    0 4px 12px rgba(0, 70, 120, 0.10) !important;
-}
-
-
-/* =========================================================
-   NAVEGAÇÃO
-   ========================================================= */
-
-.bottom-nav {
-  background: rgba(255, 255, 255, 0.98) !important;
-
-  border-top: 2px solid #7fd3f2 !important;
-
-  box-shadow:
-    0 -5px 20px rgba(0, 80, 130, 0.15) !important;
-}
-
-.bottom-nav button.active {
-  color: #087ac1 !important;
-}
-
-
-/* =========================================================
-   BOTÃO PRINCIPAL
-   ========================================================= */
-
-.cta {
-  background: linear-gradient(
-    135deg,
-    #087ac1,
-    #19a8e8
-  ) !important;
-
-  box-shadow:
-    0 5px 12px rgba(8, 122, 193, 0.25) !important;
-}
-
-
-/* =========================================================
-   TÍTULOS
-   ========================================================= */
-
-.app-title,
-.page-title h2 {
-  color: #123f5c !important;
 }
