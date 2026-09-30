@@ -2043,7 +2043,7 @@ main {
   border: 0 !important;
   border-radius: 14px !important;
 
-  object-fit: cover !important;
+  object-fit: fill !important;
   object-position: center center !important;
 
   filter: none !important;
