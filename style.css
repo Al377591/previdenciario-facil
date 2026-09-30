@@ -1996,33 +1996,39 @@ main {
   }
 
 }
+
 /* =========================================================
-   AJUSTE FINAL DO BANNER
+   AJUSTE FINAL DO BANNER — SOMENTE NO PC
    ========================================================= */
 
-.welcome-card.image-banner {
+/*
+   SOMENTE telas de desktop (1100px ou mais).
+   Celular e tablet permanecem com as configurações anteriores.
+   Altura do banner reduzida em 30%.
+*/
+
+@media (min-width: 1100px) {
+
+  .welcome-card .image-banner {
     width: 100% !important;
 
-    height: 185px !important;
+    height: auto !important;
 
-    margin: 0 0 18px 0 !important;
+    aspect-ratio: 2048 / 515.2 !important;
+
+    margin: 0 !important;
     padding: 0 !important;
 
-    background: transparent !important;
-
-    border: 0 !important;
-    border-radius: 14px !important;
-
-    box-shadow: none !important;
-
     overflow: hidden !important;
-}
 
+    border-radius: 14px !important;
+  }
 
-.welcome-card.image-banner .banner-image {
+  .welcome-card .image-banner .banner-image {
     display: block !important;
 
     width: 100% !important;
+
     height: 100% !important;
 
     max-width: none !important;
@@ -2036,4 +2042,8 @@ main {
 
     object-fit: cover !important;
     object-position: center center !important;
+
+    filter: none !important;
+  }
+
 }
