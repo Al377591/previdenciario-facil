@@ -1989,3 +1989,44 @@ main {
   }
 
 }
+/* =========================================================
+   AJUSTE FINAL DO BANNER
+   ========================================================= */
+
+.welcome-card.image-banner {
+    width: 100% !important;
+
+    height: 185px !important;
+
+    margin: 0 0 18px 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    border: 0 !important;
+    border-radius: 14px !important;
+
+    box-shadow: none !important;
+
+    overflow: hidden !important;
+}
+
+
+.welcome-card.image-banner .banner-image {
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    border-radius: 14px !important;
+
+    object-fit: cover !important;
+    object-position: center center !important;
+}
