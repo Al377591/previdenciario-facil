@@ -2158,32 +2158,26 @@ main {
     object-position: center center !important;
   }
 }
-/* =========================================
-   BARRA SUPERIOR FIXA - CELULAR E PC
+/* /* =========================================
+   BARRA SUPERIOR FIXA DENTRO DO SITE
    ========================================= */
 
 .top {
-  position: fixed !important;
-
+  position: sticky !important;
   top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-
   width: 100% !important;
-
   z-index: 1000 !important;
+
+  min-height: 78px !important;
 
   box-shadow:
     0 3px 12px rgba(0, 91, 145, 0.25) !important;
 }
 
-
-/* =========================================
-   ESPAÇO PARA O CONTEÚDO
-   ========================================= */
-
+/* NÃO criar espaço extra no main,
+   pois a barra continua fazendo parte do site */
 main {
-  padding-top: 78px !important;
+  padding-top: 0 !important;
 }
 
 
@@ -2194,6 +2188,10 @@ main {
 @media screen and (max-width: 699px) {
 
   .top {
+    position: sticky !important;
+    top: 0 !important;
+
+    width: 100% !important;
     min-height: 70px !important;
     height: 70px !important;
 
@@ -2201,9 +2199,8 @@ main {
   }
 
   main {
-    padding-top: 70px !important;
+    padding-top: 0 !important;
   }
-
 }
 
 
@@ -2214,13 +2211,14 @@ main {
 @media screen and (min-width: 700px) and (max-width: 1099px) {
 
   .top {
+    position: sticky !important;
+    top: 0 !important;
     min-height: 78px !important;
   }
 
   main {
-    padding-top: 78px !important;
+    padding-top: 0 !important;
   }
-
 }
 
 
@@ -2231,11 +2229,12 @@ main {
 @media screen and (min-width: 1100px) {
 
   .top {
+    position: sticky !important;
+    top: 0 !important;
     min-height: 78px !important;
   }
 
   main {
-    padding-top: 78px !important;
+    padding-top: 0 !important;
   }
-
 }
