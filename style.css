@@ -1996,80 +1996,51 @@ main {
   }
 
 }
+
 /* =========================================================
-   AJUSTE FINAL DO BANNER
+   AJUSTE FINAL DO BANNER — ALTURA 30% MENOR
    ========================================================= */
+
+/*
+   O banner original usa a proporção 2048 x 736.
+   A altura abaixo foi reduzida para 70% da altura original.
+   A imagem permanece nítida: não usamos blur nem filtros.
+   object-fit: cover mantém a imagem preenchendo o banner.
+*/
 
 .welcome-card.image-banner {
-    width: 100% !important;
-
-    height: 130px !important;
-
-    margin: 0 0 18px 0 !important;
-    padding: 0 !important;
-
-    background: transparent !important;
-
-    border: 0 !important;
-    border-radius: 14px !important;
-
-    box-shadow: none !important;
-
-    overflow: hidden !important;
-}
-
-
-.welcome-card.image-banner .banner-image {
-    display: block !important;
-
-    width: 100% !important;
-    height: 100% !important;
-
-    max-width: none !important;
-    max-height: none !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    border: 0 !important;
-    border-radius: 14px !important;
-
-    object-fit: cover !important;
-    object-position: center center !important;
-}
-
-/* =========================================================
-   AJUSTE FINAL DO BANNER — SOMENTE O BANNER
-   ========================================================= */
-
-.welcome-card .image-banner {
   width: 100% !important;
   height: auto !important;
-  min-height: 0 !important;
-  max-height: none !important;
-  aspect-ratio: auto !important;
+  aspect-ratio: 2048 / 515.2 !important;
 
-  margin: 0 !important;
+  margin: 0 0 18px 0 !important;
   padding: 0 !important;
 
-  overflow: hidden !important;
+  background: transparent !important;
+  border: 0 !important;
   border-radius: 14px !important;
+  box-shadow: none !important;
+
+  overflow: hidden !important;
 }
 
-.welcome-card .image-banner .banner-image {
+.welcome-card.image-banner .banner-image {
   display: block !important;
 
   width: 100% !important;
-  height: auto !important;
+  height: 100% !important;
 
-  max-width: 100% !important;
+  max-width: none !important;
   max-height: none !important;
 
   margin: 0 !important;
   padding: 0 !important;
 
-  object-fit: contain !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+
+  object-fit: cover !important;
   object-position: center center !important;
 
-  border-radius: 14px !important;
+  filter: none !important;
 }
