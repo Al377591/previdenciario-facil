@@ -2035,9 +2035,11 @@ main {
    AJUSTE FINAL — SOMENTE ALTURA DO BANNER
    ========================================================= */
 
-.welcome-card .image-banner {
+.app .page .welcome-card .image-banner {
   width: 100% !important;
-  height: 155px !important;
+  height: 190px !important;
+  min-height: 190px !important;
+  max-height: 190px !important;
   aspect-ratio: auto !important;
 
   margin: 0 0 18px 0 !important;
