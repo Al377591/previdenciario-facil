@@ -247,34 +247,65 @@ main {
    preservando toda a imagem original.
 */
 
+/* =========================================================
+   BANNER - AJUSTE FINAL
+   ========================================================= */
+
 .welcome-card {
   width: 100%;
 
-  background: #ffffff;
+  margin: 0 0 20px 0;
+  padding: 0;
 
-  border-radius: 18px;
+  background: transparent;
 
-  border: 1px solid #d8edf5;
+  border: none;
 
-  box-shadow:
-    0 4px 14px rgba(30, 90, 120, 0.10);
+  border-radius: 14px;
+
+  box-shadow: none;
 
   overflow: hidden;
-
-  margin-bottom: 20px;
 }
 
 
 .image-banner {
   width: 100%;
 
-  height: auto;
+  height: 250px;
 
-  display: block;
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+
+  border: none;
+
+  border-radius: 14px;
 
   overflow: hidden;
 
-  background: #dff5fb;
+  line-height: 0;
+}
+
+
+.banner-image {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  border-radius: 14px;
+
+  object-fit: cover;
+
+  object-position: center center;
 }
 
 
