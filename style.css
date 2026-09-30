@@ -1503,12 +1503,18 @@ main {
 
   grid-template-columns: repeat(5, 1fr);
 
-  background: rgba(255,255,255,0.97);
+  background:
+    linear-gradient(
+      135deg,
+      #006fb6 0%,
+      #087fc4 50%,
+      #0993d0 100%
+    );
 
-  border-top: 1px solid #d6e8ef;
+  border-top: 1px solid rgba(255,255,255,0.18);
 
   box-shadow:
-    0 -4px 16px rgba(30, 70, 90, 0.08);
+    0 -4px 16px rgba(0, 91, 145, 0.20);
 
   z-index: 100;
 }
@@ -1519,7 +1525,7 @@ main {
 
   background: transparent;
 
-  color: #718493;
+  color: rgba(255,255,255,0.88);
 
   cursor: pointer;
 
@@ -1546,7 +1552,8 @@ main {
 
 .bottom-nav button.active,
 .bottom-nav button:hover {
-  color: #087fc4;
+  color: #ffffff;
+  background: rgba(255,255,255,0.12);
 }
 
 
@@ -1996,7 +2003,7 @@ main {
 .welcome-card.image-banner {
     width: 100% !important;
 
-    height: 185px !important;
+    height: 130px !important;
 
     margin: 0 0 18px 0 !important;
     padding: 0 !important;
@@ -2032,17 +2039,17 @@ main {
 }
 
 /* =========================================================
-   AJUSTE FINAL — SOMENTE ALTURA DO BANNER
+   AJUSTE FINAL DO BANNER — SOMENTE O BANNER
    ========================================================= */
 
-.app .page .welcome-card .image-banner {
+.welcome-card .image-banner {
   width: 100% !important;
   height: 190px !important;
   min-height: 190px !important;
   max-height: 190px !important;
   aspect-ratio: auto !important;
 
-  margin: 0 0 18px 0 !important;
+  margin: 0 !important;
   padding: 0 !important;
 
   overflow: hidden !important;
@@ -2053,7 +2060,7 @@ main {
   display: block !important;
 
   width: 100% !important;
-  height: 100% !important;
+  height: 190px !important;
 
   max-width: none !important;
   max-height: none !important;
@@ -2065,37 +2072,4 @@ main {
   object-position: center center !important;
 
   border-radius: 14px !important;
-}
-
-
-/* =========================================================
-   AJUSTE FINAL — BARRA INFERIOR AZUL EM TODAS AS TELAS
-   ========================================================= */
-
-.bottom-nav {
-  background:
-    linear-gradient(
-      135deg,
-      #006fb6 0%,
-      #087fc4 50%,
-      #0993d0 100%
-    ) !important;
-
-  border-top: 1px solid rgba(255,255,255,0.18) !important;
-
-  box-shadow:
-    0 -4px 16px rgba(0, 91, 145, 0.20) !important;
-}
-
-.bottom-nav button {
-  color: rgba(255,255,255,0.88) !important;
-}
-
-.bottom-nav button.active,
-.bottom-nav button:hover {
-  color: #ffffff !important;
-}
-
-.bottom-nav button.active span {
-  color: #ffffff !important;
 }
