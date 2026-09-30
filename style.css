@@ -2125,3 +2125,36 @@ main {
     border-radius: 14px !important;
   }
 }
+/* =========================================
+   BANNER MOBILE - AJUSTE FINAL
+   ========================================= */
+@media screen and (max-width: 699px) {
+
+  .welcome-card .image-banner {
+    width: 100% !important;
+    height: 180px !important;
+    min-height: 180px !important;
+    max-height: 180px !important;
+    aspect-ratio: auto !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 14px !important;
+  }
+
+  .welcome-card .image-banner .banner-image {
+    display: block !important;
+    width: 100% !important;
+    height: 180px !important;
+    min-height: 180px !important;
+    max-height: 180px !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 14px !important;
+
+    object-fit: fill !important;
+    object-position: center center !important;
+  }
+}
