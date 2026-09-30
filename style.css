@@ -2043,9 +2043,29 @@ main {
   border: 0 !important;
   border-radius: 14px !important;
 
-  object-fit: fill !important;
-  object-position: center center !important;
+  object-fit: cover !important;
+  object-position: center 35% !important;
 
   filter: none !important;
+}
+
+/* =========================================================
+   CELULAR — MANTÉM A CONFIGURAÇÃO NATURAL DA IMAGEM
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .image-banner {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 2048 / 650 !important;
+    overflow: hidden !important;
+  }
+
+  .image-banner .banner-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
 }
 
