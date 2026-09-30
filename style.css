@@ -2061,6 +2061,9 @@ main {
 /* ================================
    AJUSTE DO BANNER - SOMENTE CELULAR
    ================================ */
+/* =========================================
+   BANNER MOBILE — NÃO CORTAR A IMAGEM
+   ========================================= */
 @media (max-width: 699px) {
 
   .image-banner {
@@ -2068,9 +2071,11 @@ main {
     height: auto !important;
     min-height: 0 !important;
     max-height: none !important;
-    aspect-ratio: 2048 / 736 !important;
-    overflow: hidden !important;
+    aspect-ratio: auto !important;
+    overflow: visible !important;
     border-radius: 14px !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .image-banner .banner-image {
@@ -2079,8 +2084,12 @@ main {
     height: auto !important;
     min-height: 0 !important;
     max-height: none !important;
-    object-fit: contain !important;
-    object-position: center center !important;
+    max-width: 100% !important;
+    object-fit: fill !important;
+    object-position: left center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
     border-radius: 14px !important;
   }
 }
