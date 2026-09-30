@@ -1993,11 +1993,10 @@ main {
    AJUSTE FINAL DO BANNER
    ========================================================= */
 
-.welcome-card .image-banner {
+.welcome-card.image-banner {
     width: 100% !important;
 
-    height: 130px !important;
-    aspect-ratio: auto !important;
+    height: 185px !important;
 
     margin: 0 0 18px 0 !important;
     padding: 0 !important;
@@ -2013,7 +2012,7 @@ main {
 }
 
 
-.welcome-card .image-banner .banner-image {
+.welcome-card.image-banner .banner-image {
     display: block !important;
 
     width: 100% !important;
@@ -2030,4 +2029,71 @@ main {
 
     object-fit: cover !important;
     object-position: center center !important;
+}
+
+/* =========================================================
+   AJUSTE FINAL — SOMENTE ALTURA DO BANNER
+   ========================================================= */
+
+.welcome-card .image-banner {
+  width: 100% !important;
+  height: 140px !important;
+  aspect-ratio: auto !important;
+
+  margin: 0 0 18px 0 !important;
+  padding: 0 !important;
+
+  overflow: hidden !important;
+  border-radius: 14px !important;
+}
+
+.welcome-card .image-banner .banner-image {
+  display: block !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  max-width: none !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  object-fit: cover !important;
+  object-position: center center !important;
+
+  border-radius: 14px !important;
+}
+
+
+/* =========================================================
+   AJUSTE FINAL — BARRA INFERIOR AZUL EM TODAS AS TELAS
+   ========================================================= */
+
+.bottom-nav {
+  background:
+    linear-gradient(
+      135deg,
+      #006fb6 0%,
+      #087fc4 50%,
+      #0993d0 100%
+    ) !important;
+
+  border-top: 1px solid rgba(255,255,255,0.18) !important;
+
+  box-shadow:
+    0 -4px 16px rgba(0, 91, 145, 0.20) !important;
+}
+
+.bottom-nav button {
+  color: rgba(255,255,255,0.88) !important;
+}
+
+.bottom-nav button.active,
+.bottom-nav button:hover {
+  color: #ffffff !important;
+}
+
+.bottom-nav button.active span {
+  color: #ffffff !important;
 }
