@@ -2238,3 +2238,17 @@ main {
     padding-top: 0 !important;
   }
 }
+/* =========================================================
+   AUMENTAR QR CODE — PÁGINA QR CODE
+   ========================================================= */
+
+.qr-image-box {
+  width: 280px !important;
+  height: 280px !important;
+}
+
+.qr-image-box img {
+  width: 250px !important;
+  height: 250px !important;
+  max-width: none !important;
+}
