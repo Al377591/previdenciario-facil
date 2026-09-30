@@ -269,7 +269,7 @@ main {
 .image-banner {
   width: 100%;
 
-  aspect-ratio: 2048 / 736;
+  aspect-ratio: 2048 / 500;
 
   height: auto;
 
@@ -1988,48 +1988,4 @@ main {
     max-width: 1180px;
   }
 
-}
-/* =========================================================
-   AJUSTE FINAL DO BANNER
-   ========================================================= */
-/* =========================================================
-   BANNER — AJUSTE DE ALTURA E LARGURA
-   ========================================================= */
-
-.welcome-card.image-banner {
-    width: 100% !important;
-    height: 225px !important;
-
-    margin: 0 0 18px 0 !important;
-    padding: 0 !important;
-
-    overflow: hidden !important;
-
-    border: none !important;
-    border-radius: 14px !important;
-
-    background: transparent !important;
-    box-shadow: none !important;
-}
-
-
-.welcome-card.image-banner .banner-image {
-    display: block !important;
-
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-
-    height: 225px !important;
-    min-height: 225px !important;
-    max-height: 225px !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    border: none !important;
-    border-radius: 14px !important;
-
-    object-fit: cover !important;
-    object-position: center center !important;
 }
