@@ -1992,23 +1992,24 @@ main {
 /* =========================================================
    AJUSTE FINAL DO BANNER
    ========================================================= */
+/* =========================================================
+   BANNER — AJUSTE DE ALTURA E LARGURA
+   ========================================================= */
 
 .welcome-card.image-banner {
     width: 100% !important;
-
-    height: 185px !important;
+    height: 225px !important;
 
     margin: 0 0 18px 0 !important;
     padding: 0 !important;
 
-    background: transparent !important;
+    overflow: hidden !important;
 
-    border: 0 !important;
+    border: none !important;
     border-radius: 14px !important;
 
+    background: transparent !important;
     box-shadow: none !important;
-
-    overflow: hidden !important;
 }
 
 
@@ -2016,47 +2017,19 @@ main {
     display: block !important;
 
     width: 100% !important;
-    height: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
 
-    max-width: none !important;
-    max-height: none !important;
+    height: 225px !important;
+    min-height: 225px !important;
+    max-height: 225px !important;
 
     margin: 0 !important;
     padding: 0 !important;
 
-    border: 0 !important;
+    border: none !important;
     border-radius: 14px !important;
 
     object-fit: cover !important;
     object-position: center center !important;
-}
-/* =========================================================
-   AJUSTE DEFINITIVO — SOMENTE ALTURA DO BANNER
-   ========================================================= */
-
-/* CELULAR */
-@media (max-width: 699px) {
-
-  .image-banner {
-    height: 155px !important;
-  }
-
-  .banner-image {
-    height: 155px !important;
-  }
-
-}
-
-
-/* COMPUTADOR / NOTEBOOK */
-@media (min-width: 700px) {
-
-  .image-banner {
-    height: 215px !important;
-  }
-
-  .banner-image {
-    height: 215px !important;
-  }
-
 }
