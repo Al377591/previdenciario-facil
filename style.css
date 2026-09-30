@@ -1503,18 +1503,12 @@ main {
 
   grid-template-columns: repeat(5, 1fr);
 
-  background:
-    linear-gradient(
-      135deg,
-      #006fb6 0%,
-      #087fc4 50%,
-      #0993d0 100%
-    );
+  background: rgba(255,255,255,0.97);
 
-  border-top: 1px solid rgba(255,255,255,0.18);
+  border-top: 1px solid #d6e8ef;
 
   box-shadow:
-    0 -4px 16px rgba(0, 91, 145, 0.20);
+    0 -4px 16px rgba(30, 70, 90, 0.08);
 
   z-index: 100;
 }
@@ -1525,7 +1519,7 @@ main {
 
   background: transparent;
 
-  color: rgba(255,255,255,0.88);
+  color: #718493;
 
   cursor: pointer;
 
@@ -1552,8 +1546,7 @@ main {
 
 .bottom-nav button.active,
 .bottom-nav button:hover {
-  color: #ffffff;
-  background: rgba(255,255,255,0.12);
+  color: #087fc4;
 }
 
 
@@ -2000,10 +1993,11 @@ main {
    AJUSTE FINAL DO BANNER
    ========================================================= */
 
-.welcome-card.image-banner {
+.welcome-card .image-banner {
     width: 100% !important;
 
     height: 130px !important;
+    aspect-ratio: auto !important;
 
     margin: 0 0 18px 0 !important;
     padding: 0 !important;
@@ -2019,7 +2013,7 @@ main {
 }
 
 
-.welcome-card.image-banner .banner-image {
+.welcome-card .image-banner .banner-image {
     display: block !important;
 
     width: 100% !important;
