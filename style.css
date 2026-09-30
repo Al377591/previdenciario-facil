@@ -1674,26 +1674,23 @@ main {
   }
 
 
-  .image-banner {
-    height: auto !important;
+ .image-banner {
+  width: 100% !important;
+  height: 115px !important;
+  aspect-ratio: auto !important;
+  overflow: hidden !important;
+  border-radius: 14px !important;
+}
 
-    aspect-ratio: auto !important;
-
-    overflow: hidden;
-  }
-
-
-  .banner-image {
-    width: 100% !important;
-
-    height: auto !important;
-
-    max-height: none !important;
-
-    object-fit: contain !important;
-
-    object-position: center center !important;
-  }
+.banner-image {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 14px !important;
+}
 
 
   .app-title {
