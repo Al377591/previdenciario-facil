@@ -2253,3 +2253,52 @@ main {
   max-width: none !important;
 }
 
+/* =====================================================
+   IDENTIFICAÇÃO GUIA-PREVI + USCS
+   ===================================================== */
+
+.institutional-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 7px 0 8px 0;
+}
+
+/* GUIA-PREVI - lado esquerdo */
+.institutional-row .top-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* USCS - lado direito */
+.uscs-extension {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 4px;
+}
+
+/* Logo USCS */
+.uscs-extension img {
+    width: 58px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    margin: 0 0 2px 0;
+}
+
+/* Texto Projeto de Extensão */
+.uscs-extension span {
+    font-size: 8px;
+    font-weight: 600;
+    color: #174a70;
+    line-height: 1;
+    white-space: nowrap;
+}
