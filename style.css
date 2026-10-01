@@ -2472,3 +2472,98 @@ main {
         line-height: 9px;
     }
 }
+/* =========================================================
+   IDENTIFICAÇÃO DO PROJETO - ABAIXO DO BANNER
+   ========================================================= */
+
+.identificacao-projeto {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 8px 4px 10px 4px;
+    background: #ffffff;
+}
+
+/* GUIA-PREVI - lado esquerdo */
+.identificacao-guia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.guia-titulo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #063b73;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+
+.guia-subtitulo {
+    font-size: 11px;
+    font-weight: 600;
+    color: #333333;
+    line-height: 1.2;
+    margin-top: 3px;
+    white-space: nowrap;
+}
+
+/* USCS - lado direito */
+.identificacao-uscs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 150px;
+}
+
+.identificacao-uscs img {
+    width: 115px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.uscs-texto {
+    font-size: 10px;
+    font-weight: 600;
+    color: #333333;
+    margin-top: 2px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .identificacao-projeto {
+        padding: 7px 4px 9px 4px;
+    }
+
+    .guia-titulo {
+        font-size: 16px;
+    }
+
+    .guia-subtitulo {
+        font-size: 10px;
+    }
+
+    .identificacao-uscs {
+        min-width: 125px;
+    }
+
+    .identificacao-uscs img {
+        width: 95px;
+    }
+
+    .uscs-texto {
+        font-size: 9px;
+    }
+}
