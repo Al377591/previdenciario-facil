@@ -2252,14 +2252,4 @@ main {
   height: 250px !important;
   max-width: none !important;
 }
-/* Destaca somente a balança do logo superior */
-.top-logo {
-    background: #ffffff !important;
-    border-radius: 50%;
-    width: 34px;
-    height: 34px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-}
+
