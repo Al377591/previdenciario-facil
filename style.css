@@ -2358,3 +2358,111 @@ main {
     line-height: 1;
     white-space: nowrap;
 }
+/* =====================================================
+   IDENTIFICAÇÃO GUIA-PREVI + USCS
+   Fica entre o banner e as caixas de conteúdo
+   ===================================================== */
+
+.identificacao-projeto {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    margin-top: 8px;
+    margin-bottom: 10px;
+
+    padding: 0 4px;
+}
+
+/* GUIA-PREVI - lado esquerdo */
+.identificacao-guia {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.guia-logo-pequeno {
+    font-size: 15px;
+    line-height: 17px;
+    color: #123b66;
+    white-space: nowrap;
+}
+
+.guia-logo-pequeno strong {
+    color: #123b66;
+}
+
+.guia-subtitulo {
+    font-size: 8px;
+    color: #123b66;
+    margin-top: 1px;
+    white-space: nowrap;
+}
+
+/* USCS - lado direito */
+.identificacao-uscs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100px;
+    text-align: center;
+}
+
+.identificacao-uscs img {
+    display: block;
+
+    width: 42px;
+    height: auto;
+
+    max-width: 42px;
+    object-fit: contain;
+
+    background: #ffffff;
+}
+
+.uscs-projeto {
+    margin-top: 2px;
+
+    font-size: 7px;
+    line-height: 9px;
+
+    color: #333;
+    white-space: nowrap;
+}
+@media (max-width: 600px) {
+
+    .identificacao-projeto {
+        margin-top: 6px;
+        margin-bottom: 8px;
+        padding: 0 3px;
+    }
+
+    .guia-logo-pequeno {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .guia-subtitulo {
+        font-size: 7px;
+        line-height: 9px;
+    }
+
+    .identificacao-uscs {
+        width: 75px;
+    }
+
+    .identificacao-uscs img {
+        width: 34px;
+        max-width: 34px;
+    }
+
+    .uscs-projeto {
+        font-size: 6px;
+        line-height: 8px;
+    }
+}
