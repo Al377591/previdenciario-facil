@@ -2360,7 +2360,6 @@ main {
 }
 /* =====================================================
    IDENTIFICAÇÃO GUIA-PREVI + USCS
-   Fica entre o banner e as caixas de conteúdo
    ===================================================== */
 
 .identificacao-projeto {
@@ -2371,12 +2370,11 @@ main {
     box-sizing: border-box;
 
     margin-top: 8px;
-    margin-bottom: 10px;
-
-    padding: 0 4px;
+    margin-bottom: 12px;
+    padding: 0 5px;
 }
 
-/* GUIA-PREVI - lado esquerdo */
+/* GUIA-PREVI - ESQUERDA */
 .identificacao-guia {
     display: flex;
     flex-direction: column;
@@ -2385,8 +2383,8 @@ main {
 }
 
 .guia-logo-pequeno {
-    font-size: 15px;
-    line-height: 17px;
+    font-size: 18px;
+    line-height: 20px;
     color: #123b66;
     white-space: nowrap;
 }
@@ -2396,73 +2394,81 @@ main {
 }
 
 .guia-subtitulo {
-    font-size: 8px;
+    font-size: 9px;
+    line-height: 11px;
     color: #123b66;
-    margin-top: 1px;
+    margin-top: 2px;
     white-space: nowrap;
 }
 
-/* USCS - lado direito */
+
+/* USCS - DIREITA */
 .identificacao-uscs {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    width: 100px;
+    width: 130px;
     text-align: center;
 }
 
 .identificacao-uscs img {
     display: block;
 
-    width: 42px;
+    width: 65px;
     height: auto;
 
-    max-width: 42px;
-    object-fit: contain;
+    max-width: 65px;
 
+    object-fit: contain;
     background: #ffffff;
 }
 
 .uscs-projeto {
-    margin-top: 2px;
+    margin-top: 3px;
 
-    font-size: 7px;
-    line-height: 9px;
+    font-size: 9px;
+    line-height: 11px;
 
     color: #333;
     white-space: nowrap;
 }
+
+
+/* =====================================================
+   CELULAR
+   ===================================================== */
+
 @media (max-width: 600px) {
 
     .identificacao-projeto {
-        margin-top: 6px;
-        margin-bottom: 8px;
-        padding: 0 3px;
+        margin-top: 7px;
+        margin-bottom: 10px;
+        padding: 0 4px;
     }
 
     .guia-logo-pequeno {
-        font-size: 13px;
-        line-height: 15px;
+        font-size: 15px;
+        line-height: 17px;
     }
 
     .guia-subtitulo {
-        font-size: 7px;
-        line-height: 9px;
+        font-size: 8px;
+        line-height: 10px;
     }
 
     .identificacao-uscs {
-        width: 75px;
+        width: 100px;
     }
 
     .identificacao-uscs img {
-        width: 34px;
-        max-width: 34px;
+        width: 50px;
+        max-width: 50px;
     }
 
     .uscs-projeto {
-        font-size: 6px;
-        line-height: 8px;
+        font-size: 7px;
+        line-height: 9px;
     }
 }
