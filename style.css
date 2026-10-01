@@ -2302,3 +2302,59 @@ main {
     line-height: 1;
     white-space: nowrap;
 }
+/* =====================================================
+   IDENTIFICAÇÃO DO PROJETO
+   FICA ENTRE O BANNER E AS CAIXAS
+   ===================================================== */
+
+.projeto-identificacao {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 7px 0 8px 0;
+}
+
+/* GUIA-PREVI - esquerda */
+.projeto-guia {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.projeto-guia strong {
+    font-size: 16px;
+    line-height: 1.1;
+}
+
+.projeto-guia small {
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+/* USCS - direita */
+.projeto-uscs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+}
+
+.projeto-uscs img {
+    width: 58px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.projeto-uscs span {
+    font-size: 8px;
+    font-weight: 600;
+    color: #174a70;
+    line-height: 1;
+    white-space: nowrap;
+}
