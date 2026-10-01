@@ -1,2050 +1,308 @@
 /* =========================================================
-   GUIA-PREVI
-   CSS PRINCIPAL — VERSÃO LIMPA
-   ========================================================= */
-
-
-/* =========================================================
-   RESET
+   GUIA-PREVI — CONFIGURAÇÃO GERAL
    ========================================================= */
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
 }
 
 body {
-  font-family: Verdana, Arial, sans-serif;
-  background: linear-gradient(
-    180deg,
-    #e6f7fd 0%,
-    #d5f1fa 50%,
-    #c8ebf6 100%
-  );
-  color: #17324d;
-  min-height: 100vh;
-  padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #dff6ff;
+    color: #123;
 }
-
-button,
-input,
-select {
-  font-family: inherit;
-}
-
 
 /* =========================================================
-   APLICATIVO
+   CONTAINER PRINCIPAL
    ========================================================= */
 
-.app {
-  width: 100%;
-  min-height: 100vh;
-  background: #ffffff;
-  overflow: hidden;
-
-  box-shadow:
-    0 2px 6px rgba(20, 35, 50, 0.08),
-    0 12px 35px rgba(20, 35, 50, 0.10);
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    min-height: 100vh;
 }
-
 
 /* =========================================================
-   BARRA SUPERIOR
+   CABEÇALHO
    ========================================================= */
 
-.top {
-  width: 100%;
-  min-height: 78px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 20px;
-  padding: 12px 24px;
-
-  background: linear-gradient(
-    135deg,
-    #006fb6 0%,
-    #087fc4 50%,
-    #0993d0 100%
-  );
-
-  color: #ffffff;
-
-  box-shadow:
-    0 3px 12px rgba(0, 91, 145, 0.25);
-
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+header {
+    width: 100%;
+    background: #008dcc;
+    color: #ffffff;
 }
-
-
-/* =========================================================
-   MARCA DO TOPO
-   ========================================================= */
-
-.top-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-}
-
-.top-logo {
-  width: 48px;
-  height: 48px;
-
-  border-radius: 13px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(255,255,255,0.16);
-  border: 1px solid rgba(255,255,255,0.28);
-
-  font-size: 25px;
-  flex-shrink: 0;
-}
-
-.top-title {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.top-title strong {
-  font-size: 22px;
-  line-height: 1;
-  letter-spacing: -0.5px;
-}
-
-.top-title small {
-  font-size: 10px;
-  opacity: 0.92;
-  line-height: 1.3;
-}
-
-
-/* =========================================================
-   NAVEGAÇÃO SUPERIOR
-   ========================================================= */
-
-.top-nav {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.top-nav button {
-  border: 0;
-  background: transparent;
-
-  color: rgba(255,255,255,0.88);
-
-  padding: 8px 10px;
-  border-radius: 9px;
-
-  cursor: pointer;
-  font-size: 11px;
-
-  transition:
-    background 0.15s ease,
-    color 0.15s ease;
-}
-
-.top-nav button:hover,
-.top-nav button.active {
-  background: rgba(255,255,255,0.18);
-  color: #ffffff;
-}
-
-
-/* =========================================================
-   CONTEÚDO
-   ========================================================= */
-
-main {
-  width: 100%;
-  padding-top: 0;
-}
-
-.page {
-  width: 100%;
-  max-width: 1120px;
-
-  margin: 0 auto;
-
-  padding: 22px 24px 100px;
-
-  display: none;
-}
-
-.page.active {
-  display: block;
-}
-
 
 /* =========================================================
    BANNER
+   NÃO ALTERAR PROPORÇÃO
    ========================================================= */
 
-.welcome-card {
-  width: 100%;
-
-  margin: 0 0 10px 0;
-  padding: 0;
-
-  background: transparent;
-  border: none;
-  box-shadow: none;
-
-  overflow: visible;
+.banner {
+    width: 100%;
+    overflow: hidden;
 }
 
-.image-banner {
-  width: 100%;
-
-  margin: 0;
-  padding: 0;
-
-  background: transparent;
-
-  border: none;
-  border-radius: 14px;
-
-  overflow: hidden;
-
-  line-height: 0;
+.banner img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
-
-.banner-image {
-  display: block;
-
-  width: 100%;
-  height: auto;
-
-  max-width: 100%;
-
-  margin: 0;
-  padding: 0;
-
-  border: none;
-  border-radius: 14px;
-
-  object-fit: contain;
-  object-position: center center;
-}
-
 
 /* =========================================================
-   IDENTIFICAÇÃO DO PROJETO
-   FICA EXATAMENTE ENTRE O BANNER E AS CAIXAS
+   BLOCO DE IDENTIFICAÇÃO
+   GUIA-PREVI + USCS
    ========================================================= */
 
-.projeto-identificacao {
-  width: 100%;
-
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-
-  padding: 9px 4px 12px 4px;
-
-  margin: 0;
-
-  background: #ffffff;
-
-  min-height: 105px;
+.identificacao {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 18px 8px 18px;
+    background: #ffffff;
 }
-
 
 /* =========================================================
-   GUIA-PREVI — LADO ESQUERDO
+   LADO ESQUERDO — GUIA-PREVI
    ========================================================= */
 
-.projeto-guia {
-  display: flex;
-  flex-direction: column;
-
-  align-items: flex-start;
-  justify-content: flex-start;
-
-  padding-top: 4px;
-
-  text-align: left;
+.identificacao-esquerda {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-.projeto-guia strong {
-  display: block;
-
-  color: #063b73;
-
-  font-size: 21px;
-  font-weight: 700;
-
-  line-height: 1.15;
-
-  white-space: nowrap;
+.identificacao-esquerda .titulo-guia {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: #075a9e;
 }
 
-.projeto-guia small {
-  display: block;
-
-  color: #174963;
-
-  font-size: 11px;
-  font-weight: 600;
-
-  line-height: 1.25;
-
-  margin-top: 3px;
-
-  white-space: nowrap;
+.identificacao-esquerda .subtitulo-guia {
+    margin: 2px 0 0 0;
+    padding: 0;
+    font-size: 11px;
+    line-height: 1.2;
+    color: #333333;
 }
-
 
 /* =========================================================
-   USCS — LADO DIREITO
+   LADO DIREITO — USCS
    ========================================================= */
 
-.projeto-uscs {
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: flex-start;
-
-  text-align: center;
-
-  width: 180px;
-
-  margin-left: auto;
-
-  padding-top: 0;
+.identificacao-direita {
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin-left: 20px;
 }
 
-
-/* LOGO USCS
-   AQUI ESTÁ O AUMENTO DO TAMANHO */
-
-.projeto-uscs img {
-  display: block;
-
-  width: 120px;
-  height: 75px;
-
-  max-width: 120px;
-  max-height: 75px;
-
-  object-fit: contain;
-
-  object-position: center;
-
-  margin: 0 auto 3px auto;
-
-  background: #ffffff;
+/* LOGO USCS — MAIOR */
+.identificacao-direita img {
+    display: block;
+    width: 115px;
+    height: auto;
+    max-height: 75px;
+    object-fit: contain;
+    margin: 0 auto;
 }
 
-
-/* TEXTO PROJETO DE EXTENSÃO */
-
-.projeto-uscs span {
-  display: block;
-
-  color: #174a70;
-
-  font-size: 11px;
-  font-weight: 600;
-
-  line-height: 1.15;
-
-  white-space: nowrap;
-
-  text-align: center;
+/* TEXTO ABAIXO DO LOGO */
+.identificacao-direita .projeto-extensao {
+    margin-top: 3px;
+    font-size: 11px;
+    line-height: 1.15;
+    font-weight: 500;
+    color: #333333;
+    white-space: nowrap;
 }
-
 
 /* =========================================================
-   ACESSO RÁPIDO
+   TÍTULO PRINCIPAL
    ========================================================= */
 
-.section-head {
-  width: 100%;
-
-  margin-top: 4px;
-  margin-bottom: 12px;
+.titulo-principal {
+    margin: 2px 18px 8px 18px;
 }
 
-.app-title {
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  color: #005b96;
-
-  font-size: 25px;
-  font-weight: 700;
-
-  line-height: 1.1;
-
-  margin-bottom: 5px;
+.titulo-principal h1 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #075a9e;
 }
 
-.justice-scale {
-  font-size: 25px;
+.titulo-principal p {
+    margin: 2px 0 0 0;
+    font-size: 11px;
+    color: #333333;
 }
-
-.section-head h3,
-.welcome-card h3 {
-  color: #184966;
-
-  font-size: 13px;
-  font-weight: 700;
-
-  line-height: 1.4;
-}
-
 
 /* =========================================================
-   GRID DAS CAIXAS
+   ÁREA DAS CAIXAS
    ========================================================= */
 
-.quick-grid {
-  width: 100%;
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 12px;
-
-  margin-bottom: 23px;
+.cards {
+    width: calc(100% - 36px);
+    margin: 0 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
-
 
 /* =========================================================
-   CARDS
+   CAIXAS
    ========================================================= */
 
-.feature-card {
-  width: 100%;
-
-  min-height: 104px;
-
-  border: 1px solid transparent;
-
-  border-radius: 15px;
-
-  padding: 13px 14px;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 11px;
-
-  text-align: left;
-
-  cursor: pointer;
-
-  position: relative;
-
-  color: #17324d;
-
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease,
-    border-color 0.15s ease;
+.card {
+    min-height: 65px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #ffffff;
 }
-
-.feature-card:hover {
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 5px 15px rgba(20, 50, 70, 0.10);
-}
-
-.feature-card:active {
-  transform: translateY(0);
-}
-
-
-/* CORES */
-
-.feature-card.blue {
-  background: #e8f6fd;
-  border-color: #18a4dd;
-}
-
-.feature-card.green {
-  background: #e8f9f1;
-  border-color: #20a879;
-}
-
-.feature-card.purple {
-  background: #f3edff;
-  border-color: #9a67e8;
-}
-
-.feature-card.orange {
-  background: #fff1e3;
-  border-color: #f28a31;
-}
-
-
-/* ÍCONES */
-
-.feature-icon {
-  width: 40px;
-  height: 40px;
-
-  min-width: 40px;
-
-  border-radius: 11px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  font-size: 20px;
-}
-
-.blue-bg {
-  background: #d2effb;
-}
-
-.green-bg {
-  background: #d4f3e5;
-}
-
-.purple-bg {
-  background: #e8ddfb;
-}
-
-.orange-bg {
-  background: #ffe2c4;
-}
-
-
-/* CONTEÚDO DO CARD */
-
-.feature-content {
-  min-width: 0;
-
-  flex: 1;
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 5px;
-}
-
-.feature-content b {
-  color: #17324d;
-
-  font-size: 14px;
-
-  line-height: 1.2;
-}
-
-.feature-content small {
-  color: #667b8a;
-
-  font-size: 10px;
-
-  line-height: 1.25;
-}
-
-.feature-arrow {
-  color: #527184;
-
-  font-size: 20px;
-
-  line-height: 1;
-
-  margin-left: auto;
-}
-
 
 /* =========================================================
-   LISTA DE SERVIÇOS
+   FERRAMENTAS E SERVIÇOS
    ========================================================= */
 
-.list-item {
-  width: 100%;
-
-  min-height: 60px;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 11px;
-
-  padding: 9px 12px;
-
-  margin-bottom: 9px;
-
-  background: #ffffff;
-
-  border: 1px solid #d7e7ee;
-
-  border-radius: 13px;
-
-  cursor: pointer;
-
-  text-align: left;
-
-  color: #17324d;
-
-  box-shadow:
-    0 2px 7px rgba(30, 70, 90, 0.06);
-
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
+.servicos {
+    width: calc(100% - 36px);
+    margin: 14px 18px 80px 18px;
 }
 
-.list-item:hover {
-  transform: translateY(-1px);
-
-  box-shadow:
-    0 4px 12px rgba(30, 70, 90, 0.10);
+.servicos h2 {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #075a9e;
 }
-
-.list-item > div {
-  flex: 1;
-  min-width: 0;
-}
-
-.list-item b {
-  display: block;
-
-  font-size: 12px;
-
-  margin-bottom: 3px;
-}
-
-.list-item small {
-  display: block;
-
-  color: #708493;
-
-  font-size: 9px;
-}
-
-.list-item i {
-  font-style: normal;
-
-  font-size: 20px;
-
-  color: #718897;
-}
-
-
-/* =========================================================
-   ÍCONES REDONDOS
-   ========================================================= */
-
-.round {
-  width: 38px;
-  height: 38px;
-
-  min-width: 38px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  font-size: 18px;
-}
-
-.round.green-bg {
-  background: #d8f4e7;
-}
-
-.round.orange-bg {
-  background: #ffe7ce;
-}
-
-
-/* =========================================================
-   AVISO
-   ========================================================= */
-
-.tip {
-  width: 100%;
-
-  display: flex;
-
-  align-items: flex-start;
-
-  gap: 8px;
-
-  padding: 9px 11px;
-
-  margin-top: 10px;
-
-  border-radius: 10px;
-
-  background: #eef8fc;
-
-  border: 1px solid #c8e8f3;
-
-  color: #527184;
-
-  font-size: 9px;
-
-  line-height: 1.45;
-}
-
-.tip > span:first-child {
-  color: #087fc4;
-
-  font-size: 12px;
-
-  flex-shrink: 0;
-}
-
-
-/* =========================================================
-   TÍTULO DAS PÁGINAS
-   ========================================================= */
-
-.page-title {
-  width: 100%;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 12px;
-
-  margin-bottom: 20px;
-
-  padding-bottom: 13px;
-
-  border-bottom: 1px solid #dcecf2;
-}
-
-.page-title > div {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 3px;
-}
-
-.page-title span {
-  color: #087fc4;
-
-  font-size: 9px;
-
-  font-weight: 700;
-
-  letter-spacing: 0.7px;
-}
-
-.page-title h2 {
-  color: #173b55;
-
-  font-size: 23px;
-
-  line-height: 1.1;
-}
-
-.back {
-  width: 38px;
-  height: 38px;
-
-  border: 0;
-
-  border-radius: 11px;
-
-  background: #e8f6fc;
-
-  color: #087fc4;
-
-  font-size: 27px;
-
-  cursor: pointer;
-}
-
-
-/* =========================================================
-   FORMULÁRIOS
-   ========================================================= */
-
-.form-card {
-  width: 100%;
-
-  background: #ffffff;
-
-  border: 1px solid #d8e9f0;
-
-  border-radius: 16px;
-
-  padding: 18px;
-
-  box-shadow:
-    0 4px 14px rgba(30, 70, 90, 0.07);
-
-  margin-bottom: 15px;
-}
-
-.form-card h3 {
-  color: #184966;
-
-  font-size: 15px;
-
-  margin-bottom: 16px;
-}
-
-.form-card label {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 6px;
-
-  margin-bottom: 13px;
-
-  color: #4b6474;
-
-  font-size: 11px;
-
-  font-weight: 700;
-}
-
-.form-card input,
-.form-card select,
-.search-box input {
-  width: 100%;
-
-  min-height: 43px;
-
-  border: 1px solid #cbdfe8;
-
-  border-radius: 10px;
-
-  background: #ffffff;
-
-  color: #17324d;
-
-  padding: 10px 12px;
-
-  outline: none;
-
-  font-size: 12px;
-}
-
-.form-card input:focus,
-.form-card select:focus,
-.search-box input:focus {
-  border-color: #0793d1;
-
-  box-shadow:
-    0 0 0 3px rgba(7, 147, 209, 0.10);
-}
-
-
-/* =========================================================
-   BOTÃO PRINCIPAL
-   ========================================================= */
-
-.cta {
-  width: 100%;
-
-  min-height: 45px;
-
-  border: 0;
-
-  border-radius: 11px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #087fc4,
-      #0798d4
-    );
-
-  color: #ffffff;
-
-  font-size: 12px;
-
-  font-weight: 700;
-
-  cursor: pointer;
-
-  box-shadow:
-    0 4px 10px rgba(0, 126, 190, 0.20);
-}
-
-.cta:hover {
-  transform: translateY(-1px);
-}
-
-
-/* =========================================================
-   RESULTADO
-   ========================================================= */
-
-.result {
-  width: 100%;
-
-  padding: 17px;
-
-  border-radius: 14px;
-
-  background: #eef9fd;
-
-  border: 1px solid #c8e8f3;
-
-  color: #234b63;
-
-  font-size: 12px;
-
-  line-height: 1.5;
-}
-
-.hidden {
-  display: none !important;
-}
-
-
-/* =========================================================
-   PROGRESSO
-   ========================================================= */
-
-.progress {
-  width: 100%;
-
-  height: 5px;
-
-  border-radius: 10px;
-
-  background: #e5f0f4;
-
-  margin-bottom: 20px;
-
-  overflow: hidden;
-}
-
-.progress span {
-  display: block;
-
-  width: 45%;
-
-  height: 100%;
-
-  background:
-    linear-gradient(
-      90deg,
-      #087fc4,
-      #12a1d7
-    );
-
-  border-radius: inherit;
-}
-
-
-/* =========================================================
-   PESQUISA
-   ========================================================= */
-
-.search-box {
-  width: 100%;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  padding: 7px 10px;
-
-  margin-bottom: 13px;
-
-  border-radius: 12px;
-
-  background: #f2f8fb;
-
-  border: 1px solid #d6e8ef;
-
-  color: #087fc4;
-}
-
-.search-box input {
-  border: 0;
-
-  background: transparent;
-
-  box-shadow: none;
-
-  padding: 6px;
-}
-
-.search-box input:focus {
-  box-shadow: none;
-}
-
-
-/* =========================================================
-   STACK
-   ========================================================= */
-
-.stack {
-  width: 100%;
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 10px;
-}
-
-
-/* =========================================================
-   BENEFÍCIOS
-   ========================================================= */
-
-.benefit {
-  width: 100%;
-
-  min-height: 68px;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 12px;
-
-  padding: 11px 13px;
-
-  border-radius: 13px;
-
-  border: 1px solid #d8e8ee;
-
-  background: #ffffff;
-
-  color: #17324d;
-
-  text-align: left;
-
-  box-shadow:
-    0 2px 8px rgba(30, 70, 90, 0.05);
-}
-
-.benefit.clickable {
-  cursor: pointer;
-}
-
-.benefit > span {
-  width: 39px;
-  height: 39px;
-
-  min-width: 39px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 11px;
-
-  background: #eaf6fb;
-
-  font-size: 19px;
-}
-
-.benefit div {
-  min-width: 0;
-}
-
-.benefit b {
-  display: block;
-
-  font-size: 12px;
-
-  margin-bottom: 4px;
-}
-
-.benefit small {
-  color: #718593;
-
-  font-size: 9px;
-
-  line-height: 1.3;
-}
-
-
-/* =========================================================
-   FONTES
-   ========================================================= */
-
-.source-card {
-  width: 100%;
-
-  padding: 16px;
-
-  border-radius: 14px;
-
-  border: 1px solid #d9e8ee;
-
-  background: #ffffff;
-
-  margin-bottom: 11px;
-
-  box-shadow:
-    0 3px 10px rgba(30, 70, 90, 0.06);
-}
-
-.source-card b {
-  display: block;
-
-  color: #174963;
-
-  font-size: 13px;
-
-  margin-bottom: 5px;
-}
-
-.source-card small {
-  display: block;
-
-  color: #718593;
-
-  font-size: 10px;
-
-  line-height: 1.4;
-
-  margin-bottom: 10px;
-}
-
-.source-card a {
-  color: #087fc4;
-
-  text-decoration: none;
-
-  font-size: 10px;
-
-  font-weight: 700;
-}
-
-
-/* =========================================================
-   CNIS
-   ========================================================= */
-
-.summary {
-  width: 100%;
-
-  padding: 15px;
-
-  border-radius: 13px;
-
-  background: #eef8fc;
-
-  border: 1px solid #cbe8f2;
-
-  color: #244c63;
-
-  font-size: 12px;
-
-  margin-top: 12px;
-}
-
-
-/* =========================================================
-   SERVIÇOS EXTERNOS
-   ========================================================= */
-
-.external-card {
-  width: 100%;
-
-  padding: 15px;
-
-  border-radius: 14px;
-
-  background: #ffffff;
-
-  border: 1px solid #d8e8ee;
-
-  margin-bottom: 11px;
-
-  box-shadow:
-    0 3px 10px rgba(30, 70, 90, 0.06);
-}
-
-.ext-top {
-  display: flex;
-
-  align-items: center;
-
-  gap: 11px;
-
-  margin-bottom: 12px;
-}
-
-.ext-icon {
-  width: 42px;
-  height: 42px;
-
-  min-width: 42px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 12px;
-
-  background: #eaf7fc;
-
-  font-size: 20px;
-}
-
-.ext-top b {
-  display: block;
-
-  color: #174963;
-
-  font-size: 12px;
-
-  margin-bottom: 4px;
-}
-
-.ext-top small {
-  display: block;
-
-  color: #718593;
-
-  font-size: 9px;
-
-  line-height: 1.35;
-}
-
-.ext-btn {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-
-  min-height: 39px;
-
-  border-radius: 9px;
-
-  background: #087fc4;
-
-  color: #ffffff;
-
-  text-decoration: none;
-
-  font-size: 10px;
-
-  font-weight: 700;
-}
-
-
-/* =========================================================
-   QR CODE
-   ========================================================= */
-
-.qr-card {
-  width: 100%;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  text-align: center;
-
-  padding: 20px;
-
-  margin-top: 15px;
-
-  border-radius: 16px;
-
-  background: #f5fbfd;
-
-  border: 1px solid #d5ebf2;
-}
-
-.qr-card img {
-  width: 180px;
-  height: 180px;
-
-  object-fit: contain;
-
-  background: #ffffff;
-
-  padding: 8px;
-
-  border-radius: 12px;
-
-  margin-bottom: 12px;
-}
-
-.qr-card b {
-  color: #174963;
-
-  font-size: 12px;
-
-  margin-bottom: 5px;
-}
-
-.qr-card small {
-  color: #718593;
-
-  font-size: 9px;
-
-  line-height: 1.4;
-}
-
-
-/* =========================================================
-   QR CODE DA PÁGINA
-   ========================================================= */
-
-.qr-hero {
-  text-align: center;
-
-  padding: 25px;
-}
-
-.qr-hero h2 {
-  color: #087fc4;
-
-  font-size: 20px;
-
-  margin-bottom: 7px;
-}
-
-.qr-hero h3 {
-  color: #174963;
-
-  font-size: 13px;
-
-  margin-top: 12px;
-}
-
-.qr-hero p {
-  color: #718593;
-
-  font-size: 10px;
-
-  line-height: 1.45;
-
-  margin-bottom: 10px;
-}
-
-.qr-image-box {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  margin: 15px auto;
-
-  width: 280px;
-  height: 280px;
-
-  background: #ffffff;
-
-  border-radius: 15px;
-
-  border: 1px solid #d8e8ee;
-
-  box-shadow:
-    0 4px 15px rgba(30, 70, 90, 0.08);
-}
-
-.qr-image-box img {
-  width: 250px;
-  height: 250px;
-
-  max-width: none;
-
-  object-fit: contain;
-}
-
-
-/* =========================================================
-   GUIA
-   ========================================================= */
-
-.guide-card {
-  width: 100%;
-
-  padding: 16px;
-
-  border-radius: 14px;
-
-  background: #ffffff;
-
-  border: 1px solid #d8e8ee;
-
-  margin-bottom: 11px;
-
-  box-shadow:
-    0 3px 10px rgba(30, 70, 90, 0.05);
-}
-
-.guide-card b {
-  display: block;
-
-  color: #174963;
-
-  font-size: 13px;
-
-  margin-bottom: 7px;
-}
-
-.guide-card p {
-  color: #667d8b;
-
-  font-size: 10px;
-
-  line-height: 1.5;
-}
-
 
 /* =========================================================
    BARRA INFERIOR
    ========================================================= */
 
 .bottom-nav {
-  position: fixed;
-
-  left: 50%;
-  bottom: 0;
-
-  transform: translateX(-50%);
-
-  width: 100%;
-
-  max-width: 1120px;
-
-  height: 68px;
-
-  display: grid;
-
-  grid-template-columns: repeat(5, 1fr);
-
-  background:
-    linear-gradient(
-      135deg,
-      #006fb6 0%,
-      #087fc4 50%,
-      #0993d0 100%
-    );
-
-  border-top: 1px solid rgba(255,255,255,0.18);
-
-  box-shadow:
-    0 -4px 16px rgba(0, 91, 145, 0.20);
-
-  z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 900px;
+    height: 58px;
+    background: #008dcc;
+    z-index: 9999;
 }
-
-.bottom-nav button {
-  border: 0;
-
-  background: transparent;
-
-  color: rgba(255,255,255,0.88);
-
-  cursor: pointer;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  gap: 3px;
-
-  font-size: 9px;
-}
-
-.bottom-nav button span {
-  font-size: 18px;
-
-  line-height: 1;
-}
-
-.bottom-nav button.active,
-.bottom-nav button:hover {
-  color: #ffffff;
-
-  background: rgba(255,255,255,0.12);
-}
-
 
 /* =========================================================
-   COPYRIGHT
+   RESPONSIVIDADE — CELULAR
    ========================================================= */
 
-.copyright {
-  position: fixed;
+@media (max-width: 600px) {
 
-  right: 10px;
-  bottom: 78px;
+    .identificacao {
+        padding: 8px 12px 7px 12px;
+        align-items: flex-start;
+    }
 
-  width: 28px;
-  height: 28px;
+    .identificacao-esquerda {
+        padding-top: 2px;
+    }
 
-  border-radius: 50%;
+    .identificacao-esquerda .titulo-guia {
+        font-size: 16px;
+    }
 
-  display: flex;
+    .identificacao-esquerda .subtitulo-guia {
+        font-size: 9px;
+    }
 
-  align-items: center;
-  justify-content: center;
+    .identificacao-direita {
+        width: 125px;
+        margin-left: 8px;
+    }
 
-  background: #ffffff;
+    .identificacao-direita img {
+        width: 85px;
+        max-height: 55px;
+    }
 
-  border: 1px solid #d4e7ee;
+    .identificacao-direita .projeto-extensao {
+        font-size: 8px;
+        margin-top: 2px;
+    }
 
-  color: #78909d;
+    .titulo-principal {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
 
-  font-size: 14px;
+    .titulo-principal h1 {
+        font-size: 17px;
+    }
 
-  box-shadow:
-    0 2px 8px rgba(30,70,90,0.10);
+    .titulo-principal p {
+        font-size: 9px;
+    }
 
-  z-index: 50;
+    .cards {
+        width: calc(100% - 24px);
+        margin-left: 12px;
+        margin-right: 12px;
+        gap: 7px;
+    }
+
+    .servicos {
+        width: calc(100% - 24px);
+        margin-left: 12px;
+        margin-right: 12px;
+    }
 }
 
-
 /* =========================================================
-   TABLET
+   CELULARES MUITO PEQUENOS
    ========================================================= */
 
-@media (min-width: 700px) and (max-width: 1099px) {
-
-  .page {
-    padding-left: 28px;
-    padding-right: 28px;
-  }
-
-  .banner-image {
-    width: 100%;
-    height: auto;
-  }
-
-  .projeto-guia strong {
-    font-size: 20px;
-  }
-
-  .projeto-guia small {
-    font-size: 10px;
-  }
-
-  .projeto-uscs {
-    width: 160px;
-  }
-
-  .projeto-uscs img {
-    width: 110px;
-    height: 70px;
-    max-width: 110px;
-    max-height: 70px;
-  }
-
-  .projeto-uscs span {
-    font-size: 10px;
-  }
-}
-
-
-/* =========================================================
-   CELULAR
-   ========================================================= */
-
-@media (max-width: 699px) {
-
-  body {
-    background:
-      linear-gradient(
-        180deg,
-        #e5f7fd,
-        #cceef8
-      );
-  }
-
-  .top {
-    min-height: 70px;
-    height: 70px;
-
-    padding: 10px 14px;
-
-    justify-content: center;
-  }
-
-  .top-brand {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .top-logo {
-    width: 42px;
-    height: 42px;
-
-    font-size: 22px;
-  }
-
-  .top-title strong {
-    font-size: 19px;
-  }
-
-  .top-title small {
-    font-size: 9px;
-  }
-
-  .top-nav {
-    display: none;
-  }
-
-  .page {
-    padding:
-      14px
-      14px
-      88px;
-  }
-
-
-  /* =========================================
-     BANNER MOBILE
-     Mantém o formato atual sem cortar
-     ========================================= */
-
-  .image-banner {
-    width: 100%;
-
-    height: 180px;
-
-    overflow: hidden;
-
-    border-radius: 14px;
-  }
-
-  .banner-image {
-    width: 100%;
-    height: 180px;
-
-    max-width: 100%;
-
-    object-fit: fill;
-
-    object-position: center center;
-
-    border-radius: 14px;
-  }
-
-
-  /* =========================================
-     IDENTIFICAÇÃO MOBILE
-     ========================================= */
-
-  .projeto-identificacao {
-    width: 100%;
-
-    min-height: 92px;
-
-    padding: 7px 3px 9px 3px;
-
-    align-items: flex-start;
-  }
-
-  .projeto-guia {
-    padding-top: 3px;
-  }
-
-  .projeto-guia strong {
-    font-size: 16px;
-
-    line-height: 1.15;
-  }
-
-  .projeto-guia small {
-    font-size: 9px;
-
-    line-height: 1.2;
-
-    margin-top: 2px;
-  }
-
-  .projeto-uscs {
-    width: 125px;
-
-    padding-top: 0;
-  }
-
-  .projeto-uscs img {
-    width: 90px;
-    height: 60px;
-
-    max-width: 90px;
-    max-height: 60px;
-
-    margin-bottom: 2px;
-  }
-
-  .projeto-uscs span {
-    font-size: 8px;
-
-    line-height: 1.1;
-  }
-
-
-  /* =========================================
-     TÍTULO
-     ========================================= */
-
-  .app-title {
-    font-size: 21px;
-  }
-
-  .justice-scale {
-    font-size: 21px;
-  }
-
-  .section-head h3,
-  .welcome-card h3 {
-    font-size: 10px;
-  }
-
-
-  /* =========================================
-     CARDS
-     ========================================= */
-
-  .quick-grid {
-    grid-template-columns: 1fr 1fr;
-
-    gap: 9px;
-
-    margin-bottom: 18px;
-  }
-
-  .feature-card {
-    min-height: 100px;
-
-    padding: 9px 10px;
-
-    border-radius: 13px;
-
-    gap: 8px;
-  }
-
-  .feature-icon {
-    width: 34px;
-    height: 34px;
-
-    min-width: 34px;
-
-    font-size: 17px;
-
-    border-radius: 9px;
-  }
-
-  .feature-content {
-    gap: 4px;
-  }
-
-  .feature-content b {
-    font-size: 10px;
-
-    line-height: 1.2;
-  }
-
-  .feature-content small {
-    font-size: 8px;
-
-    line-height: 1.25;
-  }
-
-  .feature-arrow {
-    font-size: 16px;
-  }
-
-
-  /* =========================================
-     SERVIÇOS
-     ========================================= */
-
-  .section-head h3 {
-    font-size: 12px;
-  }
-
-  .list-item {
-    min-height: 56px;
-
-    padding: 8px 10px;
-  }
-
-  .round {
-    width: 34px;
-    height: 34px;
-
-    min-width: 34px;
-
-    font-size: 16px;
-  }
-
-  .list-item b {
-    font-size: 10px;
-  }
-
-  .list-item small {
-    font-size: 8px;
-  }
-
-  .tip {
-    font-size: 8px;
-
-    padding: 8px 9px;
-  }
-
-
-  /* =========================================
-     PÁGINAS
-     ========================================= */
-
-  .page-title h2 {
-    font-size: 20px;
-  }
-
-  .page-title {
-    margin-bottom: 15px;
-  }
-
-  .form-card {
-    padding: 14px;
-
-    border-radius: 13px;
-  }
-
-  .form-card h3 {
-    font-size: 13px;
-  }
-
-
-  /* =========================================
-     QR CODE
-     ========================================= */
-
-  .qr-image-box {
-    width: 280px;
-    height: 280px;
-  }
-
-  .qr-image-box img {
-    width: 250px;
-    height: 250px;
-  }
-
-
-  /* =========================================
-     BARRA INFERIOR
-     ========================================= */
-
-  .bottom-nav {
-    height: 66px;
-  }
-
-  .bottom-nav button {
-    font-size: 8px;
-  }
-
-  .bottom-nav button span {
-    font-size: 17px;
-  }
-
-  .copyright {
-    right: 7px;
-
-    bottom: 73px;
-
-    width: 25px;
-    height: 25px;
-
-    font-size: 12px;
-  }
-}
-
-
-/* =========================================================
-   DESKTOP
-   ========================================================= */
-
-@media (min-width: 1100px) {
-
-  body {
-    padding: 25px 20px;
-  }
-
-  .app {
-    max-width: 1120px;
-
-    min-height: calc(100vh - 50px);
-
-    margin: 0 auto;
-
-    border-radius: 24px;
-  }
-
-  .page {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-
-  /* Banner PC */
-
-  .image-banner {
-    width: 100%;
-
-    height: auto;
-
-    overflow: hidden;
-
-    border-radius: 14px;
-  }
-
-  .banner-image {
-    display: block;
-
-    width: 100%;
-
-    height: auto;
-
-    max-width: 100%;
-
-    object-fit: contain;
-
-    object-position: center;
-  }
-
-
-  /* =========================================
-     IDENTIFICAÇÃO PC
-     ========================================= */
-
-  .projeto-identificacao {
-    min-height: 115px;
-
-    padding:
-      8px
-      5px
-      12px
-      5px;
-  }
-
-  .projeto-guia {
-    padding-top: 6px;
-  }
-
-  .projeto-guia strong {
-    font-size: 22px;
-  }
-
-  .projeto-guia small {
-    font-size: 11px;
-  }
-
-  .projeto-uscs {
-    width: 190px;
-  }
-
-  /* LOGO USCS DOBRADO */
-  .projeto-uscs img {
-    width: 150px;
-    height: 85px;
-
-    max-width: 150px;
-    max-height: 85px;
-  }
-
-  .projeto-uscs span {
-    font-size: 11px;
-  }
-
-
-  .quick-grid {
-    gap: 14px;
-  }
-
-  .feature-card {
-    min-height: 105px;
-  }
-
-  .feature-content b {
-    font-size: 14px;
-  }
-
-  .feature-content small {
-    font-size: 10px;
-  }
-
-
-  /* Barra inferior */
-
-  .bottom-nav {
-    max-width: 1120px;
-
-    border-radius:
-      0 0 24px 24px;
-  }
-
-  .copyright {
-    right: max(
-      18px,
-      calc((100vw - 1120px) / 2 + 10px)
-    );
-  }
-}
-
-
-/* =========================================================
-   TELAS GRANDES
-   ========================================================= */
-
-@media (min-width: 1400px) {
-
-  .app {
-    max-width: 1180px;
-  }
-
-  .page {
-    max-width: 1120px;
-  }
-
-  .bottom-nav {
-    max-width: 1180px;
-  }
+@media (max-width: 380px) {
+
+    .identificacao {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    .identificacao-esquerda .titulo-guia {
+        font-size: 15px;
+    }
+
+    .identificacao-esquerda .subtitulo-guia {
+        font-size: 8px;
+    }
+
+    .identificacao-direita {
+        width: 110px;
+    }
+
+    .identificacao-direita img {
+        width: 78px;
+    }
+
+    .identificacao-direita .projeto-extensao {
+        font-size: 7px;
+    }
 }
