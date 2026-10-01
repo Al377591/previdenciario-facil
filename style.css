@@ -1,5 +1,5 @@
 /* =========================================================
-   GUIA-PREVI — CONFIGURAÇÃO GERAL
+   GUIA-PREVI — CSS COMPLETO
    ========================================================= */
 
 * {
@@ -26,7 +26,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 900px;
+    max-width: 630px;
     margin: 0 auto;
     background: #ffffff;
     min-height: 100vh;
@@ -44,7 +44,6 @@ header {
 
 /* =========================================================
    BANNER
-   NÃO ALTERAR PROPORÇÃO
    ========================================================= */
 
 .banner {
@@ -59,77 +58,96 @@ header {
 }
 
 /* =========================================================
-   BLOCO DE IDENTIFICAÇÃO
-   GUIA-PREVI + USCS
+   BLOCO ENTRE O BANNER E AS CAIXAS
+   GUIA-PREVI ---------------- USCS
    ========================================================= */
 
 .identificacao {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 10px 18px 8px 18px;
+    padding: 8px 14px 4px 14px;
+    margin: 0;
     background: #ffffff;
+    min-height: 72px;
 }
 
 /* =========================================================
-   LADO ESQUERDO — GUIA-PREVI
+   GUIA-PREVI — LADO ESQUERDO
    ========================================================= */
 
 .identificacao-esquerda {
     flex: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    padding-top: 2px;
 }
 
 .identificacao-esquerda .titulo-guia {
     margin: 0;
     padding: 0;
-    font-size: 20px;
-    line-height: 1.15;
+    font-size: 17px;
+    line-height: 20px;
     font-weight: 700;
     color: #075a9e;
+    white-space: nowrap;
 }
 
 .identificacao-esquerda .subtitulo-guia {
-    margin: 2px 0 0 0;
+    margin: 1px 0 0 0;
     padding: 0;
-    font-size: 11px;
-    line-height: 1.2;
+    font-size: 9px;
+    line-height: 12px;
     color: #333333;
+    white-space: nowrap;
 }
 
 /* =========================================================
-   LADO DIREITO — USCS
+   USCS — LADO DIREITO
    ========================================================= */
 
 .identificacao-direita {
-    width: 190px;
+    flex: 0 0 135px;
+    width: 135px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    margin-left: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-/* LOGO USCS — MAIOR */
+/* =========================================================
+   LOGO USCS
+   ========================================================= */
+
 .identificacao-direita img {
     display: block;
-    width: 115px;
-    height: auto;
-    max-height: 75px;
+    width: 105px;
+    height: 62px;
+    max-width: 105px;
+    max-height: 62px;
     object-fit: contain;
+    object-position: center;
     margin: 0 auto;
 }
 
-/* TEXTO ABAIXO DO LOGO */
+/* =========================================================
+   PROJETO DE EXTENSÃO
+   ========================================================= */
+
 .identificacao-direita .projeto-extensao {
-    margin-top: 3px;
-    font-size: 11px;
-    line-height: 1.15;
+    display: block;
+    margin: 1px 0 0 0;
+    padding: 0;
+    font-size: 9px;
+    line-height: 11px;
     font-weight: 500;
     color: #333333;
     white-space: nowrap;
@@ -140,19 +158,24 @@ header {
    ========================================================= */
 
 .titulo-principal {
-    margin: 2px 18px 8px 18px;
+    width: calc(100% - 28px);
+    margin: 2px 14px 7px 14px;
+    padding: 0;
 }
 
 .titulo-principal h1 {
     margin: 0;
-    font-size: 20px;
-    line-height: 1.2;
+    padding: 0;
+    font-size: 18px;
+    line-height: 21px;
     color: #075a9e;
 }
 
 .titulo-principal p {
-    margin: 2px 0 0 0;
-    font-size: 11px;
+    margin: 1px 0 0 0;
+    padding: 0;
+    font-size: 9px;
+    line-height: 12px;
     color: #333333;
 }
 
@@ -161,11 +184,12 @@ header {
    ========================================================= */
 
 .cards {
-    width: calc(100% - 36px);
-    margin: 0 18px;
+    width: calc(100% - 28px);
+    margin: 0 14px;
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 8px;
 }
 
 /* =========================================================
@@ -173,9 +197,9 @@ header {
    ========================================================= */
 
 .card {
-    min-height: 65px;
-    padding: 12px;
-    border-radius: 10px;
+    min-height: 58px;
+    padding: 10px;
+    border-radius: 9px;
     background: #ffffff;
 }
 
@@ -184,13 +208,16 @@ header {
    ========================================================= */
 
 .servicos {
-    width: calc(100% - 36px);
-    margin: 14px 18px 80px 18px;
+    width: calc(100% - 28px);
+    margin: 12px 14px 80px 14px;
+    padding: 0;
 }
 
 .servicos h2 {
-    margin: 0 0 8px 0;
-    font-size: 14px;
+    margin: 0 0 7px 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 16px;
     color: #075a9e;
 }
 
@@ -204,21 +231,69 @@ header {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 900px;
+    max-width: 630px;
     height: 58px;
     background: #008dcc;
     z-index: 9999;
 }
 
 /* =========================================================
-   RESPONSIVIDADE — CELULAR
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 601px) {
+
+    .identificacao {
+        min-height: 74px;
+    }
+
+    .identificacao-esquerda {
+        padding-top: 5px;
+    }
+
+    .identificacao-esquerda .titulo-guia {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .identificacao-esquerda .subtitulo-guia {
+        font-size: 9px;
+        line-height: 12px;
+    }
+
+    .identificacao-direita {
+        flex-basis: 145px;
+        width: 145px;
+    }
+
+    .identificacao-direita img {
+        width: 110px;
+        max-width: 110px;
+        height: 62px;
+        max-height: 62px;
+    }
+
+    .identificacao-direita .projeto-extensao {
+        font-size: 9px;
+        line-height: 11px;
+    }
+}
+
+/* =========================================================
+   CELULAR
    ========================================================= */
 
 @media (max-width: 600px) {
 
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .identificacao {
-        padding: 8px 12px 7px 12px;
-        align-items: flex-start;
+        width: 100%;
+        min-height: 62px;
+        padding: 7px 10px 4px 10px;
     }
 
     .identificacao-esquerda {
@@ -226,83 +301,106 @@ header {
     }
 
     .identificacao-esquerda .titulo-guia {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 18px;
     }
 
     .identificacao-esquerda .subtitulo-guia {
-        font-size: 9px;
+        font-size: 8px;
+        line-height: 10px;
     }
 
     .identificacao-direita {
-        width: 125px;
-        margin-left: 8px;
+        flex-basis: 110px;
+        width: 110px;
     }
 
     .identificacao-direita img {
-        width: 85px;
-        max-height: 55px;
+        width: 82px;
+        max-width: 82px;
+        height: 48px;
+        max-height: 48px;
     }
 
     .identificacao-direita .projeto-extensao {
-        font-size: 8px;
-        margin-top: 2px;
+        font-size: 7px;
+        line-height: 9px;
     }
 
     .titulo-principal {
-        margin-left: 12px;
-        margin-right: 12px;
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .titulo-principal h1 {
-        font-size: 17px;
+        font-size: 16px;
+        line-height: 19px;
     }
 
     .titulo-principal p {
-        font-size: 9px;
+        font-size: 8px;
+        line-height: 10px;
     }
 
     .cards {
-        width: calc(100% - 24px);
-        margin-left: 12px;
-        margin-right: 12px;
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
         gap: 7px;
     }
 
+    .card {
+        min-height: 55px;
+        padding: 8px;
+    }
+
     .servicos {
-        width: calc(100% - 24px);
-        margin-left: 12px;
-        margin-right: 12px;
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .bottom-nav {
+        max-width: 100%;
     }
 }
 
 /* =========================================================
-   CELULARES MUITO PEQUENOS
+   CELULARES PEQUENOS
    ========================================================= */
 
 @media (max-width: 380px) {
 
     .identificacao {
-        padding-left: 9px;
-        padding-right: 9px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
     .identificacao-esquerda .titulo-guia {
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 17px;
     }
 
     .identificacao-esquerda .subtitulo-guia {
-        font-size: 8px;
+        font-size: 7px;
+        line-height: 9px;
     }
 
     .identificacao-direita {
-        width: 110px;
+        flex-basis: 100px;
+        width: 100px;
     }
 
     .identificacao-direita img {
-        width: 78px;
+        width: 76px;
+        max-width: 76px;
+        height: 45px;
+        max-height: 45px;
     }
 
     .identificacao-direita .projeto-extensao {
         font-size: 7px;
+        line-height: 8px;
     }
 }
